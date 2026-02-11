@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #db4431;
+  --color-lightGray: #a0a0a0;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+.text-lightgray {
+  color: var(--color-lightGray);
+}

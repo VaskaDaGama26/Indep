@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INDEP</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="container mx-auto sticky top-0 bg-white z-100">
+      <div class="px-5 py-4 flex items-center justify-between">
+        <button onclick="window.history.back()">
+          <img src="/assets/img/icons/backCaret.svg" alt="Back" />
+        </button>
+        <a href="/">
+          <img src="/assets/img/logo.svg" alt="Logo" />
+        </a>
+        <button id="burger" class="w-6">
+          <img src="/assets/img/icons/burger.svg" alt="Menu" />
+        </button>
+      </div>
+    </header>
+    <!-- Breadcrumbs -->
+    <section
+      class="container mx-auto px-5 text-[10px] leading-tight text-[#979797] flex flex-wrap items-center gap-1"
+    >
+      <a href="/">Главная</a>
+      <img class="h-2.5" src="/assets/img/icons/breadCaret.svg" alt="" />
+      <p class="text-[#DB4431]">Войти</p>
+    </section>
+    <main
+      class="container mx-auto px-5 min-h-[calc(100dvh-70px)] flex flex-col items-center justify-center"
+    >
+      <section class="flex flex-col gap-4">
+        <h1 class="text-[28px] leading-tight! font-medium text-center">
+          Войти
+        </h1>
+        <form
+          class="flex flex-col gap-4 w-full"
+          onsubmit="
+            event.preventDefault();
+            window.location.href = '/profile.html';
+          "
+        >
+          <!-- Name -->
+          <label
+            class="text-[12px] leading-tight! flex flex-col items-start gap-1.5"
+            for="name"
+          >
+            Имя
+            <input
+              id="name"
+              class="bg-[#F8F8F8] rounded-lg w-full p-3 focus:outline-none placeholder:text-[#00000080]"
+              type="text"
+              required
+              placeholder="Укажите Ваше имя"
+            />
+          </label>
+          <!-- Phone -->
+          <label
+            class="text-[12px] leading-tight! flex flex-col items-start gap-1.5"
+            for="tel"
+          >
+            Номер телефона
+            <input
+              id="tel"
+              class="bg-[#F8F8F8] rounded-lg w-full p-3 focus:outline-none placeholder:text-[#00000080]"
+              type="text"
+              required
+              placeholder="+7 (___) ___-__-__"
+            />
+          </label>
+
+          <!-- Checkbox -->
+          <div class="flex flex-col mt-2">
+            <div class="flex items-center gap-2">
+              <label class="custom-checkbox" for="policy">
+                <input checked type="checkbox" id="policy" />
+                <span class="checkmark">✓</span>
+              </label>
+              <span class="text-[12px] leading-tight!">
+                Даю согласие на
+                <a href="" class="underline"> обработку персональных данных </a>
+              </span>
+            </div>
+          </div>
+          <!-- Button -->
+          <button
+            type="submit"
+            class="text-center rounded-xl bg-[#DB4431] text-[12px] font-medium text-white py-2 px-9 w-full mt-6"
+          >
+            Войти
+          </button>
+          <!-- REGISTER QUESTION -->
+          <span class="text-center text-[12px] leading-tight! text-[#A0A0A0]">
+            У вас ещё нет аккаунта?&nbsp;
+            <a
+              class="underline text-[#DB4431] font-medium"
+              href="/register.html"
+              >Зарегистрироваться</a
+            >
+          </span>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

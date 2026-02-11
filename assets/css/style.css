@@ -1,0 +1,53 @@
+@import url(/assets/css/tailwind.css);
+@import url(/assets/css/banner.css);
+@import url(/assets/css/checkbox.css);
+@import url(/assets/css/radio.css);
+
+* {
+  font-family: "Moderustic", ui-sans-serif, system-ui, sans-serif;
+  scrollbar-color: #db4431 #f7f7f7;
+}
+
+html {
+  height: 100%;
+}
+
+main#main {
+  padding-bottom: 20px;
+}
+
+/* Check-List */
+ul#check-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+ul#check-list li::before {
+  content: "✓";
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #43c356;
+  border-radius: 2px;
+}
+
+/* Disabled Select */
+select:disabled {
+  color: #96969680;
+}
+select:disabled ~ img {
+  opacity: 30%;
+}
+
+/* Ads Marks Filter */
+.btn-mark-active {
+  background-color: #f3e4e2 !important;
+
+  span {
+    color: #db4431 !important;
+  }
+}
