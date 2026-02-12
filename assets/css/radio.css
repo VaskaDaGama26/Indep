@@ -5,6 +5,7 @@
   border-radius: 999px;
   appearance: none;
   position: relative;
+  cursor: pointer;
 }
 
 .custom-radio:checked::before {

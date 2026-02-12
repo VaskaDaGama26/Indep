@@ -18,16 +18,26 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="container mx-auto sticky top-0 bg-white z-100">
-      <div class="px-5 py-4 flex items-center justify-between">
+    <header class="sticky top-0 bg-white z-100">
+      <div
+        class="container mx-auto px-5 py-4 flex items-center justify-between"
+      >
         <button onclick="window.history.back()">
-          <img src="assets/img/icons/backCaret.svg" alt="Back" />
+          <img
+            class="h-6 md:h-9"
+            src="assets/img/icons/backCaret.svg"
+            alt="Back"
+          />
         </button>
         <a href="/Indep/">
-          <img src="assets/img/logo.svg" alt="Logo" />
+          <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
         </a>
-        <button id="burger" class="w-6">
-          <img src="assets/img/icons/burger.svg" alt="Menu" />
+        <button class="cursor-pointer" id="burger">
+          <img
+            class="h-6 md:h-12"
+            src="assets/img/icons/burger.svg"
+            alt="Menu"
+          />
         </button>
       </div>
     </header>
@@ -385,7 +395,7 @@
       <!-- Banks -->
       <section class="mt-7 flex flex-col gap-4">
         <div class="flex flex-col items-start gap-3">
-          <h3 class="text-[18px] font-medium leading-tight!">
+          <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
             Кредит на авто на специальных условиях
           </h3>
           <p class="text-[12px] opacity-60">
@@ -472,7 +482,7 @@
       </section> -->
       <!-- Hit -->
       <section class="mt-7 flex flex-col gap-4">
-        <h3 class="text-[18px] font-medium leading-tight!">
+        <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
           Лучшие предложения
         </h3>
         <div class="grid grid-cols-1 gap-y-4">
@@ -778,10 +788,12 @@
     </section>
 
     <!-- Scripts -->
-    <script src="assets/js/mobileMenu.js"></script>
-    <script src="assets/js/burger.js"></script>
-    <script src="assets/js/tabs.js"></script>
-    <script src="assets/js/favourite.js"></script>
     <script src="assets/js/bannersSlider.js" defer></script>
+    <script src="assets/js/burger.js"></script>
+    <script src="assets/js/favourite.js"></script>
+    <script src="assets/js/filter.js"></script>
+    <script src="assets/js/marksFilter.js"></script>
+    <script src="assets/js/mobileMenu.js"></script>
+    <script src="assets/js/tabs.js"></script>
   </body>
 </html>

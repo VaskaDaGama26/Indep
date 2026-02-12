@@ -17,34 +17,36 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="container mx-auto sticky top-0 bg-white z-100">
-      <div class="px-5 py-4 flex items-center justify-between">
+    <header class="sticky top-0 bg-white z-100">
+      <div
+        class="container mx-auto px-5 py-4 flex items-center justify-between"
+      >
         <button onclick="window.history.back()">
-          <img src="assets/img/icons/backCaret.svg" alt="Back" />
+          <img
+            class="h-6 md:h-9"
+            src="assets/img/icons/backCaret.svg"
+            alt="Back"
+          />
         </button>
         <a href="/Indep/">
-          <img src="assets/img/logo.svg" alt="Logo" />
+          <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
         </a>
-        <button id="burger" class="w-6">
-          <img src="assets/img/icons/burger.svg" alt="Menu" />
+        <button class="cursor-pointer" id="burger">
+          <img
+            class="h-6 md:h-12"
+            src="assets/img/icons/burger.svg"
+            alt="Menu"
+          />
         </button>
       </div>
     </header>
-    <!-- Breadcrumbs -->
-    <section
-      class="container mx-auto px-5 text-[10px] leading-tight text-[#979797] flex flex-wrap items-center gap-1"
-    >
-      <a href="/Indep/">Главная</a>
-      <img class="h-2.5" src="assets/img/icons/breadCaret.svg" alt="" />
-      <p class="text-[#DB4431]">Войти</p>
-    </section>
     <main
-      class="container mx-auto px-5 min-h-[calc(100dvh-70px)] flex flex-col items-center justify-center"
+      class="container mx-auto px-5 min-h-[calc(100dvh-100px)] flex items-center justify-center"
     >
-      <section class="flex flex-col gap-4">
-        <h1 class="text-[28px] leading-tight! font-medium text-center">
-          Войти
-        </h1>
+      <section
+        class="flex flex-col gap-4 bg-[#FFFFFF] p-5 md:p-8 rounded-2xl shadow-lg"
+      >
+        <h1 class="text-[28px] leading-tight! font-medium text-left">Войти</h1>
         <form
           class="flex flex-col gap-4 w-full"
           onsubmit="
@@ -54,13 +56,13 @@
         >
           <!-- Name -->
           <label
-            class="text-[12px] leading-tight! flex flex-col items-start gap-1.5"
+            class="text-[12px] md:text-[14px] leading-tight! flex flex-col items-start gap-1.5"
             for="name"
           >
             Имя
             <input
               id="name"
-              class="bg-[#F8F8F8] rounded-lg w-full p-3 focus:outline-none placeholder:text-[#00000080]"
+              class="text-[14px] md:text-[16px] bg-[#F8F8F8] rounded-lg w-full p-3 focus:outline-none placeholder:text-[#00000080]"
               type="text"
               required
               placeholder="Укажите Ваше имя"
@@ -68,13 +70,13 @@
           </label>
           <!-- Phone -->
           <label
-            class="text-[12px] leading-tight! flex flex-col items-start gap-1.5"
+            class="text-[12px] md:text-[14px] leading-tight! flex flex-col items-start gap-1.5"
             for="tel"
           >
             Номер телефона
             <input
               id="tel"
-              class="bg-[#F8F8F8] rounded-lg w-full p-3 focus:outline-none placeholder:text-[#00000080]"
+              class="text-[14px] md:text-[16px] bg-[#F8F8F8] rounded-lg w-full p-3 focus:outline-none placeholder:text-[#00000080]"
               type="text"
               required
               placeholder="+7 (___) ___-__-__"
@@ -88,7 +90,7 @@
                 <input checked type="checkbox" id="policy" />
                 <span class="checkmark">✓</span>
               </label>
-              <span class="text-[12px] leading-tight!">
+              <span class="text-[12px] md:text-[14px] leading-tight!">
                 Даю согласие на
                 <a href="" class="underline"> обработку персональных данных </a>
               </span>
@@ -97,21 +99,100 @@
           <!-- Button -->
           <button
             type="submit"
-            class="text-center rounded-xl bg-[#DB4431] text-[12px] font-medium text-white py-2 px-9 w-full mt-6"
+            class="mt-6 text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
           >
             Войти
           </button>
           <!-- REGISTER QUESTION -->
-          <span class="text-center text-[12px] leading-tight! text-[#A0A0A0]">
+          <span
+            class="text-center text-[12px] md:text-[14px] leading-tight! text-[#A0A0A0]"
+          >
             У вас ещё нет аккаунта?&nbsp;
             <a
               class="underline text-[#DB4431] font-medium"
-              href="/Indep/register.html"
+              href="/register.html"
               >Зарегистрироваться</a
             >
           </span>
         </form>
       </section>
     </main>
+    <!-- Bg Pattern -->
+    <div
+      class="absolute inset-0 -z-1"
+      style="
+        background: url(assets/img/bg-pattern.svg) center / cover no-repeat;
+      "
+    ></div>
+
+    <!-- Burger Overlay + Menu -->
+    <div
+      id="burger-overlay"
+      class="fixed hidden inset-0 backdrop-blur-xs z-101"
+    ></div>
+    <section
+      id="burger-menu"
+      class="fixed hidden right-0 top-0 h-dvh w-[60%] md:w-[30%] bg-[#F7F7F7] z-102 flex-col gap-10 md:gap-15 justify-between py-8 leading-tight! text-[#505050] text-[14px] md:text-[20px]"
+    >
+      <a class="px-5" href="/">
+        <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
+      </a>
+
+      <nav class="grow">
+        <ul>
+          <a href="/Indep/favourites.html">
+            <li
+              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
+            >
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/favourites.svg"
+                alt="Избранное"
+              />
+              Избранное
+            </li>
+          </a>
+          <a href="#">
+            <li
+              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
+            >
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/selection.svg"
+                alt="Подбор авто"
+              />
+              Подбор авто
+            </li>
+          </a>
+          <a href="/Indep/reports.html">
+            <li
+              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
+            >
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/ads.svg"
+                alt="Мои отчеты"
+              />
+              Мои отчеты
+            </li>
+          </a>
+        </ul>
+      </nav>
+
+      <button
+        class="flex items-center gap-2 md:gap-3.5 px-5 cursor-pointer"
+        onclick="window.location.href = '/'"
+      >
+        <img
+          class="h-5 md:h-7"
+          src="assets/img/icons/burger/logout.svg"
+          alt="Выйти из аккаунта"
+        />
+        Выйти из аккаунта
+      </button>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/burger.js"></script>
   </body>
 </html>

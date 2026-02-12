@@ -56,7 +56,8 @@ function prepareBurger() {
   };
 
   function checkScreenSize() {
-    const isMobile = window.innerWidth < 1280;
+    // const isMobile = window.innerWidth < 1280;
+    const isMobile = window.innerWidth < 5000;
 
     if (isMobile) {
       toggleButton.addEventListener("click", handleClickToggle);

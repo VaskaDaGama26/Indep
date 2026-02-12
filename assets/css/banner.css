@@ -4,3 +4,12 @@
 .banner-2 {
   background: url(/Indep/assets/img/banners/2.svg) center / cover no-repeat;
 }
+
+@media (min-width: 768px) {
+  .banner-1 {
+    background: url(/Indep/assets/img/banners/1-desktop.svg) left / cover no-repeat;
+  }
+  .banner-2 {
+    background: url(/Indep/assets/img/banners/2-desktop.svg) left / cover no-repeat;
+  }
+}
