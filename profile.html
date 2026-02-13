@@ -18,62 +18,96 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="container mx-auto sticky top-0 bg-white z-100">
-      <div class="px-5 py-4 flex items-center justify-between">
-        <a href="/Indep/">
-          <img src="assets/img/logo.svg" alt="Logo" />
-        </a>
-        <button id="burger" class="w-6">
-          <img src="assets/img/icons/burger.svg" alt="Menu" />
+    <header class="sticky top-0 bg-white z-100">
+      <div
+        class="container mx-auto px-5 py-4 flex items-center justify-between"
+      >
+        <button class="cursor-pointer" onclick="window.history.back()">
+          <img
+            class="h-6 md:h-9"
+            src="assets/img/icons/backCaret.svg"
+            alt="Back"
+          />
         </button>
+        <a href="/Indep/">
+          <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
+        </a>
+        <div class="contents md:flex gap-5 items-center">
+          <a href="/Indep/profile.html" class="cursor-pointer hidden md:block">
+            <img class="h-8" src="assets/img/icons/user.svg" alt="Menu" />
+          </a>
+          <button class="cursor-pointer" id="burger">
+            <img
+              class="h-6 md:h-12"
+              src="assets/img/icons/burger.svg"
+              alt="Menu"
+            />
+          </button>
+        </div>
       </div>
     </header>
     <main id="main" class="container mx-auto px-5">
       <section class="flex flex-col gap-4">
-        <div class="grid grid-cols-2 gap-y-4 gap-x-3">
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-y-4 md:gap-y-6 gap-x-3 md:gap-x-5"
+        >
           <div
-            class="flex gap-3 items-start py-3 px-2 rounded-xl bg-[#F7F7F7] col-span-2"
+            class="flex gap-3 md:gap-6 items-start py-3 px-2 md:p-5 rounded-xl bg-[#F7F7F7] col-span-2 md:col-span-3"
           >
             <img
-              class="h-[60px] rounded-full"
+              class="h-[60px] md:h-20 rounded-full"
               src="assets/img/profile/avatar.jpg"
               alt="Avatar"
             />
             <div class="flex flex-col gap-3 leading-tight!">
-              <h2 class="text-[18px] text-[#000000]">Аркадий Паровозов</h2>
-              <span class="text-[12px] text-[#B3B3B3]">+7 995 185 88 90</span>
+              <h2 class="text-[18px] md:text-[40px] text-[#000000]">
+                Аркадий Паровозов
+              </h2>
+              <span class="text-[12px] md:text-[20px] text-[#B3B3B3]"
+                >+7 995 185 88 90</span
+              >
             </div>
             <button class="ms-auto mb-auto">
-              <img src="assets/img/icons/edit.svg" alt="" />
+              <img
+                class="w-5 h-5 md:w-8 md:h-8"
+                src="assets/img/icons/edit.svg"
+                alt=""
+              />
             </button>
           </div>
           <!-- Reports -->
           <a
             href="/Indep/ads.html"
-            style="
-              background:
-                url(assets/img/profile/reports.svg) 10% 70% / auto no-repeat,
-                #f7f7f7;
-            "
-            class="flex flex-col justify-between h-[97px] px-2 py-3 rounded-xl leading-tight!"
+            class="relative bg-[#f7f7f7] flex flex-col justify-between gap-3 px-2 py-3 md:p-4 h-full rounded-xl leading-tight!"
           >
-            <span class="text-[11px] text-[#989898]">
+            <span class="text-[11px] md:text-[15px] text-[#989898]">
               Опубликовано объявлений
             </span>
-            <span class="ms-auto text-[32px] font-medium">2</span>
+            <span class="ms-auto text-[32px] md:text-[48px] font-medium"
+              >120</span
+            >
+            <img
+              class="h-12 md:h-16 absolute inset-x-2 bottom-3 md:inset-x-6 md:bottom-4"
+              src="assets/img/profile/reports.svg"
+              alt=""
+            />
           </a>
           <!-- Wallet -->
           <a
             href=""
-            style="
-              background:
-                url(assets/img/profile/wallet.svg) 125% -30% / auto no-repeat,
-                #f7f7f7;
-            "
-            class="flex flex-col justify-between h-[97px] px-2 py-3 rounded-xl leading-tight!"
+            class="relative overflow-hidden bg-[#f7F7F7] flex flex-col justify-between gap-3 h-full px-2 py-3 md:p-4 rounded-xl leading-tight! md:col-end-5"
           >
-            <span class="text-[11px] text-[#989898]">Ваш баланс</span>
-            <span class="me-auto text-[32px] font-medium">2 000 ₽</span>
+            <span class="text-[11px] md:text-[15px] text-[#989898]"
+              >Ваш баланс</span
+            >
+            <span class="me-auto text-[32px] md:text-[48px] font-medium"
+              >2 000 ₽</span
+            >
+            <img
+              class="h-16 md:h-18 absolute -right-4 -top-4"
+              src="assets/img/profile/wallet.svg"
+              alt=""
+            />
           </a>
           <!-- MicroBanner -->
           <a
@@ -82,13 +116,15 @@
               background: url(assets/img/profile/microbanner.svg) center
                 center / cover no-repeat;
             "
-            class="rounded-xl col-span-2 flex flex-col items-start p-3 text-white leading-tight!"
+            class="rounded-xl col-span-2 flex flex-col items-start justify-center p-3 md:p-4 text-white leading-tight! md:row-end-3 md:col-span-3"
           >
-            <span class="text-[11px] mb-1.5 opacity-70">
+            <span class="text-[11px] md:text-[14px] mb-1.5 md:mb-2 opacity-70">
               Вы использовали 6 из 10 отчётов
             </span>
-            <span class="text-[20px] mb-3">Доступно: 4 отчёта</span>
-            <span class="text-[11px] opacity-50">
+            <span class="text-[20px] md:text-[28px] mb-3 md:mb-5"
+              >Доступно: 4 отчёта</span
+            >
+            <span class="text-[11px] md:text-[14px] opacity-50">
               Пакет истекает 08.09.2027
             </span>
           </a>
@@ -100,7 +136,7 @@
                 url(assets/img/profile/favourites.svg) 95% 90% / auto no-repeat,
                 #f7f7f7;
             "
-            class="flex rounded-xl h-[62px] px-2 py-3"
+            class="flex md:hidden rounded-xl h-[62px] px-2 py-3"
           >
             <span class="text-[11px] text-[#989898] leading-tight!"
               >Избранное</span
@@ -114,7 +150,7 @@
                 url(assets/img/profile/best.svg) 110% 350% / auto no-repeat,
                 #f7f7f7;
             "
-            class="flex rounded-xl h-[62px] px-2 py-3"
+            class="flex md:hidden rounded-xl h-[62px] px-2 py-3"
           >
             <span class="text-[11px] text-[#989898] leading-tight!"
               >Лучшие предложения</span
@@ -123,40 +159,52 @@
         </div>
       </section>
       <!-- Ads -->
-      <section class="mt-7 flex flex-col gap-4">
-        <h3 class="text-[18px] font-medium leading-tight!">Мои отчёты</h3>
-        <div class="grid grid-cols-1 gap-y-4">
+      <section class="mt-7 flex flex-col gap-4 md:gap-7 max-w-none">
+        <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
+          Мои отчёты
+        </h3>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-4 md:gap-y-10 md:gap-x-5"
+        >
           <!-- Car -->
           <a
             href="/Indep/auto.html"
-            class="rounded-2xl bg-[#F7F7F7] w-full p-3 flex flex-col gap-4"
+            class="rounded-2xl bg-[#F7F7F7] w-full p-3 md:py-4 flex flex-col gap-4"
           >
             <!-- Carousel -->
             <div class="flex flex-col gap-4 overflow-x-auto">
-              <div
-                class="flex flex-row gap-4 w-full lg:grid lg:grid-cols-3 pb-2"
-              >
+              <div class="flex flex-row gap-4 w-full pb-2">
                 <img
                   src="assets/img/cars1.jpg"
-                  class="rounded-2xl shrink-0 w-[250px]"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
                 />
                 <img
                   src="assets/img/cars2.jpg"
-                  class="rounded-2xl shrink-0 w-[250px]"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars1.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars2.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
                 />
               </div>
             </div>
             <!-- Car Info -->
             <div class="flex flex-col gap-3 leading-tight!">
               <div class="flex justify-between items-start">
-                <span class="text-[20px] font-semibold">67 000 000 ₽</span>
+                <span class="text-[20px] md:text-[28px] font-semibold"
+                  >67 000 000 ₽</span
+                >
                 <span
-                  class="bg-[#DB4431] text-white px-2 py-0.5 rounded-full text-[10px] leading-none"
+                  class="bg-[#DB4431] text-white px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] md:text-[14px] leading-none"
                 >
                   200 000 км
                 </span>
               </div>
-              <div class="flex flex-col gap-2 text-[12px]">
+              <div class="flex flex-col gap-2 text-[12px] md:text-[16px]">
                 <h4 class="opacity-80">
                   Mercedes-Benz GLC AMG 43 AMG II (X254)
                 </h4>
@@ -168,17 +216,16 @@
             <!-- Buttons -->
             <div class="flex items-center gap-3">
               <button
-                class="flex-1 text-center rounded-xl bg-[#DB4431] text-[12px] font-medium text-white py-2 px-9"
+                class="flex-1 text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
               >
-                Открыть отчет
+                Купить отчет
               </button>
               <button
                 id="addToFavourite"
-                class="w-[34px] h-[34px] shrink-0 flex items-center justify-center bg-[#EFEFEF] rounded-xl"
+                class="w-[34px] md:w-11 h-[34px] md:h-11 shrink-0 flex items-center justify-center bg-[#EFEFEF] rounded-xl cursor-pointer"
               >
                 <svg
-                  width="18"
-                  height="18"
+                  class="w-4.5 md:w-6 h-4.5 md:h-6"
                   viewBox="0 0 18 18"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -187,54 +234,58 @@
                     d="M9 15.1031C7.71609 14.355 2.25 10.947 2.25 7.17188C2.25112 6.31441 2.59224 5.49238 3.19856 4.88606C3.80488 4.27974 4.62691 3.93862 5.48437 3.9375C6.85195 3.9375 8.00016 4.66594 8.47969 5.83594C8.52207 5.93911 8.59416 6.02735 8.6868 6.08945C8.77945 6.15155 8.88847 6.18471 9 6.18471C9.11153 6.18471 9.22055 6.15155 9.3132 6.08945C9.40584 6.02735 9.47793 5.93911 9.52031 5.83594C9.99984 4.66383 11.148 3.9375 12.5156 3.9375C13.3731 3.93862 14.1951 4.27974 14.8014 4.88606C15.4078 5.49238 15.7489 6.31441 15.75 7.17188C15.75 10.9413 10.2825 14.3543 9 15.1031Z"
                     fill="#EFEFEF"
                     stroke="#BFBFBF"
-                  />
+                    style="fill: none; stroke: rgb(191, 191, 191)"
+                  ></path>
                 </svg>
               </button>
             </div>
             <!-- Address -->
             <div class="flex gap-2 items-center justify-start">
-              <img src="assets/img/icons/map.svg" alt="" />
-              <span class="text-[10px]">г. Москва, ул. Волкова</span>
+              <img class="h-3 md:h-4" src="assets/img/icons/map.svg" alt="" />
+              <span class="text-[10px] md:text-[12px]"
+                >г. Москва, ул. Волкова</span
+              >
             </div>
-            <!-- Report Block -->
-            <button
-              class="flex items-center gap-1 text-[12px] text-[#2ABD6C] underline"
-            >
-              <img src="assets/img/icons/report.svg" alt="Report" />
-              Скачать отчет PDF
-            </button>
           </a>
           <!-- Car -->
           <a
             href="/Indep/auto.html"
-            class="rounded-2xl bg-[#F7F7F7] w-full p-3 flex flex-col gap-4"
+            class="rounded-2xl bg-[#F7F7F7] w-full p-3 md:py-4 flex flex-col gap-4"
           >
             <!-- Carousel -->
             <div class="flex flex-col gap-4 overflow-x-auto">
-              <div
-                class="flex flex-row gap-4 w-full lg:grid lg:grid-cols-3 pb-2"
-              >
+              <div class="flex flex-row gap-4 w-full pb-2">
                 <img
                   src="assets/img/cars1.jpg"
-                  class="rounded-2xl shrink-0 w-[250px]"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
                 />
                 <img
                   src="assets/img/cars2.jpg"
-                  class="rounded-2xl shrink-0 w-[250px]"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars1.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars2.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
                 />
               </div>
             </div>
             <!-- Car Info -->
             <div class="flex flex-col gap-3 leading-tight!">
               <div class="flex justify-between items-start">
-                <span class="text-[20px] font-semibold">67 000 000 ₽</span>
+                <span class="text-[20px] md:text-[28px] font-semibold"
+                  >67 000 000 ₽</span
+                >
                 <span
-                  class="bg-[#DB4431] text-white px-2 py-0.5 rounded-full text-[10px] leading-none"
+                  class="bg-[#DB4431] text-white px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] md:text-[14px] leading-none"
                 >
                   200 000 км
                 </span>
               </div>
-              <div class="flex flex-col gap-2 text-[12px]">
+              <div class="flex flex-col gap-2 text-[12px] md:text-[16px]">
                 <h4 class="opacity-80">
                   Mercedes-Benz GLC AMG 43 AMG II (X254)
                 </h4>
@@ -246,17 +297,16 @@
             <!-- Buttons -->
             <div class="flex items-center gap-3">
               <button
-                class="flex-1 text-center rounded-xl bg-[#DB4431] text-[12px] font-medium text-white py-2 px-9"
+                class="flex-1 text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
               >
-                Открыть отчет
+                Купить отчет
               </button>
               <button
                 id="addToFavourite"
-                class="w-[34px] h-[34px] shrink-0 flex items-center justify-center bg-[#EFEFEF] rounded-xl"
+                class="w-[34px] md:w-11 h-[34px] md:h-11 shrink-0 flex items-center justify-center bg-[#EFEFEF] rounded-xl cursor-pointer"
               >
                 <svg
-                  width="18"
-                  height="18"
+                  class="w-4.5 md:w-6 h-4.5 md:h-6"
                   viewBox="0 0 18 18"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -265,130 +315,197 @@
                     d="M9 15.1031C7.71609 14.355 2.25 10.947 2.25 7.17188C2.25112 6.31441 2.59224 5.49238 3.19856 4.88606C3.80488 4.27974 4.62691 3.93862 5.48437 3.9375C6.85195 3.9375 8.00016 4.66594 8.47969 5.83594C8.52207 5.93911 8.59416 6.02735 8.6868 6.08945C8.77945 6.15155 8.88847 6.18471 9 6.18471C9.11153 6.18471 9.22055 6.15155 9.3132 6.08945C9.40584 6.02735 9.47793 5.93911 9.52031 5.83594C9.99984 4.66383 11.148 3.9375 12.5156 3.9375C13.3731 3.93862 14.1951 4.27974 14.8014 4.88606C15.4078 5.49238 15.7489 6.31441 15.75 7.17188C15.75 10.9413 10.2825 14.3543 9 15.1031Z"
                     fill="#EFEFEF"
                     stroke="#BFBFBF"
-                  />
+                    style="fill: none; stroke: rgb(191, 191, 191)"
+                  ></path>
                 </svg>
               </button>
             </div>
             <!-- Address -->
             <div class="flex gap-2 items-center justify-start">
-              <img src="assets/img/icons/map.svg" alt="" />
-              <span class="text-[10px]">г. Москва, ул. Волкова</span>
+              <img class="h-3 md:h-4" src="assets/img/icons/map.svg" alt="" />
+              <span class="text-[10px] md:text-[12px]"
+                >г. Москва, ул. Волкова</span
+              >
             </div>
-            <!-- Report Block -->
-            <button
-              class="flex items-center gap-1 text-[12px] text-[#2ABD6C] underline"
-            >
-              <img src="assets/img/icons/report.svg" alt="Report" />
-              Скачать отчет PDF
-            </button>
           </a>
+          <!-- Car -->
           <a
-            href="/Indep/reports.html"
-            class="text-center rounded-xl bg-[#DB4431] text-[12px] font-medium text-white py-2 px-9 w-full"
+            href="/Indep/auto.html"
+            class="rounded-2xl bg-[#F7F7F7] w-full p-3 md:py-4 flex flex-col gap-4"
           >
-            Смотреть все
+            <!-- Carousel -->
+            <div class="flex flex-col gap-4 overflow-x-auto">
+              <div class="flex flex-row gap-4 w-full pb-2">
+                <img
+                  src="assets/img/cars1.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars2.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars1.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars2.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+              </div>
+            </div>
+            <!-- Car Info -->
+            <div class="flex flex-col gap-3 leading-tight!">
+              <div class="flex justify-between items-start">
+                <span class="text-[20px] md:text-[28px] font-semibold"
+                  >67 000 000 ₽</span
+                >
+                <span
+                  class="bg-[#DB4431] text-white px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] md:text-[14px] leading-none"
+                >
+                  200 000 км
+                </span>
+              </div>
+              <div class="flex flex-col gap-2 text-[12px] md:text-[16px]">
+                <h4 class="opacity-80">
+                  Mercedes-Benz GLC AMG 43 AMG II (X254)
+                </h4>
+                <p class="opacity-40">
+                  Active - 1,2 л (115 л.с.) 6MT 2WD - 2025 г.
+                </p>
+              </div>
+            </div>
+            <!-- Buttons -->
+            <div class="flex items-center gap-3">
+              <button
+                class="flex-1 text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+              >
+                Купить отчет
+              </button>
+              <button
+                id="addToFavourite"
+                class="w-[34px] md:w-11 h-[34px] md:h-11 shrink-0 flex items-center justify-center bg-[#EFEFEF] rounded-xl cursor-pointer"
+              >
+                <svg
+                  class="w-4.5 md:w-6 h-4.5 md:h-6"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 15.1031C7.71609 14.355 2.25 10.947 2.25 7.17188C2.25112 6.31441 2.59224 5.49238 3.19856 4.88606C3.80488 4.27974 4.62691 3.93862 5.48437 3.9375C6.85195 3.9375 8.00016 4.66594 8.47969 5.83594C8.52207 5.93911 8.59416 6.02735 8.6868 6.08945C8.77945 6.15155 8.88847 6.18471 9 6.18471C9.11153 6.18471 9.22055 6.15155 9.3132 6.08945C9.40584 6.02735 9.47793 5.93911 9.52031 5.83594C9.99984 4.66383 11.148 3.9375 12.5156 3.9375C13.3731 3.93862 14.1951 4.27974 14.8014 4.88606C15.4078 5.49238 15.7489 6.31441 15.75 7.17188C15.75 10.9413 10.2825 14.3543 9 15.1031Z"
+                    fill="#EFEFEF"
+                    stroke="#BFBFBF"
+                    style="fill: none; stroke: rgb(191, 191, 191)"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <!-- Address -->
+            <div class="flex gap-2 items-center justify-start">
+              <img class="h-3 md:h-4" src="assets/img/icons/map.svg" alt="" />
+              <span class="text-[10px] md:text-[12px]"
+                >г. Москва, ул. Волкова</span
+              >
+            </div>
           </a>
         </div>
+        <a
+          href="/Indep/catalog.html"
+          class="text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+        >
+          Смотреть все
+        </a>
       </section>
     </main>
     <!-- Mobile Menu -->
     <section
       id="mobilemenu"
-      class="block md:hidden sticky right-0 bottom-0 w-full z-97"
+      class="block md:hidden sticky right-0 bottom-0 w-full bg-[#F7F7F7] z-97 pt-2 pb-3"
     >
-      <div class="flex px-5 mb-3">
-        <a
-          href="/Indep/newCar.html"
-          class="ms-auto w-fit text-center rounded-full bg-[#DB4431] text-[12px] font-medium text-white p-2.5"
-        >
-          <img src="assets/img/icons/plus.svg" alt="" />
+      <div class="flex flex-row justify-between items-center">
+        <a href="/Indep/" class="mobile-menu-item w-full">
+          <div class="flex flex-col items-center gap-1">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M25.5061 7.02756C27.2533 7.02753 27.8791 6.68675 28.7492 8.40256L29.343 9.5676C29.8399 10.5195 30.6218 11.7597 30.9875 12.7561L32.8713 12.7541C33.2616 12.7524 33.5473 12.645 33.886 12.9045C34.3642 13.2711 34.1972 14.224 33.6184 14.2912C33.0763 14.3542 32.3952 14.3211 31.8322 14.3196C31.9477 14.5674 32.196 14.9696 32.341 15.2365L33.5168 17.4162C35.1096 20.3723 34.9025 20.6193 34.9641 23.8069C34.9969 25.5035 35.2776 26.6883 33.5373 27.4768C33.5192 28.7898 33.7871 30.2269 32.8401 31.2307C31.9242 32.2008 30.9138 31.9639 29.7483 31.9963C27.6858 32.0536 27.1596 30.7982 27.1594 28.9035L27.1604 27.5217H12.8645L12.8654 28.8733C12.8658 31.1042 12.1997 31.9435 9.99923 31.9387L8.94747 31.9436C6.9577 31.9568 6.41248 30.6074 6.41134 28.7571V27.4768C4.63832 26.5288 5.05172 25.3465 5.02169 23.5354C5.00626 22.6066 5.00662 21.645 5.13693 20.7268C5.40515 18.8765 7.27445 16.0934 8.1838 14.3196L7.18087 14.3215C6.66682 14.3261 5.72567 14.4191 5.78341 13.552C5.84524 12.6253 6.77492 12.7541 7.40841 12.7541L9.00607 12.7561C9.23894 12.3384 9.42278 11.9447 9.64181 11.5266L10.7697 9.38108C11.4323 8.09915 11.608 7.16259 13.1311 7.02854L25.5061 7.02756ZM10.2092 27.5207L7.884 27.5217C7.88305 27.9814 7.83253 29.3115 7.91915 29.6604C8.1797 30.7092 9.48741 30.447 10.2902 30.4377C10.6242 30.4339 10.879 30.3906 11.1506 30.1701C11.4934 29.589 11.4279 29.4126 11.427 28.7561L11.424 27.5217C11.0379 27.5084 10.5995 27.5205 10.2092 27.5207ZM29.799 27.5217C29.4316 27.5219 28.9917 27.5371 28.633 27.5217L28.6311 28.8801C28.6276 30.6891 29.0165 30.4327 30.4133 30.4367C31.0461 30.4386 31.2872 30.5817 31.8322 30.1701C32.1671 29.5866 32.0824 29.503 32.0774 28.844L32.0754 27.5217H29.799ZM9.9924 19.3967C8.07094 19.5287 7.98966 22.0234 9.60958 22.4016C9.85607 22.4587 10.1648 22.4209 10.4231 22.4192L11.7785 22.4172C13.6066 22.5463 13.7456 19.4056 11.7404 19.3996C11.1549 19.3978 10.5741 19.3885 9.9924 19.3967ZM28.7297 19.3967C28.1102 19.4326 27.728 19.4504 27.2805 19.9426C26.734 20.5439 26.771 21.4927 27.3811 22.0344C27.823 22.4265 28.3527 22.4159 28.9084 22.4172H29.7736C30.3662 22.4003 30.7357 22.41 31.1897 21.9465C31.754 21.3703 31.6507 20.3231 31.0695 19.7961C30.6275 19.3951 30.1229 19.401 29.5608 19.3977L28.7297 19.3967ZM17.4592 20.6399C17.0593 20.64 16.7361 20.9646 16.7385 21.3645C16.741 21.7666 17.063 22.0966 17.4651 22.0969C17.9753 22.097 18.4913 22.0917 18.9944 22.092H22.6037C23.0047 22.092 23.3303 21.7664 23.3303 21.3654C23.3301 20.9647 23.0046 20.6399 22.6037 20.6399H17.4592ZM12.8645 8.56662C11.8433 10.6091 10.7266 12.5883 9.68283 14.6174C9.58595 14.8058 9.476 15.0501 9.35275 15.219H27.2238L29.4846 15.2209C29.8949 15.2229 30.2704 15.2545 30.6819 15.219C29.9871 13.9873 29.3227 12.7484 28.6604 11.4983L27.5432 9.34299C27.4415 9.14856 27.201 8.74494 27.1604 8.56662H12.8645Z"
+                fill="#F0F0F0"
+              />
+            </svg>
+            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+              Главная
+            </p>
+          </div>
         </a>
-      </div>
-      <div class="bg-[#F7F7F7] pt-2 pb-3">
-        <div class="flex flex-row justify-between items-center">
-          <a href="/Indep/" class="mobile-menu-item w-full">
-            <div class="flex flex-col items-center gap-1">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M25.5061 7.02756C27.2533 7.02753 27.8791 6.68675 28.7492 8.40256L29.343 9.5676C29.8399 10.5195 30.6218 11.7597 30.9875 12.7561L32.8713 12.7541C33.2616 12.7524 33.5473 12.645 33.886 12.9045C34.3642 13.2711 34.1972 14.224 33.6184 14.2912C33.0763 14.3542 32.3952 14.3211 31.8322 14.3196C31.9477 14.5674 32.196 14.9696 32.341 15.2365L33.5168 17.4162C35.1096 20.3723 34.9025 20.6193 34.9641 23.8069C34.9969 25.5035 35.2776 26.6883 33.5373 27.4768C33.5192 28.7898 33.7871 30.2269 32.8401 31.2307C31.9242 32.2008 30.9138 31.9639 29.7483 31.9963C27.6858 32.0536 27.1596 30.7982 27.1594 28.9035L27.1604 27.5217H12.8645L12.8654 28.8733C12.8658 31.1042 12.1997 31.9435 9.99923 31.9387L8.94747 31.9436C6.9577 31.9568 6.41248 30.6074 6.41134 28.7571V27.4768C4.63832 26.5288 5.05172 25.3465 5.02169 23.5354C5.00626 22.6066 5.00662 21.645 5.13693 20.7268C5.40515 18.8765 7.27445 16.0934 8.1838 14.3196L7.18087 14.3215C6.66682 14.3261 5.72567 14.4191 5.78341 13.552C5.84524 12.6253 6.77492 12.7541 7.40841 12.7541L9.00607 12.7561C9.23894 12.3384 9.42278 11.9447 9.64181 11.5266L10.7697 9.38108C11.4323 8.09915 11.608 7.16259 13.1311 7.02854L25.5061 7.02756ZM10.2092 27.5207L7.884 27.5217C7.88305 27.9814 7.83253 29.3115 7.91915 29.6604C8.1797 30.7092 9.48741 30.447 10.2902 30.4377C10.6242 30.4339 10.879 30.3906 11.1506 30.1701C11.4934 29.589 11.4279 29.4126 11.427 28.7561L11.424 27.5217C11.0379 27.5084 10.5995 27.5205 10.2092 27.5207ZM29.799 27.5217C29.4316 27.5219 28.9917 27.5371 28.633 27.5217L28.6311 28.8801C28.6276 30.6891 29.0165 30.4327 30.4133 30.4367C31.0461 30.4386 31.2872 30.5817 31.8322 30.1701C32.1671 29.5866 32.0824 29.503 32.0774 28.844L32.0754 27.5217H29.799ZM9.9924 19.3967C8.07094 19.5287 7.98966 22.0234 9.60958 22.4016C9.85607 22.4587 10.1648 22.4209 10.4231 22.4192L11.7785 22.4172C13.6066 22.5463 13.7456 19.4056 11.7404 19.3996C11.1549 19.3978 10.5741 19.3885 9.9924 19.3967ZM28.7297 19.3967C28.1102 19.4326 27.728 19.4504 27.2805 19.9426C26.734 20.5439 26.771 21.4927 27.3811 22.0344C27.823 22.4265 28.3527 22.4159 28.9084 22.4172H29.7736C30.3662 22.4003 30.7357 22.41 31.1897 21.9465C31.754 21.3703 31.6507 20.3231 31.0695 19.7961C30.6275 19.3951 30.1229 19.401 29.5608 19.3977L28.7297 19.3967ZM17.4592 20.6399C17.0593 20.64 16.7361 20.9646 16.7385 21.3645C16.741 21.7666 17.063 22.0966 17.4651 22.0969C17.9753 22.097 18.4913 22.0917 18.9944 22.092H22.6037C23.0047 22.092 23.3303 21.7664 23.3303 21.3654C23.3301 20.9647 23.0046 20.6399 22.6037 20.6399H17.4592ZM12.8645 8.56662C11.8433 10.6091 10.7266 12.5883 9.68283 14.6174C9.58595 14.8058 9.476 15.0501 9.35275 15.219H27.2238L29.4846 15.2209C29.8949 15.2229 30.2704 15.2545 30.6819 15.219C29.9871 13.9873 29.3227 12.7484 28.6604 11.4983L27.5432 9.34299C27.4415 9.14856 27.201 8.74494 27.1604 8.56662H12.8645Z"
-                  fill="#F0F0F0"
-                />
-              </svg>
-              <p class="text-[10px] leading-tight! font-medium text-lightgray">
-                Главная
-              </p>
-            </div>
-          </a>
-          <a href="/Indep/chat.html" class="mobile-menu-item w-full">
-            <div class="flex flex-col items-center gap-1">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.8531 26.8533C11.0334 26.4019 10.4728 26.0332 9.7605 25.4624C5.30788 21.8932 4.72333 15.2452 8.46766 10.9752C10.6437 8.49359 13.3055 7.25814 16.6377 7.00059L22.5998 7C29.1899 7.00092 34.6435 12.141 33.9385 18.6816C33.4141 23.5467 29.3158 27.3053 24.4085 27.9825C22.8872 28.1816 21.3035 27.9742 19.7817 28.107C19.6959 28.1145 19.0197 28.5657 18.8945 28.645L12.6864 32.4859C12.4129 32.6547 12.1198 32.8242 11.8531 33L11.8529 28.9495C11.8529 28.2981 11.8789 27.4888 11.8531 26.8533ZM19.319 15.8999C18.2025 16.0149 18.0212 16.7459 17.9982 17.6808C17.9628 19.1161 18.4995 19.5008 19.8855 19.4949L20.6704 19.4935C22.3419 19.3029 22.2979 16.8289 21.4495 16.1966C20.9094 15.7796 19.9921 15.8874 19.319 15.8999ZM26.1741 15.8999C24.6667 15.9753 24.5559 16.8697 24.6329 18.1152C24.7182 19.495 25.9362 19.496 27.0042 19.4935C28.8113 19.4504 28.904 17.0438 28.0728 16.2527C27.5928 15.7959 26.8336 15.8981 26.1741 15.8999ZM12.6517 15.8999C11.5336 16.0944 11.4124 16.8169 11.3912 17.7459C11.3766 18.3825 11.4674 18.8741 12.0386 19.2638C12.4194 19.5236 13.6127 19.5611 14.1127 19.4935C15.4019 19.2356 15.3954 18.0202 15.2763 16.9757C15.1326 15.7147 13.48 15.9408 12.6517 15.8999Z"
-                  fill="#F0F0F0"
-                />
-              </svg>
-              <p class="text-[10px] leading-tight! font-medium text-lightgray">
-                Чат
-              </p>
-            </div>
-          </a>
-          <a href="/Indep/call.html" class="mobile-menu-item w-full">
-            <div class="flex flex-col items-center gap-1">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.0417 18.2594C13.4417 22.3472 17.3 25.6911 22.025 27.7711L25.6917 24.5861C26.15 24.1889 26.8083 24.0733 27.3833 24.2322C29.25 24.7667 31.2583 25.0556 33.3333 25.0556C34.2583 25.0556 35 25.6983 35 26.5V31.5556C35 32.3572 34.2583 33 33.3333 33C17.6833 33 5 22.0078 5 8.44444C5 7.64278 5.75 7 6.66667 7H12.5C13.425 7 14.1667 7.64278 14.1667 8.44444C14.1667 10.2428 14.5 11.9833 15.1167 13.6011C15.3 14.0994 15.1667 14.67 14.7083 15.0672L11.0417 18.2594Z"
-                  fill="#F0F0F0"
-                />
-              </svg>
-              <p class="text-[10px] leading-tight! font-medium text-lightgray">
-                Позвонить
-              </p>
-            </div>
-          </a>
-          <a href="/Indep/profile.html" class="mobile-menu-item w-full">
-            <div class="flex flex-col items-center gap-1">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M20.2152 21.296C16.6277 21.4267 13.623 18.3339 13.5037 14.3877C13.3844 10.4414 16.1956 7.1358 19.7832 7.00406C23.3713 6.87229 26.377 9.96539 26.4963 13.9123C26.6157 17.8593 23.8034 21.1652 20.2152 21.296Z"
-                  fill="#F0F0F0"
-                />
-                <path
-                  d="M27.4919 32.9457L8.8669 32.9462C7.57931 32.9474 6.90781 33.3639 7.01021 31.861C7.35178 26.8477 10.3913 23.2995 14.4307 21.3C14.505 21.3362 15.1649 21.8572 15.3031 21.9538C17.8447 23.7296 21.2921 23.8603 23.9851 22.3992C24.5697 22.0819 25.0218 21.7447 25.5535 21.3594C29.7352 22.9047 32.793 27.5332 32.9982 32.2731C33.0327 33.0702 32.5643 32.9471 31.9925 32.9465L27.4919 32.9457Z"
-                  fill="#F0F0F0"
-                />
-              </svg>
-              <p class="text-[10px] leading-tight! font-medium text-lightgray">
-                Профиль
-              </p>
-            </div>
-          </a>
-        </div>
+        <a href="/Indep/chat.html" class="mobile-menu-item w-full">
+          <div class="flex flex-col items-center gap-1">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.8531 26.8533C11.0334 26.4019 10.4728 26.0332 9.7605 25.4624C5.30788 21.8932 4.72333 15.2452 8.46766 10.9752C10.6437 8.49359 13.3055 7.25814 16.6377 7.00059L22.5998 7C29.1899 7.00092 34.6435 12.141 33.9385 18.6816C33.4141 23.5467 29.3158 27.3053 24.4085 27.9825C22.8872 28.1816 21.3035 27.9742 19.7817 28.107C19.6959 28.1145 19.0197 28.5657 18.8945 28.645L12.6864 32.4859C12.4129 32.6547 12.1198 32.8242 11.8531 33L11.8529 28.9495C11.8529 28.2981 11.8789 27.4888 11.8531 26.8533ZM19.319 15.8999C18.2025 16.0149 18.0212 16.7459 17.9982 17.6808C17.9628 19.1161 18.4995 19.5008 19.8855 19.4949L20.6704 19.4935C22.3419 19.3029 22.2979 16.8289 21.4495 16.1966C20.9094 15.7796 19.9921 15.8874 19.319 15.8999ZM26.1741 15.8999C24.6667 15.9753 24.5559 16.8697 24.6329 18.1152C24.7182 19.495 25.9362 19.496 27.0042 19.4935C28.8113 19.4504 28.904 17.0438 28.0728 16.2527C27.5928 15.7959 26.8336 15.8981 26.1741 15.8999ZM12.6517 15.8999C11.5336 16.0944 11.4124 16.8169 11.3912 17.7459C11.3766 18.3825 11.4674 18.8741 12.0386 19.2638C12.4194 19.5236 13.6127 19.5611 14.1127 19.4935C15.4019 19.2356 15.3954 18.0202 15.2763 16.9757C15.1326 15.7147 13.48 15.9408 12.6517 15.8999Z"
+                fill="#F0F0F0"
+              />
+            </svg>
+            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+              Чат
+            </p>
+          </div>
+        </a>
+        <a href="/Indep/call.html" class="mobile-menu-item w-full">
+          <div class="flex flex-col items-center gap-1">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.0417 18.2594C13.4417 22.3472 17.3 25.6911 22.025 27.7711L25.6917 24.5861C26.15 24.1889 26.8083 24.0733 27.3833 24.2322C29.25 24.7667 31.2583 25.0556 33.3333 25.0556C34.2583 25.0556 35 25.6983 35 26.5V31.5556C35 32.3572 34.2583 33 33.3333 33C17.6833 33 5 22.0078 5 8.44444C5 7.64278 5.75 7 6.66667 7H12.5C13.425 7 14.1667 7.64278 14.1667 8.44444C14.1667 10.2428 14.5 11.9833 15.1167 13.6011C15.3 14.0994 15.1667 14.67 14.7083 15.0672L11.0417 18.2594Z"
+                fill="#F0F0F0"
+              />
+            </svg>
+            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+              Позвонить
+            </p>
+          </div>
+        </a>
+        <a href="/Indep/profile.html" class="mobile-menu-item w-full">
+          <div class="flex flex-col items-center gap-1">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.2152 21.296C16.6277 21.4267 13.623 18.3339 13.5037 14.3877C13.3844 10.4414 16.1956 7.1358 19.7832 7.00406C23.3713 6.87229 26.377 9.96539 26.4963 13.9123C26.6157 17.8593 23.8034 21.1652 20.2152 21.296Z"
+                fill="#F0F0F0"
+              />
+              <path
+                d="M27.4919 32.9457L8.8669 32.9462C7.57931 32.9474 6.90781 33.3639 7.01021 31.861C7.35178 26.8477 10.3913 23.2995 14.4307 21.3C14.505 21.3362 15.1649 21.8572 15.3031 21.9538C17.8447 23.7296 21.2921 23.8603 23.9851 22.3992C24.5697 22.0819 25.0218 21.7447 25.5535 21.3594C29.7352 22.9047 32.793 27.5332 32.9982 32.2731C33.0327 33.0702 32.5643 32.9471 31.9925 32.9465L27.4919 32.9457Z"
+                fill="#F0F0F0"
+              />
+            </svg>
+            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+              Профиль
+            </p>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -399,19 +516,20 @@
     ></div>
     <section
       id="burger-menu"
-      class="fixed hidden right-0 top-0 h-dvh w-[60%] bg-[#F7F7F7] z-102 flex-col gap-10 justify-between py-8 leading-tight! text-[#505050] text-[14px]"
+      class="fixed hidden right-0 top-0 h-dvh w-[60%] md:w-[30%] bg-[#F7F7F7] z-102 flex-col gap-10 md:gap-15 justify-between py-8 leading-tight! text-[#505050] text-[14px] md:text-[20px]"
     >
-      <a class="w-full px-5" href="/Indep/">
-        <img class="h-3" src="assets/img/logo.svg" alt="" />
+      <a class="px-5" href="/Indep/">
+        <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
       </a>
 
       <nav class="grow">
         <ul>
           <a href="/Indep/favourites.html">
             <li
-              class="flex items-center gap-2 py-4 px-5 border-b border-b-[#00000066]"
+              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
             >
               <img
+                class="h-5 md:h-7"
                 src="assets/img/icons/burger/favourites.svg"
                 alt="Избранное"
               />
@@ -420,9 +538,10 @@
           </a>
           <a href="#">
             <li
-              class="flex items-center gap-2 py-4 px-5 border-b border-b-[#00000066]"
+              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
             >
               <img
+                class="h-5 md:h-7"
                 src="assets/img/icons/burger/selection.svg"
                 alt="Подбор авто"
               />
@@ -431,19 +550,25 @@
           </a>
           <a href="/Indep/reports.html">
             <li
-              class="flex items-center gap-2 py-4 px-5 border-b border-b-[#00000066]"
+              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
             >
-              <img src="assets/img/icons/burger/ads.svg" alt="Мои отчеты" />
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/ads.svg"
+                alt="Мои отчеты"
+              />
               Мои отчеты
             </li>
           </a>
         </ul>
       </nav>
+
       <button
-        class="flex items-center gap-2 px-5"
+        class="flex items-center gap-2 md:gap-3.5 px-5 cursor-pointer"
         onclick="window.location.href = '/'"
       >
         <img
+          class="h-5 md:h-7"
           src="assets/img/icons/burger/logout.svg"
           alt="Выйти из аккаунта"
         />

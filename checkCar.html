@@ -18,17 +18,32 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="container mx-auto sticky top-0 bg-white z-100">
-      <div class="px-5 py-4 flex items-center justify-between">
-        <button onclick="window.history.back()">
-          <img src="assets/img/icons/backCaret.svg" alt="Back" />
+    <header class="sticky top-0 bg-white z-100">
+      <div
+        class="container mx-auto px-5 py-4 flex items-center justify-between"
+      >
+        <button class="cursor-pointer" onclick="window.history.back()">
+          <img
+            class="h-6 md:h-9"
+            src="assets/img/icons/backCaret.svg"
+            alt="Back"
+          />
         </button>
         <a href="/Indep/">
-          <img src="assets/img/logo.svg" alt="Logo" />
+          <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
         </a>
-        <button id="burger" class="w-6">
-          <img src="assets/img/icons/burger.svg" alt="Menu" />
-        </button>
+        <div class="contents md:flex gap-5 items-center">
+          <a href="/Indep/profile.html" class="cursor-pointer hidden md:block">
+            <img class="h-8" src="assets/img/icons/user.svg" alt="Menu" />
+          </a>
+          <button class="cursor-pointer" id="burger">
+            <img
+              class="h-6 md:h-12"
+              src="assets/img/icons/burger.svg"
+              alt="Menu"
+            />
+          </button>
+        </div>
       </div>
     </header>
     <main id="main" class="container mx-auto px-5 leading-tight!">
