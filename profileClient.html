@@ -50,48 +50,58 @@
       <section class="flex flex-col gap-4">
         <div class="grid grid-cols-2 gap-y-4 gap-x-3">
           <div
-            class="flex gap-3 items-start py-3 px-2 rounded-xl bg-[#F7F7F7] col-span-2"
+            class="flex gap-3 md:gap-6 items-start py-3 px-2 md:p-5 rounded-xl bg-[#F7F7F7] col-span-2 md:col-span-3"
           >
             <img
-              class="h-[60px] rounded-full"
+              class="h-[60px] md:h-20 rounded-full"
               src="assets/img/profile/avatar.jpg"
               alt="Avatar"
             />
             <div class="flex flex-col gap-3 leading-tight!">
-              <h2 class="text-[18px] text-[#000000]">Аркадий Паровозов</h2>
-              <span class="text-[12px] text-[#B3B3B3]">+7 995 185 88 90</span>
+              <h2 class="text-[18px] md:text-[40px] text-[#000000]">
+                Аркадий Паровозов
+              </h2>
+              <span class="text-[12px] md:text-[20px] text-[#B3B3B3]"
+                >+7 995 185 88 90</span
+              >
             </div>
             <button class="ms-auto mb-auto">
-              <img src="assets/img/icons/edit.svg" alt="" />
+              <img
+                class="w-5 h-5 md:w-8 md:h-8"
+                src="assets/img/icons/edit.svg"
+                alt=""
+              />
             </button>
           </div>
           <!-- Favourites -->
           <a
             href="/Indep/favourites.html"
-            style="
-              background:
-                url(assets/img/profile/favourites.svg) 95% 90% / auto no-repeat,
-                #f7f7f7;
-            "
-            class="flex rounded-xl h-[62px] px-2 py-3"
+            class="relative bg-[#f7f7f7] flex rounded-xl h-full px-2 py-3"
           >
-            <span class="text-[11px] text-[#989898] leading-tight!"
-              >Избранное</span
+            <span
+              class="text-[11px] md:text-[15px] text-[#989898] leading-tight!"
             >
+              Избранное
+            </span>
+            <img
+              class="h-12 md:h-16 absolute right-0 bottom-0"
+              src="assets/img/profile/favourites.svg"
+              alt=""
+            />
           </a>
           <!-- Hit -->
           <a
             href="/Indep/hit.html"
-            style="
-              background:
-                url(assets/img/profile/best.svg) 110% 350% / auto no-repeat,
-                #f7f7f7;
-            "
-            class="flex rounded-xl h-[62px] px-2 py-3"
+            class="overflow-hidden relative bg-[#f7f7f7] flex rounded-xl h-full px-2 py-3"
           >
-            <span class="text-[11px] text-[#989898] leading-tight!"
-              >Лучшие предложения</span
-            >
+            <span class="text-[11px] md:text-[15px] text-[#989898] leading-tight!">
+              Лучшие предложения
+            </span>
+            <img
+              class="h-12 md:h-16 absolute right-0 -bottom-4"
+              src="assets/img/profile/best.svg"
+              alt=""
+            />
           </a>
         </div>
       </section>
