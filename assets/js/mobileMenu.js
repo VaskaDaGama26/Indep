@@ -13,7 +13,7 @@ const updateMobileMenu = () => {
 
   const items = document.querySelectorAll("#mobilemenu a.mobile-menu-item");
   items.forEach((item, index) => {
-    const color = index === activeIndex ? "#DB4431" : "#A0A0A0";
+    const color = index === activeIndex ? "#DB4431" : "#F0F0F0";
 
     item.querySelectorAll("path").forEach((path) => (path.style.fill = color));
 
