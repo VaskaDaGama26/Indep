@@ -49,10 +49,14 @@
     <main id="main" class="container mx-auto">
       <!-- Breadcrumbs -->
       <section
-        class="container mx-auto px-5 text-[10px] leading-tight text-[#979797] flex items-center gap-1"
+        class="container mx-auto px-5 text-[10px] md:text-[16px] leading-tight text-[#979797] flex flex-wrap items-center gap-1 md:gap-2"
       >
-        <a href="/Indep/profile.html">Профиль</a>
-        <img class="h-2.5" src="assets/img/icons/breadCaret.svg" alt="" />
+        <a href="/Indep/">Главная</a>
+        <img
+          class="h-2.5 md:h-full"
+          src="assets/img/icons/breadCaret.svg"
+          alt=""
+        />
         <p class="text-[#DB4431]">Мои объявления</p>
       </section>
       <!-- Filters -->
@@ -91,7 +95,7 @@
             </div>
             <button
               id="filter-btn"
-              class="focus-visible:outline-none text-center rounded-xl bg-[#DB4431] text-[#FFFFFF] text-[12px] font-medium py-2 px-6 shrink-0 transition-all duration-300"
+              class="focus-visible:outline-none text-center shrink-0 rounded-xl bg-[#DB4431] text-[#FFFFFF] text-[12px] md:text-[16px] font-medium py-2 md:py-2.5 px-5 md:px-9 cursor-pointer transition-all duration-300"
             >
               Марка
             </button>
