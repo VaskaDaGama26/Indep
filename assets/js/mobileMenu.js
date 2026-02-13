@@ -1,7 +1,7 @@
 const updateMobileMenu = () => {
   const path = location.pathname;
   const activeIndex =
-    path === "/"
+    path === "/Indep/"
       ? 0
       : path.includes("chat")
         ? 1
