@@ -4,12 +4,24 @@
 .banner-2 {
   background: url(/Indep/assets/img/banners/2.svg) center / cover no-repeat;
 }
+.new-car_assets-bg {
+  background:
+    url(/Indep/assets/img/addCar/photosBG.svg) left / cover no-repeat,
+    #f8f8f8;
+}
 
 @media (min-width: 768px) {
   .banner-1 {
-    background: url(/Indep/assets/img/banners/1-desktop.svg) left / cover no-repeat;
+    background: url(/Indep/assets/img/banners/1-desktop.svg) left / cover
+      no-repeat;
   }
   .banner-2 {
-    background: url(/Indep/assets/img/banners/2-desktop.svg) left / cover no-repeat;
+    background: url(/Indep/assets/img/banners/2-desktop.svg) left / cover
+      no-repeat;
+  }
+  .new-car_assets-bg {
+    background:
+      url(/Indep/assets/img/addCar/photosBG-desktop.svg) left / cover no-repeat,
+      #f8f8f8;
   }
 }
