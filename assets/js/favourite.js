@@ -1,7 +1,7 @@
 function toggleFavourite() {
   const favouriteButtons = document.querySelectorAll("button#addToFavourite");
   const currentPath = window.location.pathname;
-  const isFavouritePage = currentPath.includes("/Indep/favourites");
+  const isFavouritePage = currentPath.includes("/favourites");
 
   favouriteButtons.forEach((button) => {
     if (isFavouritePage) {
