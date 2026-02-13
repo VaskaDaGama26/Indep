@@ -209,19 +209,20 @@
     ></div>
     <section
       id="burger-menu"
-      class="fixed hidden right-0 top-0 h-dvh w-[60%] bg-[#F7F7F7] z-102 flex-col gap-10 justify-between py-8 leading-tight! text-[#505050] text-[14px]"
+      class="fixed hidden right-0 top-0 h-dvh w-[60%] md:w-[30%] bg-[#F7F7F7] z-102 flex-col gap-10 md:gap-15 justify-between py-8 leading-tight! text-[#505050] text-[14px] md:text-[20px]"
     >
-      <a class="w-full px-5" href="/Indep/">
-        <img class="h-3" src="assets/img/logo.svg" alt="" />
+      <a class="px-5" href="/Indep/">
+        <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
       </a>
 
       <nav class="grow">
         <ul>
           <a href="/Indep/favourites.html">
             <li
-              class="flex items-center gap-2 py-4 px-5 border-b border-b-[#00000066]"
+              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
             >
               <img
+                class="h-5 md:h-7"
                 src="assets/img/icons/burger/favourites.svg"
                 alt="Избранное"
               />
@@ -230,9 +231,10 @@
           </a>
           <a href="#">
             <li
-              class="flex items-center gap-2 py-4 px-5 border-b border-b-[#00000066]"
+              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
             >
               <img
+                class="h-5 md:h-7"
                 src="assets/img/icons/burger/selection.svg"
                 alt="Подбор авто"
               />
@@ -241,19 +243,25 @@
           </a>
           <a href="/Indep/reports.html">
             <li
-              class="flex items-center gap-2 py-4 px-5 border-b border-b-[#00000066]"
+              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
             >
-              <img src="assets/img/icons/burger/ads.svg" alt="Мои отчеты" />
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/ads.svg"
+                alt="Мои отчеты"
+              />
               Мои отчеты
             </li>
           </a>
         </ul>
       </nav>
+
       <button
-        class="flex items-center gap-2 px-5"
+        class="flex items-center gap-2 md:gap-3.5 px-5 cursor-pointer"
         onclick="window.location.href = '/'"
       >
         <img
+          class="h-5 md:h-7"
           src="assets/img/icons/burger/logout.svg"
           alt="Выйти из аккаунта"
         />
