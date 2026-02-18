@@ -13,10 +13,6 @@ html {
   height: 100dvh;
 }
 
-main#main {
-  padding-bottom: 20px;
-}
-
 input {
   cursor: pointer;
 }

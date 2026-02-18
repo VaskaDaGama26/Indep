@@ -40,15 +40,15 @@ function showTab(tabName) {
   toggleRealtorBtn.classList.add("text-[#080717]");
 
   if (tabName === "right") {
-    // Показываем контент "Ищу авто"
+    // Показываем контент "Хочу купить авто"
     contentClient.classList.remove("hidden");
-    // Активируем кнопку "Ищу авто"
+    // Активируем кнопку "Хочу купить авто"
     toggleClientBtn.classList.remove("text-[#080717]");
     toggleClientBtn.classList.add(activeColorClass, "text-[#FFFFFF]");
   } else if (tabName === "left") {
-    // Показываем контент "Я подборщик"
+    // Показываем контент "Хочу продать авто"
     contentRealtor.classList.remove("hidden");
-    // Активируем кнопку "Я подборщик"
+    // Активируем кнопку "Хочу продать авто"
     toggleRealtorBtn.classList.remove("text-[#080717]");
     toggleRealtorBtn.classList.add(activeColorClass, "text-[#FFFFFF]");
   }
@@ -57,7 +57,7 @@ function showTab(tabName) {
 document.addEventListener("DOMContentLoaded", function () {
   const { toggleClientBtn, toggleRealtorBtn } = getEntities();
 
-  // По умолчанию показываем "Ищу авто"
+  // По умолчанию показываем "Хочу купить авто"
   showTab("right");
 
   toggleClientBtn.addEventListener("click", function () {

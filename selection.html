@@ -1,0 +1,1495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INDEP</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="sticky top-0 bg-white z-100 border-b border-[#DEDEDE]">
+      <div
+        class="container mx-auto px-5 py-4 flex items-center justify-between"
+      >
+        <a href="/Indep/">
+          <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
+        </a>
+        <div class="contents md:flex gap-10 items-center">
+          <nav class="hidden md:flex items-center gap-6">
+            <a class="text-[#080717]" href="/Indep/catalog.html">Каталог</a>
+            <a class="text-[#DB4431]" href="/Indep/selection.html">Подбор авто</a>
+            <a class="text-[#080717]" href="/Indep/cooperation.html">Сотрудничество</a>
+            <a class="text-[#080717]" href="/Indep/about.html">О нас</a>
+          </nav>
+          <div class="flex gap-5 items-center">
+            <a
+              href="/Indep/favourites.html"
+              class="cursor-pointer hidden md:block"
+            >
+              <img
+                class="h-8"
+                src="assets/img/icons/favourite.svg"
+                alt="Favoruites"
+              />
+            </a>
+            <a
+              href="/Indep/profile.html"
+              class="cursor-pointer hidden md:block"
+            >
+              <img class="h-8" src="assets/img/icons/user.svg" alt="Menu" />
+            </a>
+            <button class="block md:hidden cursor-pointer" id="burger">
+              <img
+                class="h-6 md:h-12"
+                src="assets/img/icons/burger.svg"
+                alt="Menu"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="container mx-auto md:mt-6">
+      <!-- Main Banner -->
+      <section class="px-5">
+        <div
+          class="relative w-full h-[440px] select-none lg:h-[460px] p-2 lg:p-4 rounded-lg lg:rounded-2xl overflow-hidden bg-white"
+        >
+          <div
+            class="slider-container absolute inset-0 flex transition-transform duration-500 ease-in-out"
+            id="slider"
+          >
+            <div
+              class="banner-1 w-full shrink-0 relative py-10 px-5"
+              fetchpriority="high"
+              loading="eager"
+            >
+              <div
+                class="absolute contents md:flex flex-col items-start top-24 left-15 max-w-[400px]"
+              >
+                <h2
+                  class="text-[28px] md:text-[40px] text-black font-medium leading-tight! md:mb-9"
+                >
+                  <span class="text-primary">Честный</span>
+                  подбор — спокойная покупка
+                </h2>
+                <p class="text-[13px] leading-tight! hidden md:block mb-15">
+                  Подберём автомобиль без скрытых проблем и переплат. Проверяем
+                  технику, историю и документы. Вы получаете честный результат и
+                  спокойствие при покупке.
+                </p>
+                <a
+                  href="/Indep/catalog.html"
+                  class="hidden md:block text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+                >
+                  Перейти в каталог авто
+                </a>
+              </div>
+            </div>
+            <div
+              class="banner-2 w-full shrink-0 relative py-10 px-5"
+              fetchpriority="high"
+              loading="eager"
+            >
+              <div
+                class="absolute contents md:flex flex-col items-start top-24 left-15 max-w-[400px]"
+              >
+                <h2
+                  class="text-[28px] md:text-[40px] text-black font-medium leading-tight! md:mb-9"
+                >
+                  <span class="text-primary">Добавь объявление</span>
+                  и заработай 1000 ₽!
+                </h2>
+                <p class="text-[13px] leading-tight! hidden md:block mb-15">
+                  Добавьте авто с полной информацией и комментариями по осмотру.
+                </p>
+                <a
+                  href="/Indep/register.html"
+                  class="hidden md:block text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+                >
+                  Зарегистрироваться
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Carousel -->
+      <section class="px-5 mt-7">
+        <div class="flex flex-col gap-4 overflow-x-auto">
+          <div class="flex flex-row gap-4 w-full lg:grid lg:grid-cols-3 pb-2">
+            <!-- Parameter -->
+            <div
+              class="bg-[#F7F7F7] rounded-lg md:rounded-xl py-3 px-2.5 md:py-6 md:px-5 shrink-0 w-[190px] md:w-[402px] lg:w-full leading-tight!"
+            >
+              <div class="flex items-start justify-between">
+                <div class="flex items-start gap-2 md:gap-3">
+                  <img
+                    class="h-6 md:h-10"
+                    src="assets/img/mainpage/carousel/parameter.svg"
+                    alt=""
+                  />
+                  <div class="flex flex-col flex-1 gap-2 md:gap-3">
+                    <h4 class="text-[13px] md:text-[24px]">
+                      Проверка по 100+ параметрам
+                    </h4>
+                    <p class="text-[11px] md:text-[15px] opacity-50">
+                      Тщательно проверяем состояние, документы и прошлую
+                      эксплуатацию
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Time -->
+            <div
+              class="bg-[#F7F7F7] rounded-lg md:rounded-xl py-3 px-2.5 md:py-6 md:px-5 shrink-0 w-[190px] md:w-[402px] lg:w-full leading-tight!"
+            >
+              <div class="flex items-start justify-between">
+                <div class="flex items-start gap-2 md:gap-3">
+                  <img
+                    class="h-6 md:h-10"
+                    src="assets/img/mainpage/carousel/time.svg"
+                    alt=""
+                  />
+                  <div class="flex flex-col flex-1 gap-2 md:gap-3">
+                    <h4 class="text-[13px] md:text-[24px]">
+                      Экономия времени и денег
+                    </h4>
+                    <p class="text-[11px] md:text-[15px] opacity-50">
+                      Берём на себя поиск, переговоры и торг, часто снижая цену
+                      автомобиля
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Report -->
+            <div
+              class="bg-[#F7F7F7] rounded-lg md:rounded-xl py-3 px-2.5 md:py-6 md:px-5 shrink-0 w-[190px] md:w-[402px] lg:w-full leading-tight!"
+            >
+              <div class="flex items-start justify-between">
+                <div class="flex items-start gap-2 md:gap-3">
+                  <img
+                    class="h-6 md:h-10"
+                    src="assets/img/mainpage/carousel/report.svg"
+                    alt=""
+                  />
+                  <div class="flex flex-col flex-1 gap-2 md:gap-3">
+                    <h4 class="text-[13px] md:text-[24px]">
+                      Прозрачные отчёты
+                    </h4>
+                    <p class="text-[11px] md:text-[15px] opacity-50">
+                      Подробный фото и видеоотчёт по каждому варианту с
+                      понятными комментариями и рекомендациями.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Manual -->
+      <section class="px-5 mt-7 md:mt-15">
+        <div
+          id="toggle-buttons"
+          data-enable-color-class="bg-[#080717]"
+          class="w-full flex gap-3 bg-[#F7F7F7] p-1 md:p-2 rounded-2xl"
+        >
+          <button
+            id="toggle-left"
+            data-enable-color="#DB4431"
+            class="w-full rounded-xl text-[12px] md:text-[20px] leading-tight! py-2 md:py-3 cursor-pointer"
+          >
+            Хочу продать авто
+          </button>
+          <button
+            id="toggle-right"
+            data-enable-color="#DB4431"
+            class="w-full rounded-xl text-[12px] md:text-[20px] leading-tight! py-2 md:py-3 cursor-pointer"
+          >
+            Хочу купить авто
+          </button>
+        </div>
+        <div id="content-left" class="w-full mt-4 md:mt-7">
+          <div
+            class="grid grid-cols-2 lg:grid-cols-4 gap-y-5 md:gap-y-8 gap-x-3 md:gap-x-5"
+          >
+            <div
+              class="flex flex-col items-start md:border md:border-[#F5F5F5] md:pb-5 md:rounded-xl"
+            >
+              <div
+                class="flex items-center justify-center h-[110px] md:h-[150px] rounded-xl bg-[#F7F7F7] w-full mb-4"
+              >
+                <img
+                  class="h-auto md:h-1/2"
+                  src="assets/img/mainpage/manual/realtor/1.svg"
+                  alt=""
+                />
+              </div>
+              <div class="md:px-3">
+                <span
+                  class="bg-[#F3E4E2] text-[11px] md:text-[20px] leading-none! text-[#DB4431] w-6 md:w-8 h-6 md:h-8 rounded-full flex items-center justify-center mb-2 md:mb-4"
+                >
+                  1
+                </span>
+                <h4
+                  class="text-[14px] md:text-[20px] font-medium leading-tight! mb-3"
+                >
+                  Зарегистрируйтесь
+                </h4>
+                <p class="text-[11px] md:text-[14px] leading-tight!">
+                  Регистрация позволит сохранить выбранные автомобили, вернуться
+                  к подбору авто позже и получить персональные рекомендации от
+                  специалиста под ваши задачи и бюджет.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-start md:border md:border-[#F5F5F5] md:pb-5 md:rounded-xl"
+            >
+              <div
+                class="flex items-center justify-center h-[110px] md:h-[150px] rounded-xl bg-[#F7F7F7] w-full mb-4"
+              >
+                <img
+                  class="h-auto md:h-1/2"
+                  src="assets/img/mainpage/manual/realtor/2.svg"
+                  alt=""
+                />
+              </div>
+              <div class="md:px-3">
+                <span
+                  class="bg-[#F3E4E2] text-[11px] md:text-[20px] leading-none! text-[#DB4431] w-6 md:w-8 h-6 md:h-8 rounded-full flex items-center justify-center mb-2 md:mb-4"
+                >
+                  2
+                </span>
+                <h4
+                  class="text-[14px] md:text-[20px] font-medium leading-tight! mb-3"
+                >
+                  Выберите авто
+                </h4>
+                <p class="text-[11px] md:text-[14px] leading-tight!">
+                  Выберите автомобиль из каталога или доверьте поиск
+                  профессиональному подборщику — мы учтём ваш бюджет, цели и
+                  пожелания, найдём подходящие варианты и поможем с покупкой.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-start md:border md:border-[#F5F5F5] md:pb-5 md:rounded-xl"
+            >
+              <div
+                class="flex items-center justify-center h-[110px] md:h-[150px] rounded-xl bg-[#F7F7F7] w-full mb-4"
+              >
+                <img
+                  class="h-auto md:h-1/2"
+                  src="assets/img/mainpage/manual/realtor/3.svg"
+                  alt=""
+                />
+              </div>
+              <div class="md:px-3">
+                <span
+                  class="bg-[#F3E4E2] text-[11px] md:text-[20px] leading-none! text-[#DB4431] w-6 md:w-8 h-6 md:h-8 rounded-full flex items-center justify-center mb-2 md:mb-4"
+                >
+                  3
+                </span>
+                <h4
+                  class="text-[14px] md:text-[20px] font-medium leading-tight! mb-3"
+                >
+                  Получите отчёт по авто
+                </h4>
+                <p class="text-[11px] md:text-[14px] leading-tight!">
+                  Получите полную и достоверную информацию об автомобиле перед
+                  покупкой. Вы узнаете реальную историю автомобиля.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-start md:border md:border-[#F5F5F5] md:pb-5 md:rounded-xl"
+            >
+              <div
+                class="flex items-center justify-center h-[110px] md:h-[150px] rounded-xl bg-[#F7F7F7] w-full mb-4"
+              >
+                <img
+                  class="h-auto md:h-1/2"
+                  src="assets/img/mainpage/manual/realtor/4.svg"
+                  alt=""
+                />
+              </div>
+              <div class="md:px-3">
+                <span
+                  class="bg-[#F3E4E2] text-[11px] md:text-[20px] leading-none! text-[#DB4431] w-6 md:w-8 h-6 md:h-8 rounded-full flex items-center justify-center mb-2 md:mb-4"
+                >
+                  4
+                </span>
+                <h4
+                  class="text-[14px] md:text-[20px] font-medium leading-tight! mb-3"
+                >
+                  Оплата услуг
+                </h4>
+                <p class="text-[11px] md:text-[14px] leading-tight!">
+                  Оплата на сайте проходит быстро и безопасно. Вы можете
+                  оплатить услугу удобным для вас способом сразу после
+                  оформления заказа.
+                </p>
+              </div>
+            </div>
+            <a
+              href="/Indep/register.html"
+              class="col-span-2 md:max-w-fit text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+            >
+              Зарегистрироваться
+            </a>
+          </div>
+        </div>
+        <div id="content-right" class="w-full mt-4 md:mt-7">
+          <div
+            class="grid grid-cols-2 lg:grid-cols-4 gap-y-5 md:gap-y-8 gap-x-3 md:gap-x-5"
+          >
+            <div
+              class="flex flex-col items-start md:border md:border-[#F5F5F5] md:pb-5 md:rounded-xl"
+            >
+              <div
+                class="flex items-center justify-center h-[110px] md:h-[150px] rounded-xl bg-[#F7F7F7] w-full mb-4"
+              >
+                <img
+                  class="h-2/3 md:h-3/4"
+                  src="assets/img/mainpage/manual/client/1.svg"
+                  alt=""
+                />
+              </div>
+              <div class="md:px-3">
+                <span
+                  class="bg-[#F3E4E2] text-[11px] md:text-[20px] leading-none! text-[#DB4431] w-6 md:w-8 h-6 md:h-8 rounded-full flex items-center justify-center mb-2 md:mb-4"
+                >
+                  1
+                </span>
+                <h4
+                  class="text-[14px] md:text-[20px] font-medium leading-tight! mb-3"
+                >
+                  Зарегистрируйтесь
+                </h4>
+                <p class="text-[11px] md:text-[14px] leading-tight!">
+                  Регистрация позволит сохранить выбранные автомобили, вернуться
+                  к подбору авто позже и получить персональные рекомендации от
+                  специалиста под ваши задачи и бюджет.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-start md:border md:border-[#F5F5F5] md:pb-5 md:rounded-xl"
+            >
+              <div
+                class="flex items-center justify-center h-[110px] md:h-[150px] rounded-xl bg-[#F7F7F7] w-full mb-4"
+              >
+                <img
+                  class="h-2/3 md:h-3/4"
+                  src="assets/img/mainpage/manual/client/2.svg"
+                  alt=""
+                />
+              </div>
+              <div class="md:px-3">
+                <span
+                  class="bg-[#F3E4E2] text-[11px] md:text-[20px] leading-none! text-[#DB4431] w-6 md:w-8 h-6 md:h-8 rounded-full flex items-center justify-center mb-2 md:mb-4"
+                >
+                  2
+                </span>
+                <h4
+                  class="text-[14px] md:text-[20px] font-medium leading-tight! mb-3"
+                >
+                  Выберите авто
+                </h4>
+                <p class="text-[11px] md:text-[14px] leading-tight!">
+                  Выберите автомобиль из каталога или доверьте поиск
+                  профессиональному подборщику — мы учтём ваш бюджет, цели и
+                  пожелания, найдём подходящие варианты и поможем с покупкой.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-start md:border md:border-[#F5F5F5] md:pb-5 md:rounded-xl"
+            >
+              <div
+                class="flex items-center justify-center h-[110px] md:h-[150px] rounded-xl bg-[#F7F7F7] w-full mb-4"
+              >
+                <img
+                  class="h-2/3 md:h-3/4"
+                  src="assets/img/mainpage/manual/client/3.svg"
+                  alt=""
+                />
+              </div>
+              <div class="md:px-3">
+                <span
+                  class="bg-[#F3E4E2] text-[11px] md:text-[20px] leading-none! text-[#DB4431] w-6 md:w-8 h-6 md:h-8 rounded-full flex items-center justify-center mb-2 md:mb-4"
+                >
+                  3
+                </span>
+                <h4
+                  class="text-[14px] md:text-[20px] font-medium leading-tight! mb-3"
+                >
+                  Получите отчёт по авто
+                </h4>
+                <p class="text-[11px] md:text-[14px] leading-tight!">
+                  Получите полную и достоверную информацию об автомобиле перед
+                  покупкой. Вы узнаете реальную историю автомобиля.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-start md:border md:border-[#F5F5F5] md:pb-5 md:rounded-xl"
+            >
+              <div
+                class="flex items-center justify-center h-[110px] md:h-[150px] rounded-xl bg-[#F7F7F7] w-full mb-4"
+              >
+                <img
+                  class="h-2/3 md:h-3/4"
+                  src="assets/img/mainpage/manual/client/4.svg"
+                  alt=""
+                />
+              </div>
+              <div class="md:px-3">
+                <span
+                  class="bg-[#F3E4E2] text-[11px] md:text-[20px] leading-none! text-[#DB4431] w-6 md:w-8 h-6 md:h-8 rounded-full flex items-center justify-center mb-2 md:mb-4"
+                >
+                  4
+                </span>
+                <h4
+                  class="text-[14px] md:text-[20px] font-medium leading-tight! mb-3"
+                >
+                  Получите отчёт по авто
+                </h4>
+                <p class="text-[11px] md:text-[14px] leading-tight!">
+                  Получите полную и достоверную информацию об автомобиле перед
+                  покупкой. Вы узнаете реальную историю автомобиля.
+                </p>
+              </div>
+            </div>
+            <a
+              href="/Indep/catalog.html"
+              class="col-span-2 md:max-w-fit text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+            >
+              Перейти в каталог авто
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- List Of Parameters -->
+      <section
+        class="px-5 mt-7 md:mt-15 text-[#1E1E1E] flex flex-col gap-4 items-start leading-tight!"
+      >
+        <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
+          Что проверяют подборщики
+        </h3>
+        <div class="flex flex-col gap-8 md:gap-11">
+          <!-- Tech -->
+          <div class="flex flex-col gap-3 md:gap-8 items-start">
+            <h4 class="text-[12px] md:text-[16px] font-semibold">
+              Техническая сторона
+            </h4>
+            <div
+              class="grid grid-cols-3 lg:grid-cols-6 gap-x-3 md:gap-x-5 gap-y-4"
+            >
+              <div class="flex flex-col items-start gap-2 md:gap-4">
+                <div
+                  class="flex items-center justify-center md:py-2 rounded-lg bg-[#F7F7F7] w-full"
+                >
+                  <img
+                    class="h-15 md:h-28"
+                    src="assets/img/mainpage/parameters/tech/1.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-[11px] md:text-[16px] leading-tight!">
+                  Пробег авто и его соответствие
+                </span>
+              </div>
+              <div class="flex flex-col items-start gap-2 md:gap-4">
+                <div
+                  class="flex items-center justify-center md:py-2 rounded-lg bg-[#F7F7F7] w-full"
+                >
+                  <img
+                    class="h-15 md:h-28"
+                    src="assets/img/mainpage/parameters/tech/2.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-[11px] md:text-[16px] leading-tight!">
+                  Состояние, уровень жидкостей в авто
+                </span>
+              </div>
+              <div class="flex flex-col items-start gap-2 md:gap-4">
+                <div
+                  class="flex items-center justify-center md:py-2 rounded-lg bg-[#F7F7F7] w-full"
+                >
+                  <img
+                    class="h-15 md:h-28"
+                    src="assets/img/mainpage/parameters/tech/3.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-[11px] md:text-[16px] leading-tight!">
+                  Двигатель
+                </span>
+              </div>
+              <div class="flex flex-col items-start gap-2 md:gap-4">
+                <div
+                  class="flex items-center justify-center md:py-2 rounded-lg bg-[#F7F7F7] w-full"
+                >
+                  <img
+                    class="h-15 md:h-28"
+                    src="assets/img/mainpage/parameters/tech/4.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-[11px] md:text-[16px] leading-tight!">
+                  Коробка передач
+                </span>
+              </div>
+              <div class="flex flex-col items-start gap-2 md:gap-4">
+                <div
+                  class="flex items-center justify-center md:py-2 rounded-lg bg-[#F7F7F7] w-full"
+                >
+                  <img
+                    class="h-15 md:h-28"
+                    src="assets/img/mainpage/parameters/tech/5.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-[11px] md:text-[16px] leading-tight!">
+                  Шины и диски
+                </span>
+              </div>
+              <div class="flex flex-col items-start gap-2 md:gap-4">
+                <div
+                  class="flex items-center justify-center md:py-2 rounded-lg bg-[#F7F7F7] w-full"
+                >
+                  <img
+                    class="h-15 md:h-28"
+                    src="assets/img/mainpage/parameters/tech/6.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-[11px] md:text-[16px] leading-tight!">
+                  Подвеска автомобиля
+                </span>
+              </div>
+            </div>
+            <a
+              href=""
+              class="md:min-w-[250px] text-center rounded-xl bg-[#1E1E1E] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9"
+            >
+              Смотреть еще
+            </a>
+          </div>
+          <!-- Law -->
+          <div class="flex flex-col gap-3 md:gap-8 items-start">
+            <h4 class="text-[12px] md:text-[16px] font-semibold">
+              Юридическая сторона
+            </h4>
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 gap-x-3 md:gap-x-5 gap-y-4 md:gap-y-10"
+            >
+              <div class="flex items-start gap-2 md:gap-5">
+                <div
+                  class="flex items-center justify-center px-2 md:w-full md:max-w-[200px] rounded-lg bg-[#F7F7F7] shrink-0"
+                >
+                  <img
+                    class="h-15 md:h-28"
+                    src="assets/img/mainpage/parameters/law/1.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-[11px] md:text-[16px] leading-tight!">
+                  Анализ рыночной стоимости автомобиля — помогает определить, не
+                  завышена ли цена по сравнению с реальной рыночной ценой.
+                </span>
+              </div>
+              <div class="flex items-start gap-2 md:gap-5">
+                <div
+                  class="flex items-center justify-center px-2 md:w-full md:max-w-[200px] rounded-lg bg-[#F7F7F7] shrink-0"
+                >
+                  <img
+                    class="h-15 md:h-28"
+                    src="assets/img/mainpage/parameters/law/2.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-[11px] md:text-[16px] leading-tight!">
+                  Проверяется попадал ли автомобиль в аварии и какие детали
+                  могли быть повреждены.
+                </span>
+              </div>
+              <div class="flex items-start gap-2 md:gap-5">
+                <div
+                  class="flex items-center justify-center px-2 md:w-full md:max-w-[200px] rounded-lg bg-[#F7F7F7] shrink-0"
+                >
+                  <img
+                    class="h-15 md:h-28"
+                    src="assets/img/mainpage/parameters/law/3.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-[11px] md:text-[16px] leading-tight!">
+                  Автомобиль проверяется на залоги и обременения, чтобы покупка
+                  была безопасной.
+                </span>
+              </div>
+              <div class="flex items-start gap-2 md:gap-5">
+                <div
+                  class="flex items-center justify-center px-2 md:w-full md:max-w-[200px] rounded-lg bg-[#F7F7F7] shrink-0"
+                >
+                  <img
+                    class="h-15 md:h-28"
+                    src="assets/img/mainpage/parameters/law/4.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="text-[11px] md:text-[16px] leading-tight!">
+                  Проверяется был ли авто в такси, каршеринге, аресте или угоне.
+                </span>
+              </div>
+            </div>
+            <a
+              href=""
+              class="md:min-w-[250px] text-center rounded-xl bg-[#1E1E1E] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9"
+            >
+              Смотреть еще
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Result -->
+      <section
+        class="px-5 mt-7 md:mt-15 text-[#1E1E1E] flex flex-col gap-4 md:gap-7 items-start leading-tight!"
+      >
+        <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
+          Как выглядит результат подбора
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 w-full">
+          <div class="flex flex-col gap-3 md:gap-7 items-start">
+            <div
+              class="flex items-center justify-center rounded-sm md:rounded-xl bg-[#F7F7F7] w-full"
+            >
+              <img
+                class="h-[110px] md:h-40 lg:h-[213px]"
+                src="assets/img/mainpage/result/1.svg"
+                alt=""
+              />
+            </div>
+            <span class="text-[11px] md:text-[20px] leading-tight!">
+              Результаты диагностики
+            </span>
+          </div>
+          <div class="flex flex-col gap-3 md:gap-7 items-start">
+            <div
+              class="flex items-center justify-center rounded-sm md:rounded-xl bg-[#F7F7F7] w-full"
+            >
+              <img
+                class="h-[110px] md:h-40 lg:h-[213px]"
+                src="assets/img/mainpage/result/2.svg"
+                alt=""
+              />
+            </div>
+            <span class="text-[11px] md:text-[20px] leading-tight!">
+              Интерактивная схема с отметками повреждений
+            </span>
+          </div>
+          <div class="flex flex-col gap-3 md:gap-7 items-start">
+            <div
+              style="
+                background: url(assets/img/mainpage/result/3.jpg) center
+                  center / cover no-repeat;
+              "
+              class="flex items-center justify-center rounded-sm md:rounded-xl shrink-0 w-full relative"
+            >
+              <div
+                class="flex flex-col items-center justify-center z-1 h-[110px] md:h-40 lg:h-[213px]"
+              >
+                <span
+                  class="text-center text-white text-[12px] md:text-[28px] leading-none"
+                  >30+</span
+                >
+                <span
+                  class="text-center text-white text-[10px] md:text-[20px] leading-none"
+                  >фото</span
+                >
+              </div>
+              <!-- Mask -->
+              <div
+                class="absolute w-full h-full overflow-hidden bg-[#3b3b3bcc] rounded-sm md:rounded-xl"
+              ></div>
+            </div>
+            <span class="text-[11px] md:text-[20px] leading-tight!">
+              Более 30 фото и видео в подробном отчёте
+            </span>
+          </div>
+        </div>
+      </section>
+      <!-- Reviews -->
+      <section class="px-5 mt-7 md:mt-15 flex flex-col gap-4 md:gap-7">
+        <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
+          Автомобили подобранные INDEP
+        </h3>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-y-5 md:gap-y-8 md:gap-x-5"
+        >
+          <div class="flex gap-3 md:gap-5">
+            <div
+              class="w-[134px] md:h-[324px] md:w-[calc(50%-10px)] shrink-0 bg-[#F7F7F7]"
+            >
+              <img
+                class="object-cover h-full w-full rounded-lg"
+                src="assets/img/mainpage/reviews/1.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="bg-[#F7F7F7] px-2 py-3 md:p-5 rounded-lg flex flex-col items-start justify-center gap-2 md:gap-4"
+            >
+              <h4
+                class="text-[14px] md:text-[20px] font-medium leading-tight! text-[#1E1E1E]"
+              >
+                BMW X5
+              </h4>
+              <p
+                class="text-[10px] md:text-[15px] leading-tight! text-[#1E1E1E]"
+              >
+                Подобрали BMW X5 до 2,9 млн рублей с пробегом до 70 тыс. км у
+                официального дилера — состояние как у нового за исключением пары
+                незначительных сколов.
+              </p>
+            </div>
+          </div>
+          <div class="flex lg:flex-row-reverse gap-3 md:gap-5">
+            <div
+              class="bg-[#F7F7F7] px-2 py-3 md:p-5 rounded-lg flex flex-col items-start justify-center gap-2 md:gap-4"
+            >
+              <h4
+                class="text-[14px] md:text-[20px] font-medium leading-tight! text-[#1E1E1E]"
+              >
+                Kia Venga 
+              </h4>
+              <p
+                class="text-[10px] md:text-[15px] leading-tight! text-[#1E1E1E]"
+              >
+                Подобрали BMW X5 до 2,9 млн рублей с пробегом до 70 тыс. км у
+                официального дилера — состояние как у нового за исключением пары
+                незначительных сколов.
+              </p>
+            </div>
+            <div
+              class="w-[134px] md:h-[324px] md:w-[calc(50%-10px)] shrink-0 bg-[#F7F7F7]"
+            >
+              <img
+                class="object-cover h-full w-full rounded-lg"
+                src="assets/img/mainpage/reviews/2.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="flex gap-3 md:gap-5">
+            <div
+              class="w-[134px] md:h-[324px] md:w-[calc(50%-10px)] shrink-0 bg-[#F7F7F7]"
+            >
+              <img
+                class="object-cover h-full w-full rounded-lg"
+                src="assets/img/mainpage/reviews/3.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="bg-[#F7F7F7] px-2 py-3 md:p-5 rounded-lg flex flex-col items-start justify-center gap-2 md:gap-4"
+            >
+              <h4
+                class="text-[14px] md:text-[20px] font-medium leading-tight! text-[#1E1E1E]"
+              >
+                Audi A6
+              </h4>
+              <p
+                class="text-[10px] md:text-[15px] leading-tight! text-[#1E1E1E]"
+              >
+                Подобрали BMW X5 до 2,9 млн рублей с пробегом до 70 тыс. км у
+                официального дилера — состояние как у нового за исключением пары
+                незначительных сколов.
+              </p>
+            </div>
+          </div>
+          <div class="flex lg:flex-row-reverse gap-3 md:gap-5">
+            <div
+              class="bg-[#F7F7F7] px-2 py-3 md:p-5 rounded-lg flex flex-col items-start justify-center gap-2 md:gap-4"
+            >
+              <h4
+                class="text-[14px] md:text-[20px] font-medium leading-tight! text-[#1E1E1E]"
+              >
+                Kia Venga 
+              </h4>
+              <p
+                class="text-[10px] md:text-[15px] leading-tight! text-[#1E1E1E]"
+              >
+                Подобрали BMW X5 до 2,9 млн рублей с пробегом до 70 тыс. км у
+                официального дилера — состояние как у нового за исключением пары
+                незначительных сколов.
+              </p>
+            </div>
+            <div
+              class="w-[134px] md:h-[324px] md:w-[calc(50%-10px)] shrink-0 bg-[#F7F7F7]"
+            >
+              <img
+                class="object-cover h-full w-full rounded-lg"
+                src="assets/img/mainpage/reviews/4.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services -->
+      <section class="px-5 mt-7 md:mt-15 flex flex-col gap-4 md:gap-7">
+        <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
+          Стоимость услуг подборщика
+        </h3>
+        <div class="flex flex-col gap-4 overflow-x-auto">
+          <div class="flex flex-row gap-4 w-full lg:grid lg:grid-cols-3 pb-2">
+            <div
+              style="
+                background: url(assets/img/mainpage/services/1.svg) center /
+                  cover no-repeat;
+              "
+              class="rounded-lg py-4 md:py-6 px-2 md:px-5 shrink-0 w-[220px] md:w-[380px] lg:w-full leading-tight!"
+            >
+              <div class="flex items-start justify-between h-full">
+                <div
+                  class="flex flex-col items-start justify-between gap-4 md:gap-7 h-full"
+                >
+                  <div class="flex flex-col flex-1 gap-2 md:gap-3">
+                    <h4 class="text-[15px] md:text-[24px] font-medium">
+                      Автоподборщик на день
+                    </h4>
+                    <p class="text-[10px] md:text-[16px]">
+                      Это услуга для тех, кто хочет доверить поиск и проверку
+                      автомобиля профессионалу.
+                    </p>
+                  </div>
+                  <ul
+                    class="list-inside list-disc text-[10px] md:text-[15px] flex flex-col items-start gap-3 md:gap-4"
+                  >
+                    <span class="font-medium">
+                      В течение дня наш специалист:
+                    </span>
+                    <li class="ps-2">
+                      Подбирает автомобили по вашим критериям: бюджет, марка,
+                      модель, комплектация
+                    </li>
+                    <li class="ps-2">
+                      Проверяет юридическую чистоту: отсутствие обременений,
+                      кредитов, ограничений
+                    </li>
+                    <li class="ps-2">
+                      Консультирует по каждой сделке и помогает принять
+                      окончательное решение
+                    </li>
+                  </ul>
+                  <span class="text-[14px] md:text-[20px] font-medium"
+                    >12 000 ₽</span
+                  >
+                  <button
+                    class="text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+                  >
+                    Заказать
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                background: url(assets/img/mainpage/services/2.svg) center /
+                  cover no-repeat;
+              "
+              class="rounded-lg py-4 md:py-6 px-2 md:px-5 shrink-0 w-[220px] md:w-[380px] lg:w-full leading-tight!"
+            >
+              <div class="flex items-start justify-between h-full">
+                <div
+                  class="flex flex-col items-start justify-between gap-4 md:gap-7 h-full"
+                >
+                  <div class="flex flex-col flex-1 gap-2 md:gap-3">
+                    <h4 class="text-[15px] md:text-[24px] font-medium">
+                      Разовая диагностика
+                    </h4>
+                    <p class="text-[10px] md:text-[16px]">
+                      Это услуга для тех, кто хочет быстро и точно проверить
+                      состояние автомобиля перед покупкой.
+                    </p>
+                  </div>
+                  <ul
+                    class="list-inside list-disc text-[10px] md:text-[15px] flex flex-col items-start gap-3 md:gap-4"
+                  >
+                    <span class="font-medium">В услугу включено:</span>
+                    <li class="ps-2">
+                      Подборщик осматривает автомобиль и проверяет ключевые узлы
+                    </li>
+                    <li class="ps-2">
+                      Проверяет двигатель, подвеску и электронику, оценивая их
+                      работу и выявляя возможные проблемы.
+                    </li>
+                    <li class="ps-2">
+                      Проверяет скрытые поломки и проблемы, которые могут
+                      проявиться в будущем.
+                    </li>
+                  </ul>
+                  <span class="text-[14px] md:text-[20px] font-medium"
+                    >12 000 ₽</span
+                  >
+                  <button
+                    class="text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+                  >
+                    Заказать
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                background: url(assets/img/mainpage/services/3.svg) center /
+                  cover no-repeat;
+              "
+              class="rounded-lg py-4 md:py-6 px-2 md:px-5 shrink-0 w-[220px] md:w-[380px] lg:w-full leading-tight!"
+            >
+              <div class="flex items-start justify-between h-full">
+                <div
+                  class="flex flex-col items-start justify-between gap-4 md:gap-7 h-full"
+                >
+                  <div class="flex flex-col flex-1 gap-2 md:gap-3">
+                    <h4 class="text-[15px] md:text-[24px] font-medium">
+                      Подбор авто с пробегом под ключ
+                    </h4>
+                    <p class="text-[10px] md:text-[16px]">
+                      Для тех, кто хочет купить подержанный автомобиль без
+                      забот.
+                    </p>
+                  </div>
+                  <ul
+                    class="list-inside list-disc text-[10px] md:text-[15px] flex flex-col items-start gap-3 md:gap-4"
+                  >
+                    <span class="font-medium">В услуге:</span>
+                    <li class="ps-2">
+                      Подбор автомобиля с пробегом по вашим критериям: марка,
+                      модель, комплектация, цена
+                    </li>
+                    <li class="ps-2">
+                      Проверка юридической чистоты и сопровождение сделки
+                    </li>
+                    <li class="ps-2">
+                      Передача автомобиля с полным пакетом документов и
+                      рекомендациями по эксплуатации
+                    </li>
+                  </ul>
+                  <span class="text-[14px] md:text-[20px] font-medium"
+                    >12 000 ₽</span
+                  >
+                  <button
+                    class="text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+                  >
+                    Заказать
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hit -->
+      <section class="px-5 mt-7 md:mt-15 flex flex-col gap-4 md:gap-7">
+        <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
+          Лучшие предложения
+        </h3>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-4 md:gap-y-10 md:gap-x-5"
+        >
+          <!-- Car -->
+          <a
+            href="/Indep/auto.html"
+            class="rounded-2xl bg-[#F7F7F7] w-full p-3 md:py-4 flex flex-col gap-4"
+          >
+            <!-- Carousel -->
+            <div class="flex flex-col gap-4 overflow-x-auto">
+              <div class="flex flex-row gap-4 w-full pb-2">
+                <img
+                  src="assets/img/cars1.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars2.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars1.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars2.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+              </div>
+            </div>
+            <!-- Car Info -->
+            <div class="flex flex-col gap-3 leading-tight!">
+              <div class="flex justify-between items-start">
+                <span class="text-[20px] md:text-[28px] font-semibold"
+                  >67 000 000 ₽</span
+                >
+                <span
+                  class="bg-[#DB4431] text-white px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] md:text-[14px] leading-none"
+                >
+                  200 000 км
+                </span>
+              </div>
+              <div class="flex flex-col gap-2 text-[12px] md:text-[16px]">
+                <h4 class="opacity-80">
+                  Mercedes-Benz GLC AMG 43 AMG II (X254)
+                </h4>
+                <p class="opacity-40">
+                  Active - 1,2 л (115 л.с.) 6MT 2WD - 2025 г.
+                </p>
+              </div>
+            </div>
+            <!-- Buttons -->
+            <div class="flex items-center gap-3">
+              <button
+                class="flex-1 text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+              >
+                Купить отчет
+              </button>
+              <button
+                id="addToFavourite"
+                class="w-[34px] md:w-11 h-[34px] md:h-11 shrink-0 flex items-center justify-center bg-[#EFEFEF] rounded-xl cursor-pointer"
+              >
+                <svg
+                  class="w-4.5 md:w-6 h-4.5 md:h-6"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 15.1031C7.71609 14.355 2.25 10.947 2.25 7.17188C2.25112 6.31441 2.59224 5.49238 3.19856 4.88606C3.80488 4.27974 4.62691 3.93862 5.48437 3.9375C6.85195 3.9375 8.00016 4.66594 8.47969 5.83594C8.52207 5.93911 8.59416 6.02735 8.6868 6.08945C8.77945 6.15155 8.88847 6.18471 9 6.18471C9.11153 6.18471 9.22055 6.15155 9.3132 6.08945C9.40584 6.02735 9.47793 5.93911 9.52031 5.83594C9.99984 4.66383 11.148 3.9375 12.5156 3.9375C13.3731 3.93862 14.1951 4.27974 14.8014 4.88606C15.4078 5.49238 15.7489 6.31441 15.75 7.17188C15.75 10.9413 10.2825 14.3543 9 15.1031Z"
+                    fill="#EFEFEF"
+                    stroke="#BFBFBF"
+                  />
+                </svg>
+              </button>
+            </div>
+            <!-- Address -->
+            <div class="flex gap-2 items-center justify-start">
+              <img class="h-3 md:h-4" src="assets/img/icons/map.svg" alt="" />
+              <span class="text-[10px] md:text-[12px]"
+                >г. Москва, ул. Волкова</span
+              >
+            </div>
+          </a>
+          <!-- Car -->
+          <a
+            href="/Indep/auto.html"
+            class="rounded-2xl bg-[#F7F7F7] w-full p-3 md:py-4 flex flex-col gap-4"
+          >
+            <!-- Carousel -->
+            <div class="flex flex-col gap-4 overflow-x-auto">
+              <div class="flex flex-row gap-4 w-full pb-2">
+                <img
+                  src="assets/img/cars1.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars2.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars1.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars2.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+              </div>
+            </div>
+            <!-- Car Info -->
+            <div class="flex flex-col gap-3 leading-tight!">
+              <div class="flex justify-between items-start">
+                <span class="text-[20px] md:text-[28px] font-semibold"
+                  >67 000 000 ₽</span
+                >
+                <span
+                  class="bg-[#DB4431] text-white px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] md:text-[14px] leading-none"
+                >
+                  200 000 км
+                </span>
+              </div>
+              <div class="flex flex-col gap-2 text-[12px] md:text-[16px]">
+                <h4 class="opacity-80">
+                  Mercedes-Benz GLC AMG 43 AMG II (X254)
+                </h4>
+                <p class="opacity-40">
+                  Active - 1,2 л (115 л.с.) 6MT 2WD - 2025 г.
+                </p>
+              </div>
+            </div>
+            <!-- Buttons -->
+            <div class="flex items-center gap-3">
+              <button
+                class="flex-1 text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+              >
+                Купить отчет
+              </button>
+              <button
+                id="addToFavourite"
+                class="w-[34px] md:w-11 h-[34px] md:h-11 shrink-0 flex items-center justify-center bg-[#EFEFEF] rounded-xl cursor-pointer"
+              >
+                <svg
+                  class="w-4.5 md:w-6 h-4.5 md:h-6"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 15.1031C7.71609 14.355 2.25 10.947 2.25 7.17188C2.25112 6.31441 2.59224 5.49238 3.19856 4.88606C3.80488 4.27974 4.62691 3.93862 5.48437 3.9375C6.85195 3.9375 8.00016 4.66594 8.47969 5.83594C8.52207 5.93911 8.59416 6.02735 8.6868 6.08945C8.77945 6.15155 8.88847 6.18471 9 6.18471C9.11153 6.18471 9.22055 6.15155 9.3132 6.08945C9.40584 6.02735 9.47793 5.93911 9.52031 5.83594C9.99984 4.66383 11.148 3.9375 12.5156 3.9375C13.3731 3.93862 14.1951 4.27974 14.8014 4.88606C15.4078 5.49238 15.7489 6.31441 15.75 7.17188C15.75 10.9413 10.2825 14.3543 9 15.1031Z"
+                    fill="#EFEFEF"
+                    stroke="#BFBFBF"
+                  />
+                </svg>
+              </button>
+            </div>
+            <!-- Address -->
+            <div class="flex gap-2 items-center justify-start">
+              <img class="h-3 md:h-4" src="assets/img/icons/map.svg" alt="" />
+              <span class="text-[10px] md:text-[12px]"
+                >г. Москва, ул. Волкова</span
+              >
+            </div>
+          </a>
+          <!-- Car -->
+          <a
+            href="/Indep/auto.html"
+            class="rounded-2xl bg-[#F7F7F7] w-full p-3 md:py-4 flex flex-col gap-4"
+          >
+            <!-- Carousel -->
+            <div class="flex flex-col gap-4 overflow-x-auto">
+              <div class="flex flex-row gap-4 w-full pb-2">
+                <img
+                  src="assets/img/cars1.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars2.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars1.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+                <img
+                  src="assets/img/cars2.jpg"
+                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                />
+              </div>
+            </div>
+            <!-- Car Info -->
+            <div class="flex flex-col gap-3 leading-tight!">
+              <div class="flex justify-between items-start">
+                <span class="text-[20px] md:text-[28px] font-semibold"
+                  >67 000 000 ₽</span
+                >
+                <span
+                  class="bg-[#DB4431] text-white px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] md:text-[14px] leading-none"
+                >
+                  200 000 км
+                </span>
+              </div>
+              <div class="flex flex-col gap-2 text-[12px] md:text-[16px]">
+                <h4 class="opacity-80">
+                  Mercedes-Benz GLC AMG 43 AMG II (X254)
+                </h4>
+                <p class="opacity-40">
+                  Active - 1,2 л (115 л.с.) 6MT 2WD - 2025 г.
+                </p>
+              </div>
+            </div>
+            <!-- Buttons -->
+            <div class="flex items-center gap-3">
+              <button
+                class="flex-1 text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+              >
+                Купить отчет
+              </button>
+              <button
+                id="addToFavourite"
+                class="w-[34px] md:w-11 h-[34px] md:h-11 shrink-0 flex items-center justify-center bg-[#EFEFEF] rounded-xl cursor-pointer"
+              >
+                <svg
+                  class="w-4.5 md:w-6 h-4.5 md:h-6"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 15.1031C7.71609 14.355 2.25 10.947 2.25 7.17188C2.25112 6.31441 2.59224 5.49238 3.19856 4.88606C3.80488 4.27974 4.62691 3.93862 5.48437 3.9375C6.85195 3.9375 8.00016 4.66594 8.47969 5.83594C8.52207 5.93911 8.59416 6.02735 8.6868 6.08945C8.77945 6.15155 8.88847 6.18471 9 6.18471C9.11153 6.18471 9.22055 6.15155 9.3132 6.08945C9.40584 6.02735 9.47793 5.93911 9.52031 5.83594C9.99984 4.66383 11.148 3.9375 12.5156 3.9375C13.3731 3.93862 14.1951 4.27974 14.8014 4.88606C15.4078 5.49238 15.7489 6.31441 15.75 7.17188C15.75 10.9413 10.2825 14.3543 9 15.1031Z"
+                    fill="#EFEFEF"
+                    stroke="#BFBFBF"
+                  />
+                </svg>
+              </button>
+            </div>
+            <!-- Address -->
+            <div class="flex gap-2 items-center justify-start">
+              <img class="h-3 md:h-4" src="assets/img/icons/map.svg" alt="" />
+              <span class="text-[10px] md:text-[12px]"
+                >г. Москва, ул. Волкова</span
+              >
+            </div>
+          </a>
+        </div>
+        <a
+          href="/Indep/catalog.html"
+          class="text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+        >
+          Смотреть все
+        </a>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#1E1E1E] text-white leading-tight! mt-7">
+      <div
+        class="relative container mx-auto px-5 py-8 flex flex-col items-start justify-between"
+      >
+        <div class="flex flex-col gap-7 items-start">
+          <div class="w-full flex justify-between items-center">
+            <a href="/Indep/">
+              <img class="h-6" src="assets/img/logo-white.svg" alt="Logo" />
+            </a>
+            <img
+              class="md:absolute right-0 bottom-0 h-[50px] md:h-[124px]"
+              src="assets/img/footer-car.svg"
+              alt=""
+            />
+          </div>
+          <nav
+            aria-label="Footer Menu"
+            class="flex flex-wrap items-center gap-5 text-[14px] md:text-[16px] underline"
+          >
+            <a class="text-[#080717]" href="/Indep/catalog.html">Каталог</a>
+            <a class="text-[#080717]" href="/Indep/selection.html">Подбор авто</a>
+            <a class="text-[#080717]" href="/Indep/cooperation.html">Сотрудничество</a>
+            <a class="text-[#080717]" href="/Indep/about.html">О нас</a>
+          </nav>
+          <div class="flex flex-col items-start gap-3 text-[12px]">
+            <p>
+              Производитель сохраняет за собой исключительное право в любое
+              время вносить дополнения, изменения, обновления в информацию о
+              параметрах продукта, конфигурации, материалы, цвета и в другую
+              информацию о транспортном средстве без предварительного
+              уведомления. Приобретение любой продукции осуществляется в
+              соответствии с условиями индивидуального договора купли-продажи.
+              Представленное изображение, цвет, технические характеристики и
+              комплектация автомобилей могут отличаться от реализуемого.
+              Упоминаемое оборудование может быть опциональным. Не является
+              публичной офертой.
+            </p>
+            <span class="opacity-50">Все права защищены</span>
+            <span class="opacity-50"
+              >ООО EXAMPLE, вл. 777, корп.777 ОГРН 11112222333344445 ИНН
+              6666777788</span
+            >
+          </div>
+        </div>
+        <a class="mt-12 text-[12px]" href="/Indep/privacypolicy.html">
+          Политика конфиденциальности
+        </a>
+      </div>
+    </footer>
+    <!-- Mobile Menu -->
+    <section
+      id="mobilemenu"
+      class="block md:hidden sticky right-0 bottom-0 w-full bg-[#F7F7F7] z-97 pt-2 pb-3"
+    >
+      <div class="flex flex-row justify-between items-center">
+        <a href="/Indep/" class="mobile-menu-item w-full">
+          <div class="flex flex-col items-center gap-1">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M25.5061 7.02756C27.2533 7.02753 27.8791 6.68675 28.7492 8.40256L29.343 9.5676C29.8399 10.5195 30.6218 11.7597 30.9875 12.7561L32.8713 12.7541C33.2616 12.7524 33.5473 12.645 33.886 12.9045C34.3642 13.2711 34.1972 14.224 33.6184 14.2912C33.0763 14.3542 32.3952 14.3211 31.8322 14.3196C31.9477 14.5674 32.196 14.9696 32.341 15.2365L33.5168 17.4162C35.1096 20.3723 34.9025 20.6193 34.9641 23.8069C34.9969 25.5035 35.2776 26.6883 33.5373 27.4768C33.5192 28.7898 33.7871 30.2269 32.8401 31.2307C31.9242 32.2008 30.9138 31.9639 29.7483 31.9963C27.6858 32.0536 27.1596 30.7982 27.1594 28.9035L27.1604 27.5217H12.8645L12.8654 28.8733C12.8658 31.1042 12.1997 31.9435 9.99923 31.9387L8.94747 31.9436C6.9577 31.9568 6.41248 30.6074 6.41134 28.7571V27.4768C4.63832 26.5288 5.05172 25.3465 5.02169 23.5354C5.00626 22.6066 5.00662 21.645 5.13693 20.7268C5.40515 18.8765 7.27445 16.0934 8.1838 14.3196L7.18087 14.3215C6.66682 14.3261 5.72567 14.4191 5.78341 13.552C5.84524 12.6253 6.77492 12.7541 7.40841 12.7541L9.00607 12.7561C9.23894 12.3384 9.42278 11.9447 9.64181 11.5266L10.7697 9.38108C11.4323 8.09915 11.608 7.16259 13.1311 7.02854L25.5061 7.02756ZM10.2092 27.5207L7.884 27.5217C7.88305 27.9814 7.83253 29.3115 7.91915 29.6604C8.1797 30.7092 9.48741 30.447 10.2902 30.4377C10.6242 30.4339 10.879 30.3906 11.1506 30.1701C11.4934 29.589 11.4279 29.4126 11.427 28.7561L11.424 27.5217C11.0379 27.5084 10.5995 27.5205 10.2092 27.5207ZM29.799 27.5217C29.4316 27.5219 28.9917 27.5371 28.633 27.5217L28.6311 28.8801C28.6276 30.6891 29.0165 30.4327 30.4133 30.4367C31.0461 30.4386 31.2872 30.5817 31.8322 30.1701C32.1671 29.5866 32.0824 29.503 32.0774 28.844L32.0754 27.5217H29.799ZM9.9924 19.3967C8.07094 19.5287 7.98966 22.0234 9.60958 22.4016C9.85607 22.4587 10.1648 22.4209 10.4231 22.4192L11.7785 22.4172C13.6066 22.5463 13.7456 19.4056 11.7404 19.3996C11.1549 19.3978 10.5741 19.3885 9.9924 19.3967ZM28.7297 19.3967C28.1102 19.4326 27.728 19.4504 27.2805 19.9426C26.734 20.5439 26.771 21.4927 27.3811 22.0344C27.823 22.4265 28.3527 22.4159 28.9084 22.4172H29.7736C30.3662 22.4003 30.7357 22.41 31.1897 21.9465C31.754 21.3703 31.6507 20.3231 31.0695 19.7961C30.6275 19.3951 30.1229 19.401 29.5608 19.3977L28.7297 19.3967ZM17.4592 20.6399C17.0593 20.64 16.7361 20.9646 16.7385 21.3645C16.741 21.7666 17.063 22.0966 17.4651 22.0969C17.9753 22.097 18.4913 22.0917 18.9944 22.092H22.6037C23.0047 22.092 23.3303 21.7664 23.3303 21.3654C23.3301 20.9647 23.0046 20.6399 22.6037 20.6399H17.4592ZM12.8645 8.56662C11.8433 10.6091 10.7266 12.5883 9.68283 14.6174C9.58595 14.8058 9.476 15.0501 9.35275 15.219H27.2238L29.4846 15.2209C29.8949 15.2229 30.2704 15.2545 30.6819 15.219C29.9871 13.9873 29.3227 12.7484 28.6604 11.4983L27.5432 9.34299C27.4415 9.14856 27.201 8.74494 27.1604 8.56662H12.8645Z"
+                fill="#A0A0A0"
+              />
+            </svg>
+            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+              Главная
+            </p>
+          </div>
+        </a>
+        <a href="/Indep/chat.html" class="mobile-menu-item w-full">
+          <div class="flex flex-col items-center gap-1">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.8531 26.8533C11.0334 26.4019 10.4728 26.0332 9.7605 25.4624C5.30788 21.8932 4.72333 15.2452 8.46766 10.9752C10.6437 8.49359 13.3055 7.25814 16.6377 7.00059L22.5998 7C29.1899 7.00092 34.6435 12.141 33.9385 18.6816C33.4141 23.5467 29.3158 27.3053 24.4085 27.9825C22.8872 28.1816 21.3035 27.9742 19.7817 28.107C19.6959 28.1145 19.0197 28.5657 18.8945 28.645L12.6864 32.4859C12.4129 32.6547 12.1198 32.8242 11.8531 33L11.8529 28.9495C11.8529 28.2981 11.8789 27.4888 11.8531 26.8533ZM19.319 15.8999C18.2025 16.0149 18.0212 16.7459 17.9982 17.6808C17.9628 19.1161 18.4995 19.5008 19.8855 19.4949L20.6704 19.4935C22.3419 19.3029 22.2979 16.8289 21.4495 16.1966C20.9094 15.7796 19.9921 15.8874 19.319 15.8999ZM26.1741 15.8999C24.6667 15.9753 24.5559 16.8697 24.6329 18.1152C24.7182 19.495 25.9362 19.496 27.0042 19.4935C28.8113 19.4504 28.904 17.0438 28.0728 16.2527C27.5928 15.7959 26.8336 15.8981 26.1741 15.8999ZM12.6517 15.8999C11.5336 16.0944 11.4124 16.8169 11.3912 17.7459C11.3766 18.3825 11.4674 18.8741 12.0386 19.2638C12.4194 19.5236 13.6127 19.5611 14.1127 19.4935C15.4019 19.2356 15.3954 18.0202 15.2763 16.9757C15.1326 15.7147 13.48 15.9408 12.6517 15.8999Z"
+                fill="#A0A0A0"
+              />
+            </svg>
+            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+              Чат
+            </p>
+          </div>
+        </a>
+        <a href="/Indep/call.html" class="mobile-menu-item w-full">
+          <div class="flex flex-col items-center gap-1">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.0417 18.2594C13.4417 22.3472 17.3 25.6911 22.025 27.7711L25.6917 24.5861C26.15 24.1889 26.8083 24.0733 27.3833 24.2322C29.25 24.7667 31.2583 25.0556 33.3333 25.0556C34.2583 25.0556 35 25.6983 35 26.5V31.5556C35 32.3572 34.2583 33 33.3333 33C17.6833 33 5 22.0078 5 8.44444C5 7.64278 5.75 7 6.66667 7H12.5C13.425 7 14.1667 7.64278 14.1667 8.44444C14.1667 10.2428 14.5 11.9833 15.1167 13.6011C15.3 14.0994 15.1667 14.67 14.7083 15.0672L11.0417 18.2594Z"
+                fill="#A0A0A0"
+              />
+            </svg>
+            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+              Позвонить
+            </p>
+          </div>
+        </a>
+        <a href="/Indep/profile.html" class="mobile-menu-item w-full">
+          <div class="flex flex-col items-center gap-1">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.2152 21.296C16.6277 21.4267 13.623 18.3339 13.5037 14.3877C13.3844 10.4414 16.1956 7.1358 19.7832 7.00406C23.3713 6.87229 26.377 9.96539 26.4963 13.9123C26.6157 17.8593 23.8034 21.1652 20.2152 21.296Z"
+                fill="#A0A0A0"
+              />
+              <path
+                d="M27.4919 32.9457L8.8669 32.9462C7.57931 32.9474 6.90781 33.3639 7.01021 31.861C7.35178 26.8477 10.3913 23.2995 14.4307 21.3C14.505 21.3362 15.1649 21.8572 15.3031 21.9538C17.8447 23.7296 21.2921 23.8603 23.9851 22.3992C24.5697 22.0819 25.0218 21.7447 25.5535 21.3594C29.7352 22.9047 32.793 27.5332 32.9982 32.2731C33.0327 33.0702 32.5643 32.9471 31.9925 32.9465L27.4919 32.9457Z"
+                fill="#A0A0A0"
+              />
+            </svg>
+            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+              Профиль
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Burger Overlay + Menu -->
+    <div
+      id="burger-overlay"
+      class="fixed hidden inset-0 backdrop-blur-xs z-101"
+    ></div>
+    <section
+      id="burger-menu"
+      class="fixed hidden right-0 top-0 h-dvh w-[60%] md:w-[30%] bg-[#F7F7F7] z-102 flex-col gap-10 md:gap-15 justify-between py-8 leading-tight! text-[#505050] text-[14px] md:text-[20px]"
+    >
+      <a class="px-5" href="/Indep/">
+        <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
+      </a>
+
+      <nav class="grow">
+        <ul>
+          <a href="/Indep/favourites.html">
+            <li
+              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
+            >
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/favourites.svg"
+                alt="Избранное"
+              />
+              Избранное
+            </li>
+          </a>
+          <a href="#">
+            <li
+              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
+            >
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/selection.svg"
+                alt="Подбор авто"
+              />
+              Подбор авто
+            </li>
+          </a>
+          <a href="/Indep/reports.html">
+            <li
+              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
+            >
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/ads.svg"
+                alt="Сотрудничество"
+              />
+              Сотрудничество
+            </li>
+          </a>
+          <a href="/Indep/reports.html">
+            <li
+              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
+            >
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/about.svg"
+                alt="О нас"
+              />
+              О нас
+            </li>
+          </a>
+        </ul>
+      </nav>
+
+      <button
+        class="flex items-center gap-2 md:gap-3.5 px-5 cursor-pointer"
+        onclick="window.location.href = '/'"
+      >
+        <img
+          class="h-5 md:h-7"
+          src="assets/img/icons/burger/logout.svg"
+          alt="Выйти из аккаунта"
+        />
+        Выйти из аккаунта
+      </button>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/bannersSlider.js" defer></script>
+    <script src="assets/js/burger.js"></script>
+    <script src="assets/js/favourite.js"></script>
+    <script src="assets/js/mobileMenu.js"></script>
+    <script src="assets/js/tabs.js"></script>
+  </body>
+</html>
