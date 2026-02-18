@@ -2,6 +2,7 @@
 @import url(banner.css);
 @import url(checkbox.css);
 @import url(radio.css);
+@import url(range.css);
 
 * {
   font-family: "Moderustic", ui-sans-serif, system-ui, sans-serif;
@@ -16,6 +17,10 @@ main#main {
   padding-bottom: 20px;
 }
 
+input {
+  cursor: pointer;
+}
+
 /* Check-List */
 ul#check-list li {
   display: flex;
@@ -25,8 +30,8 @@ ul#check-list li {
 ul#check-list li::before {
   content: "✓";
   font-size: 12px;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   color: white;
   display: flex;
   align-items: center;

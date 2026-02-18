@@ -1,0 +1,25 @@
+.range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  border-radius: 999px;
+  color: #080717;
+  background: linear-gradient(
+    to right,
+    #080717 0%,
+    #080717 var(--progress, 0%),
+    #ffffff var(--progress, 0%),
+    #ffffff 100%
+  );
+  height: 24px;
+  border: 1px solid #080717;
+}
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #080717;
+  border-radius: 999px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #ffffff;
+}
