@@ -18,38 +18,52 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="sticky top-0 bg-white z-100">
+    <header class="sticky top-0 bg-white z-100 border-b border-[#DEDEDE]">
       <div
         class="container mx-auto px-5 py-4 flex items-center justify-between"
       >
-        <button class="cursor-pointer" onclick="window.history.back()">
-          <img
-            class="h-6 md:h-9"
-            src="assets/img/icons/backCaret.svg"
-            alt="Back"
-          />
-        </button>
         <a href="/Indep/">
           <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
         </a>
-        <div class="contents md:flex gap-5 items-center">
-          <a href="/Indep/profile.html" class="cursor-pointer hidden md:block">
-            <img class="h-8" src="assets/img/icons/user.svg" alt="Menu" />
-          </a>
-          <button class="cursor-pointer" id="burger">
-            <img
-              class="h-6 md:h-12"
-              src="assets/img/icons/burger.svg"
-              alt="Menu"
-            />
-          </button>
+        <div class="contents md:flex gap-10 items-center">
+          <nav class="hidden md:flex items-center gap-6">
+            <a href="/Indep/catalog.html">Каталог</a>
+            <a href="/Indep/selection.html">Подбор авто</a>
+            <a href="/Indep/cooperation.html">Сотрудничество</a>
+            <a href="/Indep/about.html">О нас</a>
+          </nav>
+          <div class="flex gap-5 items-center">
+            <a
+              href="/Indep/favourites.html"
+              class="cursor-pointer hidden md:block"
+            >
+              <img
+                class="h-8"
+                src="assets/img/icons/favourite.svg"
+                alt="Favoruites"
+              />
+            </a>
+            <a
+              href="/Indep/profile.html"
+              class="cursor-pointer hidden md:block"
+            >
+              <img class="h-8" src="assets/img/icons/user.svg" alt="Menu" />
+            </a>
+            <button class="block md:hidden cursor-pointer" id="burger">
+              <img
+                class="h-6 md:h-12"
+                src="assets/img/icons/burger.svg"
+                alt="Menu"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </header>
-    <main id="main" class="container mx-auto px-5 leading-tight!">
+    <main id="main" class="container mx-auto mt-6 leading-tight!">
       <!-- Breadcrumbs -->
       <section
-        class="container mx-auto text-[10px] md:text-[16px] leading-tight text-[#979797] flex flex-wrap items-center gap-1 md:gap-2"
+        class="px-5 container mx-auto text-[10px] md:text-[16px] leading-tight text-[#979797] flex flex-wrap items-center gap-1 md:gap-2"
       >
         <a href="/Indep/profile.html">Профиль</a>
         <img
@@ -65,14 +79,16 @@
         />
         <p class="text-[#DB4431]">Проверка информации</p>
       </section>
-      <div class="flex flex-col gap-3 mt-4">
-        <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">Всё верно?</h3>
+      <div class="px-5 flex flex-col gap-3 mt-4">
+        <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
+          Всё верно?
+        </h3>
         <p class="text-[12px] md:text-[16px] opacity-50">
           Пожалуйста, проверьте введённые данные перед отправкой.
         </p>
       </div>
       <!-- Defects -->
-      <section class="mt-7 flex flex-col gap-4">
+      <section class="px-5 mt-7 flex flex-col gap-4">
         <div
           class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg"
         >
@@ -83,7 +99,11 @@
           </h2>
           <div class="flex flex-col gap-3 md:gap-8">
             <div id="content-left" class="w-full">
-              <img class="h-[149px] md:h-[250px]" src="assets/img/auto/scheme.svg" alt="" />
+              <img
+                class="h-[149px] md:h-[250px]"
+                src="assets/img/auto/scheme.svg"
+                alt=""
+              />
             </div>
             <div id="content-right" class="w-full">
               <div
@@ -154,9 +174,13 @@
         </div>
       </section>
       <!-- Checks Info -->
-      <section class="mt-7 flex flex-col gap-4">
-        <div class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg">
-          <h2 class="text-[16px] md:text-[24px] leading-tight! font-medium text-left">
+      <section class="px-5 mt-7 flex flex-col gap-4">
+        <div
+          class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg"
+        >
+          <h2
+            class="text-[16px] md:text-[24px] leading-tight! font-medium text-left"
+          >
             Общая информация
           </h2>
           <ul
@@ -175,9 +199,13 @@
         </div>
       </section>
       <!-- Vehicle Passport -->
-      <section class="mt-7 flex flex-col gap-4">
-        <div class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg">
-          <h2 class="text-[16px] md:text-[24px] leading-tight! font-medium text-left">
+      <section class="px-5 mt-7 flex flex-col gap-4">
+        <div
+          class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg"
+        >
+          <h2
+            class="text-[16px] md:text-[24px] leading-tight! font-medium text-left"
+          >
             Данные из ПТС
           </h2>
           <!-- Rows -->
@@ -228,9 +256,13 @@
         </div>
       </section>
       <!-- Owners Info -->
-      <section class="mt-7 flex flex-col gap-4">
-        <div class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg">
-          <h2 class="text-[16px] md:text-[24px] leading-tight! font-medium text-left">
+      <section class="px-5 mt-7 flex flex-col gap-4">
+        <div
+          class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg"
+        >
+          <h2
+            class="text-[16px] md:text-[24px] leading-tight! font-medium text-left"
+          >
             2 владельца по ПТС
           </h2>
           <!-- Rows -->
@@ -252,7 +284,7 @@
         </div>
       </section>
       <!-- Legal Info -->
-      <section class="mt-7 flex flex-col gap-4">
+      <section class="px-5 mt-7 flex flex-col gap-4">
         <div
           class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg relative"
         >
@@ -264,7 +296,9 @@
               Есть проблемы
             </span>
           </div>
-          <h2 class="text-[16px] md:text-[24px] leading-tight! font-medium text-left">
+          <h2
+            class="text-[16px] md:text-[24px] leading-tight! font-medium text-left"
+          >
             Юридическая чистота
           </h2>
           <ul
@@ -277,7 +311,7 @@
         </div>
       </section>
       <!-- Commercial Info -->
-      <section class="mt-7 flex flex-col gap-4">
+      <section class="px-5 mt-7 flex flex-col gap-4">
         <div
           class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg relative"
         >
@@ -285,15 +319,13 @@
             <span
               class="flex items-center gap-0.5 py-1 md:py-1.5 px-2 md:px-3 rounded-lg text-[8px] md:text-[13px] text-[#4DB95C] bg-[#E6F6EA]"
             >
-              <img
-                class="h-3"
-                src="assets/img/icons/badges/check.svg"
-                alt=""
-              />
+              <img class="h-3" src="assets/img/icons/badges/check.svg" alt="" />
               Все в порядке
             </span>
           </div>
-          <h2 class="text-[16px] md:text-[24px] leading-tight! font-medium text-left">
+          <h2
+            class="text-[16px] md:text-[24px] leading-tight! font-medium text-left"
+          >
             Коммерция
           </h2>
           <ul
@@ -305,7 +337,7 @@
         </div>
       </section>
       <!-- Steps -->
-      <section class="mt-7 flex flex-col gap-4">
+      <section class="px-5 mt-7 flex flex-col gap-4">
         <div class="w-full flex items-center gap-3">
           <a
             href="/Indep/newCar.html"

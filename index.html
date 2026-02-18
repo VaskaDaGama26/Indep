@@ -17,30 +17,51 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="sticky top-0 bg-white z-100">
+    <header class="sticky top-0 bg-white z-100 border-b border-[#DEDEDE]">
       <div
         class="container mx-auto px-5 py-4 flex items-center justify-between"
       >
         <a href="/Indep/">
           <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
         </a>
-        <div class="contents md:flex gap-5 items-center">
-          <a href="/Indep/profile.html" class="cursor-pointer hidden md:block">
-            <img class="h-8" src="assets/img/icons/user.svg" alt="Menu" />
-          </a>
-          <button class="cursor-pointer" id="burger">
-            <img
-              class="h-6 md:h-12"
-              src="assets/img/icons/burger.svg"
-              alt="Menu"
-            />
-          </button>
+        <div class="contents md:flex gap-10 items-center">
+          <nav class="hidden md:flex items-center gap-6">
+            <a href="/Indep/catalog.html">Каталог</a>
+            <a href="/Indep/selection.html">Подбор авто</a>
+            <a href="/Indep/cooperation.html">Сотрудничество</a>
+            <a href="/Indep/about.html">О нас</a>
+          </nav>
+          <div class="flex gap-5 items-center">
+            <a
+              href="/Indep/favourites.html"
+              class="cursor-pointer hidden md:block"
+            >
+              <img
+                class="h-8"
+                src="assets/img/icons/favourite.svg"
+                alt="Favoruites"
+              />
+            </a>
+            <a
+              href="/Indep/profile.html"
+              class="cursor-pointer hidden md:block"
+            >
+              <img class="h-8" src="assets/img/icons/user.svg" alt="Menu" />
+            </a>
+            <button class="block md:hidden cursor-pointer" id="burger">
+              <img
+                class="h-6 md:h-12"
+                src="assets/img/icons/burger.svg"
+                alt="Menu"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </header>
-    <main id="main" class="container mx-auto px-5 md:mt-6">
+    <main id="main" class="container mx-auto md:mt-6">
       <!-- Main Banner -->
-      <section>
+      <section class="px-5">
         <div
           class="relative w-full h-[440px] select-none lg:h-[460px] p-2 lg:p-4 rounded-lg lg:rounded-2xl overflow-hidden bg-white"
         >
@@ -104,7 +125,7 @@
         </div>
       </section>
       <!-- Carousel -->
-      <section class="mt-7">
+      <section class="px-5 mt-7">
         <div class="flex flex-col gap-4 overflow-x-auto">
           <div class="flex flex-row gap-4 w-full lg:grid lg:grid-cols-3 pb-2">
             <!-- Parameter -->
@@ -180,7 +201,7 @@
         </div>
       </section>
       <!-- Manual -->
-      <section class="mt-7 md:mt-15">
+      <section class="px-5 mt-7 md:mt-15">
         <div
           id="toggle-buttons"
           data-enable-color-class="bg-[#080717]"
@@ -463,7 +484,7 @@
       </section>
       <!-- List Of Parameters -->
       <section
-        class="mt-7 md:mt-15 text-[#1E1E1E] flex flex-col gap-4 items-start leading-tight!"
+        class="px-5 mt-7 md:mt-15 text-[#1E1E1E] flex flex-col gap-4 items-start leading-tight!"
       >
         <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
           Что проверяют подборщики
@@ -648,7 +669,7 @@
       </section>
       <!-- Result -->
       <section
-        class="mt-7 md:mt-15 text-[#1E1E1E] flex flex-col gap-4 md:gap-7 items-start leading-tight!"
+        class="px-5 mt-7 md:mt-15 text-[#1E1E1E] flex flex-col gap-4 md:gap-7 items-start leading-tight!"
       >
         <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
           Как выглядит результат подбора
@@ -714,7 +735,7 @@
         </div>
       </section>
       <!-- Reviews -->
-      <section class="mt-7 md:mt-15 flex flex-col gap-4 md:gap-7">
+      <section class="px-5 mt-7 md:mt-15 flex flex-col gap-4 md:gap-7">
         <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
           Автомобили подобранные INDEP
         </h3>
@@ -832,7 +853,7 @@
         </div>
       </section>
       <!-- Services -->
-      <section class="mt-7 md:mt-15 flex flex-col gap-4 md:gap-7">
+      <section class="px-5 mt-7 md:mt-15 flex flex-col gap-4 md:gap-7">
         <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
           Стоимость услуг подборщика
         </h3>
@@ -986,7 +1007,7 @@
         </div>
       </section>
       <!-- Hit -->
-      <section class="mt-7 md:mt-15 flex flex-col gap-4 md:gap-7">
+      <section class="px-5 mt-7 md:mt-15 flex flex-col gap-4 md:gap-7">
         <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
           Лучшие предложения
         </h3>
