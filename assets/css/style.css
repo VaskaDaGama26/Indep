@@ -4,6 +4,7 @@
 @import url(radio.css);
 @import url(range.css);
 @import url(selection.css);
+@import url(details.css);
 
 * {
   font-family: "Moderustic", ui-sans-serif, system-ui, sans-serif;

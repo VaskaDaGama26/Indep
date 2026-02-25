@@ -1,9 +1,15 @@
 .how-1 {
-    background: url(/Indep/assets/img/selection/how/1-bg.svg) center / cover no-repeat;
+  background: url(/Indep/assets/img/selection/how/1-bg.svg) center / cover
+      no-repeat,
+    #db4431;
 }
 .how-2 {
-    background: url(/Indep/assets/img/selection/how/2-bg.svg) center / cover no-repeat;
+  background: url(/Indep/assets/img/selection/how/2-bg.svg) center / cover
+      no-repeat,
+    #db4431;
 }
 .how-3 {
-    background: url(/Indep/assets/img/selection/how/3-bg.webp) center / cover no-repeat;
+  background: url(/Indep/assets/img/selection/how/3-bg.webp) center / cover
+      no-repeat,
+    #db4431;
 }
