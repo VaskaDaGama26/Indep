@@ -93,7 +93,7 @@
             id="slider"
           >
             <div
-              class="banner-3 w-full shrink-0 relative py-10 px-5"
+              class="banner-4 w-full shrink-0 relative py-10 px-5"
               fetchpriority="high"
               loading="eager"
             >
@@ -128,26 +128,109 @@
         <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
           Как это работает?
         </h3>
-        <div class="grid gap-5 grid-cols-8 h-[465px]">
+        <div class="grid gap-5 md:grid-cols-12">
           <div
-            class="how-1 w-full h-full rounded-lg p-2 bg-primary col-span-3 row-span-2"
+            class="how-1 h-[465px] relative w-full rounded-[20px] p-2 bg-primary md:col-span-4"
           >
-            1
+            <img
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 px-5"
+              src="assets/img/selection/how/1.webp"
+              alt=""
+            />
+            <div
+              class="flex flex-col gap-3 bg-[#F7F7F7] rounded-[12px] p-3 text-[#1E1E1E] leading-tight"
+            >
+              <span
+                class="bg-[#81818133] text-[11px] md:text-[20px] leading-none! text-[#1E1E1E] w-6 md:w-8 h-6 md:h-8 rounded-full flex items-center justify-center"
+              >
+                1
+              </span>
+              <h4 class="text-[20px]">Оставьте заявку</h4>
+              <p class="text-[11px]">
+                Наш менеджер свяжется с вами в течение дня, чтобы уточнить все
+                детали вашего запроса: бюджет, предпочтительные марки и модели,
+                требования к комплектации и состоянию автомобиля.
+              </p>
+            </div>
           </div>
           <div
-            class="how-2 w-full h-full rounded-lg p-2 bg-primary col-span-3 col-start-4 row-span-1 row-start-1"
+            class="how-2 h-[465px] relative w-full rounded-[20px] p-2 bg-primary md:col-span-5"
           >
-            2
+            <div
+              class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-[500px]"
+            >
+              <div class="flex gap-[22px] justify-center">
+                <!-- Левая колонка с двумя маленькими картинками -->
+                <div class="flex flex-col gap-[22px] max-w-[150px]">
+                  <div class="aspect-[4/3] w-full">
+                    <img
+                      class="w-full h-full object-cover rounded-[8px] md:rounded-[12px]"
+                      src="assets/img/selection/how/2-1.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="aspect-[4/3] w-full">
+                    <img
+                      class="w-full h-full object-cover rounded-[8px] md:rounded-[12px]"
+                      src="assets/img/selection/how/2-2.webp"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <!-- Правая большая картинка -->
+                <div class="max-w-[258px]">
+                  <div class="aspect-square w-full h-full">
+                    <img
+                      class="w-full h-full object-cover rounded-[8px] md:rounded-[12px]"
+                      src="assets/img/selection/how/2-3.webp"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-3 bg-[#F7F7F7] rounded-[12px] p-3 text-[#1E1E1E] leading-tight"
+            >
+              <span
+                class="bg-[#81818133] text-[11px] md:text-[20px] leading-none! text-[#1E1E1E] w-6 md:w-8 h-6 md:h-8 rounded-full flex items-center justify-center"
+              >
+                2
+              </span>
+              <h4 class="text-[20px]">Подбор и предложения автомобилей</h4>
+              <p class="text-[11px]">
+                Подбираем проверенные автомобили с пробегом под ваши требования
+                и бюджет. Отправляем только подходящие варианты по марке,
+                модели, году, комплектации и с подтверждённой историей.
+              </p>
+            </div>
           </div>
           <div
-            class="how-3 w-full h-full rounded-lg p-2 bg-primary col-span-3 col-start-4 row-span-1 row-start-2"
+            class="how-3 h-[465px] relative w-full rounded-[20px] p-2 bg-primary md:col-span-3"
           >
-            3
-          </div>
-          <div
-            class="how-4 w-full h-full rounded-lg p-2 bg-primary col-span-2 row-span-2"
-          >
-            4
+            <div
+              class="flex flex-col gap-3 bg-[#F7F7F7] rounded-[12px] p-3 text-[#1E1E1E] leading-tight"
+            >
+              <span
+                class="bg-[#81818133] text-[11px] md:text-[20px] leading-none! text-[#1E1E1E] w-6 md:w-8 h-6 md:h-8 rounded-full flex items-center justify-center"
+              >
+                3
+              </span>
+              <h4 class="text-[20px]">Выбор авто</h4>
+              <p class="text-[11px]">
+                После согласования подходящего варианта вы принимаете финальное
+                решение о покупке. Мы сопровождаем сделку на всех этапах:
+              </p>
+              <ul class="list-disc ps-4 text-[11px]">
+                <li>Проверяем документы</li>
+                <li>Согласовываем условия с продавцом</li>
+                <li>
+                  При необходимости помогаем оформить автокредит на выгодных
+                  условия
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -303,6 +386,108 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <!-- Why Choose Us? -->
+      <section class="px-5 mt-7 md:mt-15 flex flex-col gap-4 md:gap-7">
+        <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
+          Почему мы?
+        </h3>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-y-7 gap-x-3 md:gap-x-5 w-full"
+        >
+          <div
+            class="rounded-[12px] bg-[#F7F7F7] py-5 px-3 flex flex-col md:flex-row items-start gap-3 md:gap-5"
+          >
+            <img
+              class="w-10 md:w-15"
+              src="assets/img/selection/why/1.svg"
+              alt=""
+            />
+            <div
+              class="flex flex-col gap-2 md:gap-4 leading-tight text-[#1E1E1E]"
+            >
+              <h4 class="text-[18px] md:text-[24px] font-medium">
+                Мы экономим ваше время и деньги
+              </h4>
+              <span class="text-[12px] md:text-[16px]">
+                Рынок автомобилей огромен, но достойных вариантов мало. Мы
+                отсекаем проблемные машины ещё на этапе анализа объявлений,
+                чтобы вы не тратили время впустую. Наша цель — подобрать лучший
+                автомобиль в рамках вашего бюджета, а не просто любой вариант.
+              </span>
+            </div>
+          </div>
+          <div
+            class="rounded-[12px] bg-[#F7F7F7] py-5 px-3 flex flex-col md:flex-row items-start gap-3 md:gap-5"
+          >
+            <img
+              class="w-10 md:w-15"
+              src="assets/img/selection/why/2.svg"
+              alt=""
+            />
+            <div
+              class="flex flex-col gap-2 md:gap-4 leading-tight text-[#1E1E1E]"
+            >
+              <h4 class="text-[18px] md:text-[24px] font-medium">
+                Профессиональная техническая проверка
+              </h4>
+              <span class="text-[12px] md:text-[16px]">
+                Мы проверяем каждый автомобиль более чем по 100 параметрам — от
+                состояния кузова и техники до электроники и юридической истории.
+                Это помогает заранее обнаружить скрытые недостатки и исключить
+                возможные риски.
+              </span>
+            </div>
+          </div>
+          <div
+            class="rounded-[12px] bg-[#F7F7F7] py-5 px-3 flex flex-col md:flex-row items-start gap-3 md:gap-5"
+          >
+            <img
+              class="w-10 md:w-15"
+              src="assets/img/selection/why/3.svg"
+              alt=""
+            />
+            <div
+              class="flex flex-col gap-2 md:gap-4 leading-tight text-[#1E1E1E]"
+            >
+              <h4 class="text-[18px] md:text-[24px] font-medium">
+                Честность и прозрачность
+              </h4>
+              <span class="text-[12px] md:text-[16px]">
+                Предоставляем подробный отчёт по каждому автомобилю: фото,
+                видеообзор и полную информацию о состоянии. Вы можете объективно
+                оценить машину ещё до осмотра — прозрачно и безопасно.
+              </span>
+            </div>
+          </div>
+          <div
+            class="rounded-[12px] bg-[#F7F7F7] py-5 px-3 flex flex-col md:flex-row items-start gap-3 md:gap-5"
+          >
+            <img
+              class="w-10 md:w-15"
+              src="assets/img/selection/why/4.svg"
+              alt=""
+            />
+            <div
+              class="flex flex-col gap-2 md:gap-4 leading-tight text-[#1E1E1E]"
+            >
+              <h4 class="text-[18px] md:text-[24px] font-medium">
+                Полное сопровождение сделки
+              </h4>
+              <span class="text-[12px] md:text-[16px]">
+                От первого звонка до передачи ключей — мы рядом. Проверяем
+                документы, сопровождаем на сделке, помогаем с переоформлением и
+                даём рекомендации по дальнейшей эксплуатации.
+              </span>
+            </div>
+          </div>
+          <a
+            href="/Indep/#"
+            class="md:max-w-fit text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+          >
+            Подобрать авто
+          </a>
         </div>
       </section>
       <!-- Result -->
@@ -671,7 +856,7 @@
               Подбор авто
             </li>
           </a>
-          <a href="/Indep/reports.html">
+          <a href="/Indep/selection.html">
             <li
               class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
             >
@@ -683,7 +868,7 @@
               Сотрудничество
             </li>
           </a>
-          <a href="/Indep/reports.html">
+          <a href="/Indep/about.html">
             <li
               class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
             >
