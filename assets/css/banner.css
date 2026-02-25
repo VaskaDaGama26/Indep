@@ -4,6 +4,9 @@
 .banner-2 {
   background: url(/Indep/assets/img/banners/2.svg) center / cover no-repeat;
 }
+.banner-3 {
+  background: url(/Indep/assets/img/banners/3.svg) center / cover no-repeat;
+}
 .new-car_assets-bg {
   background:
     url(/Indep/assets/img/addCar/photosBG.svg) left / cover no-repeat,
@@ -17,6 +20,10 @@
   }
   .banner-2 {
     background: url(/Indep/assets/img/banners/2-desktop.svg) left / cover
+      no-repeat;
+  }
+  .banner-3 {
+    background: url(/Indep/assets/img/banners/3-desktop.svg) right bottom / cover
       no-repeat;
   }
   .new-car_assets-bg {

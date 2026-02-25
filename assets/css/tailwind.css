@@ -8,6 +8,9 @@
 .text-primary {
   color: var(--color-primary);
 }
+.bg-primary {
+  background-color: var(--color-primary);
+}
 .text-lightgray {
   color: var(--color-lightGray);
 }
