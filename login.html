@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,11 +19,30 @@
     <!-- Header -->
     <header class="sticky top-0 bg-white z-100 border-b border-[#DEDEDE]">
       <div
-        class="container mx-auto px-5 py-4 flex items-center justify-between"
+        class="container mx-auto px-5 py-4 flex items-center justify-between gap-5"
       >
-        <a href="/Indep/">
-          <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
-        </a>
+        <div class="contents xl:flex gap-15 items-center">
+          <a href="/Indep/">
+            <img
+              class="h-2.5 md:h-8 max-w-[120px]"
+              src="assets/img/logo.svg"
+              alt="Logo"
+            />
+          </a>
+          <!-- Search Bar -->
+          <div class="hidden xl:block relative w-[312px]">
+            <input
+              class="focus-visible:outline-none w-full rounded-xl bg-[#F8F8F8] text-[#979797] text-[12px] md:text-[14px] font-medium py-2 ps-8 pe-2 md:py-2.5 md:ps-10 md:pe-2.5 shrink-0 transition-all duration-300"
+              type="text"
+              placeholder="Поиск по объявлениям"
+            />
+            <img
+              class="md:h-5 md:w-5 absolute left-2 top-1/2 -translate-y-1/2 pointer-events-non"
+              src="assets/img/icons/search.svg"
+              alt="Search Bar"
+            />
+          </div>
+        </div>
         <div class="contents md:flex gap-10 items-center">
           <nav class="hidden md:flex items-center gap-6">
             <a class="text-[#080717]" href="/Indep/catalog.html">Каталог</a>

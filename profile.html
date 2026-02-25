@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,11 +20,30 @@
     <!-- Header -->
     <header class="sticky top-0 bg-white z-100 border-b border-[#DEDEDE]">
       <div
-        class="container mx-auto px-5 py-4 flex items-center justify-between"
+        class="container mx-auto px-5 py-4 flex items-center justify-between gap-5"
       >
-        <a href="/Indep/">
-          <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
-        </a>
+        <div class="contents xl:flex gap-15 items-center">
+          <a href="/Indep/">
+            <img
+              class="h-2.5 md:h-8 max-w-[120px]"
+              src="assets/img/logo.svg"
+              alt="Logo"
+            />
+          </a>
+          <!-- Search Bar -->
+          <div class="hidden xl:block relative w-[312px]">
+            <input
+              class="focus-visible:outline-none w-full rounded-xl bg-[#F8F8F8] text-[#979797] text-[12px] md:text-[14px] font-medium py-2 ps-8 pe-2 md:py-2.5 md:ps-10 md:pe-2.5 shrink-0 transition-all duration-300"
+              type="text"
+              placeholder="Поиск по объявлениям"
+            />
+            <img
+              class="md:h-5 md:w-5 absolute left-2 top-1/2 -translate-y-1/2 pointer-events-non"
+              src="assets/img/icons/search.svg"
+              alt="Search Bar"
+            />
+          </div>
+        </div>
         <div class="contents md:flex gap-10 items-center">
           <nav class="hidden md:flex items-center gap-6">
             <a class="text-[#080717]" href="/Indep/catalog.html">Каталог</a>
@@ -131,8 +150,8 @@
           <a
             href="/Indep/reports.html"
             style="
-              background: url(assets/img/profile/microbanner.svg) center
-                center / cover no-repeat;
+              background: url(assets/img/profile/microbanner.svg) center center /
+                cover no-repeat;
             "
             class="rounded-xl col-span-2 flex flex-col items-start justify-center p-3 md:p-4 text-white leading-tight! md:row-end-3 md:col-span-3"
           >
@@ -150,8 +169,8 @@
           <a
             href="/Indep/favourites.html"
             style="
-              background:
-                url(assets/img/profile/favourites.svg) 95% 90% / auto no-repeat,
+              background: url(assets/img/profile/favourites.svg) 95% 90% / auto
+                  no-repeat,
                 #f7f7f7;
             "
             class="flex md:hidden rounded-xl h-[62px] px-2 py-3"
@@ -164,8 +183,8 @@
           <a
             href="/Indep/hit.html"
             style="
-              background:
-                url(assets/img/profile/best.svg) 110% 350% / auto no-repeat,
+              background: url(assets/img/profile/best.svg) 110% 350% / auto
+                  no-repeat,
                 #f7f7f7;
             "
             class="flex md:hidden rounded-xl h-[62px] px-2 py-3"
