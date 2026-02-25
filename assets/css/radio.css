@@ -1,13 +1,28 @@
+.custom-radio-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background-color: #0000000a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .custom-radio {
   width: 20px;
   height: 20px;
-  border: 2px solid #db4431;
+  border: 2px solid #626262;
   border-radius: 999px;
   appearance: none;
   position: relative;
   cursor: pointer;
 }
 
+.custom-radio-wrapper:has(.custom-radio:checked) {
+  background-color: #db44310a;
+}
+.custom-radio:checked {
+  border: 2px solid #db4431;
+}
 .custom-radio:checked::before {
   content: "";
   position: absolute;
