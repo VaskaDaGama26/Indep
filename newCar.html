@@ -18,14 +18,14 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="sticky top-0 bg-white z-100 border-b border-[#DEDEDE]">
+    <header class="top-0 z-100 sticky bg-white border-[#DEDEDE] border-b">
       <div
-        class="container mx-auto px-5 py-4 flex items-center justify-between gap-5"
+        class="flex justify-between items-center gap-5 mx-auto px-5 py-4 container"
       >
-        <div class="contents xl:flex gap-15 items-center">
+        <div class="contents xl:flex items-center gap-15">
           <a href="/Indep/">
             <img
-              class="h-2.5 md:h-8 max-w-[120px]"
+              class="max-w-[120px] h-2.5 md:h-8"
               src="assets/img/logo.svg"
               alt="Logo"
             />
@@ -33,46 +33,146 @@
           <!-- Search Bar -->
           <div class="hidden xl:block relative w-[312px]">
             <input
-              class="focus-visible:outline-none w-full rounded-xl bg-[#F8F8F8] text-[#979797] text-[12px] md:text-[14px] font-medium py-2 ps-8 pe-2 md:py-2.5 md:ps-10 md:pe-2.5 shrink-0 transition-all duration-300"
+              class="bg-[#F8F8F8] py-2 md:py-2.5 ps-8 md:ps-10 pe-2 md:pe-2.5 rounded-xl focus-visible:outline-none w-full font-medium text-[#979797] text-[12px] md:text-[14px] transition-all duration-300 shrink-0"
               type="text"
               placeholder="Поиск по объявлениям"
             />
             <img
-              class="md:h-5 md:w-5 absolute left-2 top-1/2 -translate-y-1/2 pointer-events-non"
+              class="top-1/2 left-2 absolute md:w-5 md:h-5 -translate-y-1/2 pointer-events-non"
               src="assets/img/icons/search.svg"
               alt="Search Bar"
             />
           </div>
         </div>
-        <div class="contents md:flex gap-10 items-center">
+        <div class="contents md:flex items-center gap-10">
           <nav class="hidden md:flex items-center gap-6">
-            <a class="text-[#080717]" href="/Indep/catalog.html">Каталог</a>
-            <a class="text-[#080717]" href="/Indep/selection.html"
-              >Подбор авто</a
+            <a
+              class="text-[#080717] hover:text-[#db4431] transition-colors duration-200"
+              href="/Indep/catalog.html"
+              >Купить авто</a
             >
-            <a class="text-[#080717]" href="/Indep/cooperation.html"
-              >Сотрудничество</a
+            <a
+              class="text-[#080717] hover:text-[#db4431] transition-colors duration-200"
+              href="/Indep/register.html"
+              >Продать авто</a
             >
-            <a class="text-[#080717]" href="/Indep/about.html">О нас</a>
+            <div class="group relative nav-dropdown__wrapper">
+              <button
+                class="inline-flex justify-center items-center gap-1 text-[#080717] hover:text-[#db4431] transition-colors duration-200 nav-dropdown__link"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Услуги
+                <img
+                  class="w-4 h-4 group-hover:rotate-180 transition-transform duration-200 nav-dropdown__img"
+                  src="assets/img/icons/black-dropdown.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+
+              <ul
+                class="invisible group-hover:visible top-full left-0 z-50 absolute bg-white opacity-0 group-hover:opacity-100 shadow-lg mt-1 py-2 border border-gray-100 rounded-lg min-w-[200px] transition-all duration-200 nav-dropdown"
+                role="menu"
+                aria-label="Услуги"
+              >
+                <li role="none">
+                  <a
+                    href="/Indep/selection.html"
+                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                    role="menuitem"
+                  >
+                    Разовая диагностика
+                  </a>
+                </li>
+                <li role="none">
+                  <a
+                    href="/Indep/day.html"
+                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                    role="menuitem"
+                  >
+                    Автоподборщик на день
+                  </a>
+                </li>
+                <li role="none">
+                  <a
+                    href="/Indep/key.html"
+                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                    role="menuitem"
+                  >
+                    Подбор авто под ключ
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="group relative nav-dropdown__wrapper">
+              <button
+                class="inline-flex justify-center items-center gap-1 text-[#080717] hover:text-[#db4431] transition-colors duration-200 nav-dropdown__link"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Партнерам
+                <img
+                  class="w-4 h-4 group-hover:rotate-180 transition-transform duration-200 nav-dropdown__img"
+                  src="assets/img/icons/black-dropdown.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+
+              <ul
+                class="invisible group-hover:visible top-full left-0 z-50 absolute bg-white opacity-0 group-hover:opacity-100 shadow-lg mt-1 py-2 border border-gray-100 rounded-lg min-w-[200px] transition-all duration-200 nav-dropdown"
+                role="menu"
+                aria-label="Партнерам"
+              >
+                <li role="none">
+                  <a
+                    href="/Indep/cooperation.html"
+                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                    role="menuitem"
+                  >
+                    Сотрудничество
+                  </a>
+                </li>
+                <li role="none">
+                  <a
+                    href="/Indep/about.html"
+                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                    role="menuitem"
+                  >
+                    О нас
+                  </a>
+                </li>
+                <li role="none">
+                  <a
+                    href="/Indep/contacts.html"
+                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                    role="menuitem"
+                  >
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
-          <div class="flex gap-5 items-center">
+          <div class="flex items-center gap-5">
             <a
               href="/Indep/favourites.html"
-              class="cursor-pointer hidden md:block"
+              class="hidden md:block cursor-pointer"
             >
               <img
                 class="h-8"
                 src="assets/img/icons/favourite.svg"
-                alt="Favoruites"
+                alt="Favourites"
               />
             </a>
             <a
               href="/Indep/profile.html"
-              class="cursor-pointer hidden md:block"
+              class="hidden md:block cursor-pointer"
             >
               <img class="h-8" src="assets/img/icons/user.svg" alt="Menu" />
             </a>
-            <button class="block md:hidden cursor-pointer" id="burger">
+            <button class="md:hidden block cursor-pointer" id="burger">
               <img
                 class="h-6 md:h-12"
                 src="assets/img/icons/burger.svg"
@@ -83,10 +183,10 @@
         </div>
       </div>
     </header>
-    <main id="main" class="container mx-auto mt-6">
+    <main id="main" class="mx-auto mt-6 container">
       <!-- Breadcrumbs -->
       <section
-        class="px-5 container mx-auto text-[10px] md:text-[16px] leading-tight text-[#979797] flex flex-wrap items-center gap-1 md:gap-2"
+        class="flex flex-wrap items-center gap-1 md:gap-2 mx-auto px-5 text-[#979797] text-[10px] md:text-[16px] leading-tight container"
       >
         <a href="/Indep/profile.html">Профиль</a>
         <img
@@ -96,13 +196,13 @@
         />
         <p class="text-[#DB4431]">Создать объявление</p>
       </section>
-      <section class="px-5 flex flex-col gap-4 mt-4">
+      <section class="flex flex-col gap-4 mt-4 px-5">
         <!-- Photos + Videos -->
         <div
-          class="new-car_assets-bg flex flex-col justify-end gap-3 md:gap-6 px-3 py-4 md:p-5 rounded-lg h-[300px] md:h-fit"
+          class="flex flex-col justify-end gap-3 md:gap-6 md:p-5 px-3 py-4 rounded-lg h-[300px] md:h-fit new-car_assets-bg"
         >
           <h2
-            class="text-[16px] md:text-[24px] leading-tight! font-medium text-left"
+            class="font-medium text-[16px] md:text-[24px] text-left leading-tight!"
           >
             Добавьте фото авто
           </h2>
@@ -112,7 +212,7 @@
               <span class="text-[12px] md:text-[18px]">Фото салона</span>
               <button
                 popovertarget="photoCabin"
-                class="w-[105px] md:w-[246px] text-[10px] md:text-[14px] text-white py-1 px-2 md:py-3 md:px-4 text-center rounded-xl bg-[#DB4431]"
+                class="bg-[#DB4431] px-2 md:px-4 py-1 md:py-3 rounded-xl w-[105px] md:w-[246px] text-[10px] text-white md:text-[14px] text-center"
               >
                 Добавить
               </button>
@@ -121,7 +221,7 @@
               <span class="text-[12px] md:text-[18px]">Фото кузова</span>
               <button
                 popovertarget="photoBody"
-                class="w-[105px] md:w-[246px] text-[10px] md:text-[14px] text-white py-1 px-2 md:py-3 md:px-4 text-center rounded-xl bg-[#43C356]"
+                class="bg-[#43C356] px-2 md:px-4 py-1 md:py-3 rounded-xl w-[105px] md:w-[246px] text-[10px] text-white md:text-[14px] text-center"
               >
                 Добавлено
               </button>
@@ -130,7 +230,7 @@
               <span class="text-[12px] md:text-[18px]">Видео салона</span>
               <button
                 popovertarget="videoCabin"
-                class="w-[105px] md:w-[246px] text-[10px] md:text-[14px] text-white py-1 px-2 md:py-3 md:px-4 text-center rounded-xl bg-[#DB4431]"
+                class="bg-[#DB4431] px-2 md:px-4 py-1 md:py-3 rounded-xl w-[105px] md:w-[246px] text-[10px] text-white md:text-[14px] text-center"
               >
                 Добавить
               </button>
@@ -139,7 +239,7 @@
               <span class="text-[12px] md:text-[18px]">Видео кузова</span>
               <button
                 popovertarget="videoBody"
-                class="w-[105px] md:w-[246px] text-[10px] md:text-[14px] text-white py-1 px-2 md:py-3 md:px-4 text-center rounded-xl bg-[#DB4431]"
+                class="bg-[#DB4431] px-2 md:px-4 py-1 md:py-3 rounded-xl w-[105px] md:w-[246px] text-[10px] text-white md:text-[14px] text-center"
               >
                 Добавить
               </button>
@@ -148,18 +248,18 @@
         </div>
       </section>
       <!-- Checks Info -->
-      <section class="px-5 mt-7 flex flex-col gap-4">
+      <section class="flex flex-col gap-4 mt-7 px-5">
         <div
-          class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg"
+          class="flex flex-col gap-3 md:gap-6 bg-[#F8F8F8] px-3 md:px-8 py-4 md:py-10 rounded-lg"
         >
           <h2
-            class="text-[16px] md:text-[24px] leading-tight! font-medium text-left"
+            class="font-medium text-[16px] md:text-[24px] text-left leading-tight!"
           >
             Общая информация
           </h2>
           <ul
             id="check-list"
-            class="list-none text-[11px] leading-tight! flex flex-col items-start gap-2 md:gap-6"
+            class="flex flex-col items-start gap-2 md:gap-6 text-[11px] leading-tight! list-none"
           >
             <div class="flex items-center gap-2">
               <label class="custom-checkbox dark" for="pts">
@@ -237,25 +337,25 @@
         </div>
       </section>
       <!-- Vehicle Pasport -->
-      <section class="px-5 mt-7 flex flex-col gap-4">
+      <section class="flex flex-col gap-4 mt-7 px-5">
         <div
-          class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg"
+          class="flex flex-col gap-3 md:gap-6 bg-[#F8F8F8] px-3 md:px-8 py-4 md:py-10 rounded-lg"
         >
           <h2
-            class="text-[16px] md:text-[24px] leading-tight! font-medium text-left"
+            class="font-medium text-[16px] md:text-[24px] text-left leading-tight!"
           >
             Общая информация
           </h2>
           <div class="flex flex-col gap-3 md:gap-8">
             <!-- VIN -->
             <label
-              class="text-[12px] md:text-[16px] leading-tight! flex flex-col items-start gap-1.5 md:gap-3"
+              class="flex flex-col items-start gap-1.5 md:gap-3 text-[12px] md:text-[16px] leading-tight!"
               for="VIN"
             >
               VIN
               <input
                 id="VIN"
-                class="bg-white rounded-lg w-full p-3 focus:outline-none placeholder:text-[#00000080]"
+                class="bg-white p-3 rounded-lg focus:outline-none w-full placeholder:text-[#00000080]"
                 type="text"
                 required
                 placeholder="Введите VIN"
@@ -263,13 +363,13 @@
             </label>
             <!-- Mark -->
             <label
-              class="text-[12px] md:text-[16px] leading-tight! flex flex-col items-start gap-1.5 md:gap-3"
+              class="flex flex-col items-start gap-1.5 md:gap-3 text-[12px] md:text-[16px] leading-tight!"
               for="mark"
             >
               Марка
               <input
                 id="mark"
-                class="bg-white rounded-lg w-full p-3 focus:outline-none placeholder:text-[#00000080]"
+                class="bg-white p-3 rounded-lg focus:outline-none w-full placeholder:text-[#00000080]"
                 type="text"
                 required
                 placeholder="Укажите марку"
@@ -277,13 +377,13 @@
             </label>
             <!-- Model -->
             <label
-              class="text-[12px] md:text-[16px] leading-tight! flex flex-col items-start gap-1.5 md:gap-3"
+              class="flex flex-col items-start gap-1.5 md:gap-3 text-[12px] md:text-[16px] leading-tight!"
               for="model"
             >
               Модель
               <input
                 id="model"
-                class="bg-white rounded-lg w-full p-3 focus:outline-none placeholder:text-[#00000080]"
+                class="bg-white p-3 rounded-lg focus:outline-none w-full placeholder:text-[#00000080]"
                 type="text"
                 required
                 placeholder="Укажите модель"
@@ -291,20 +391,20 @@
             </label>
             <!-- Year -->
             <div
-              class="w-full flex flex-col items-start gap-2 text-[12px] md:text-[16px]"
+              class="flex flex-col items-start gap-2 w-full text-[12px] md:text-[16px]"
             >
               <label class="font-medium" for="year">Год выпуска </label>
-              <div class="w-full relative">
+              <div class="relative w-full">
                 <select
                   id="year"
-                  class="relative appearance-none focus-visible:outline-none w-full bg-white text-[#979797] rounded-lg py-3 ps-5 pe-9"
+                  class="relative bg-white py-3 ps-5 pe-9 rounded-lg focus-visible:outline-none w-full text-[#979797] appearance-none"
                 >
                   <option selected value="">Укажите год выпуска</option>
                   <option value="Test">Test</option>
                 </select>
                 <img
                   id="select-dropdown"
-                  class="absolute right-5 top-3 pointer-events-non"
+                  class="top-3 right-5 absolute pointer-events-non"
                   src="assets/img/icons/dropdown.svg"
                   alt=""
                 />
@@ -312,20 +412,20 @@
             </div>
             <!-- Color -->
             <div
-              class="w-full flex flex-col items-start gap-2 text-[12px] md:text-[16px]"
+              class="flex flex-col items-start gap-2 w-full text-[12px] md:text-[16px]"
             >
               <label class="font-medium" for="color">Цвет</label>
-              <div class="w-full relative">
+              <div class="relative w-full">
                 <select
                   id="color"
-                  class="relative appearance-none focus-visible:outline-none w-full bg-white text-[#979797] rounded-lg py-3 ps-5 pe-9"
+                  class="relative bg-white py-3 ps-5 pe-9 rounded-lg focus-visible:outline-none w-full text-[#979797] appearance-none"
                 >
                   <option selected value="">Укажите цвет</option>
                   <option value="Test">Test</option>
                 </select>
                 <img
                   id="select-dropdown"
-                  class="absolute right-5 top-3 pointer-events-non"
+                  class="top-3 right-5 absolute pointer-events-non"
                   src="assets/img/icons/dropdown.svg"
                   alt=""
                 />
@@ -333,20 +433,20 @@
             </div>
             <!-- Engine -->
             <div
-              class="w-full flex flex-col items-start gap-2 text-[12px] md:text-[16px]"
+              class="flex flex-col items-start gap-2 w-full text-[12px] md:text-[16px]"
             >
               <label class="font-medium" for="engine">Объём двигателя</label>
-              <div class="w-full relative">
+              <div class="relative w-full">
                 <select
                   id="engine"
-                  class="relative appearance-none focus-visible:outline-none w-full bg-white text-[#979797] rounded-lg py-3 ps-5 pe-9"
+                  class="relative bg-white py-3 ps-5 pe-9 rounded-lg focus-visible:outline-none w-full text-[#979797] appearance-none"
                 >
                   <option selected value="">Укажите объём двигателя</option>
                   <option value="Test">Test</option>
                 </select>
                 <img
                   id="select-dropdown"
-                  class="absolute right-5 top-3 pointer-events-non"
+                  class="top-3 right-5 absolute pointer-events-non"
                   src="assets/img/icons/dropdown.svg"
                   alt=""
                 />
@@ -354,15 +454,15 @@
             </div>
             <!-- PTS Type -->
             <div
-              class="w-full flex flex-col items-start gap-2 text-[12px] md:text-[16px]"
+              class="flex flex-col items-start gap-2 w-full text-[12px] md:text-[16px]"
             >
               ПТС
               <div
-                class="grid grid-cols-2 justify-between gap-5 w-full text-[12px] md:text-[14px] leading-tight!"
+                class="justify-between gap-5 grid grid-cols-2 w-full text-[12px] md:text-[14px] leading-tight!"
               >
                 <label class="flex items-center gap-3" for="original">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -377,7 +477,7 @@
                 </label>
                 <label class="flex items-center gap-3" for="non-original">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -394,15 +494,15 @@
             </div>
             <!-- PTS Electro -->
             <div
-              class="w-full flex flex-col items-start gap-2 text-[12px] md:text-[16px]"
+              class="flex flex-col items-start gap-2 w-full text-[12px] md:text-[16px]"
             >
               Электронный ПТС
               <div
-                class="grid grid-cols-2 justify-between gap-5 w-full text-[12px] md:text-[14px] leading-tight!"
+                class="justify-between gap-5 grid grid-cols-2 w-full text-[12px] md:text-[14px] leading-tight!"
               >
                 <label class="flex items-center gap-3" for="electronic">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -417,7 +517,7 @@
                 </label>
                 <label class="flex items-center gap-3" for="non-electronic">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -436,23 +536,23 @@
         </div>
       </section>
       <!-- Mileage -->
-      <section class="px-5 mt-7 flex flex-col gap-4">
+      <section class="flex flex-col gap-4 mt-7 px-5">
         <div
-          class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg"
+          class="flex flex-col gap-3 md:gap-6 bg-[#F8F8F8] px-3 md:px-8 py-4 md:py-10 rounded-lg"
         >
           <h2
-            class="text-[16px] md:text-[24px] leading-tight! font-medium text-left"
+            class="font-medium text-[16px] md:text-[24px] text-left leading-tight!"
           >
             Заполните пробег
           </h2>
           <label
-            class="text-[12px] md:text-[16px] leading-tight! flex flex-col items-start gap-1.5 md:gap-3"
+            class="flex flex-col items-start gap-1.5 md:gap-3 text-[12px] md:text-[16px] leading-tight!"
             for="mileage"
           >
             Пробег авто, км
             <input
               id="mileage"
-              class="bg-white rounded-lg w-full p-3 focus:outline-none placeholder:text-[#00000080]"
+              class="bg-white p-3 rounded-lg focus:outline-none w-full placeholder:text-[#00000080]"
               type="text"
               required
               placeholder="300 000"
@@ -461,27 +561,27 @@
         </div>
       </section>
       <!-- Owner Info -->
-      <section class="px-5 mt-7 flex flex-col gap-4">
+      <section class="flex flex-col gap-4 mt-7 px-5">
         <div
-          class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg"
+          class="flex flex-col gap-3 md:gap-6 bg-[#F8F8F8] px-3 md:px-8 py-4 md:py-10 rounded-lg"
         >
           <h2
-            class="text-[16px] md:text-[24px] leading-tight! font-medium text-left"
+            class="font-medium text-[16px] md:text-[24px] text-left leading-tight!"
           >
             Заполните сведения о владельцах по ПТС
           </h2>
           <div class="flex flex-col gap-3 md:gap-8">
             <!-- Owner Type -->
             <div
-              class="flex flex-col items-start justify-between gap-5 w-full text-[12px] md:text-[16px] leading-tight!"
+              class="flex flex-col justify-between items-start gap-5 w-full text-[12px] md:text-[16px] leading-tight!"
             >
               Тип владельца
               <div
-                class="grid grid-cols-1 justify-between gap-5 w-full text-[12px] md:text-[14px] leading-tight!"
+                class="justify-between gap-5 grid grid-cols-1 w-full text-[12px] md:text-[14px] leading-tight!"
               >
                 <label class="flex items-center gap-3" for="urik">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -496,7 +596,7 @@
                 </label>
                 <label class="flex items-center gap-3" for="physic">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -513,13 +613,13 @@
             </div>
             <!-- Start Date -->
             <label
-              class="text-[12px] md:text-[16px] leading-tight! flex flex-col items-start gap-1.5 md:gap-3"
+              class="flex flex-col items-start gap-1.5 md:gap-3 text-[12px] md:text-[16px] leading-tight!"
               for="start"
             >
               Дата начала владения
               <input
                 id="start"
-                class="bg-white rounded-lg w-full p-3 focus:outline-none placeholder:text-[#00000080]"
+                class="bg-white p-3 rounded-lg focus:outline-none w-full placeholder:text-[#00000080]"
                 type="date"
                 required
                 placeholder="дд.мм.гггг"
@@ -527,13 +627,13 @@
             </label>
             <!-- End Date -->
             <label
-              class="text-[12px] md:text-[16px] leading-tight! flex flex-col items-start gap-1.5 md:gap-3"
+              class="flex flex-col items-start gap-1.5 md:gap-3 text-[12px] md:text-[16px] leading-tight!"
               for="end"
             >
               Дата окончания владения
               <input
                 id="end"
-                class="bg-white rounded-lg w-full p-3 focus:outline-none placeholder:text-[#00000080]"
+                class="bg-white p-3 rounded-lg focus:outline-none w-full placeholder:text-[#00000080]"
                 type="date"
                 required
                 placeholder="дд.мм.гггг"
@@ -542,7 +642,7 @@
             <!-- Add New Owner -->
             <a
               href=""
-              class="flex justify-center items-center gap-2.5 text-center rounded-xl bg-[#F7F1F0] text-[12px] md:text-[16px] font-medium text-[#DB4431] py-2 md:py-2.5 px-9 w-full cursor-pointer"
+              class="flex justify-center items-center gap-2.5 bg-[#F7F1F0] px-9 py-2 md:py-2.5 rounded-xl w-full font-medium text-[#DB4431] text-[12px] md:text-[16px] text-center cursor-pointer"
             >
               <img
                 class="md:h-5"
@@ -555,27 +655,27 @@
         </div>
       </section>
       <!-- Legal Info -->
-      <section class="px-5 mt-7 flex flex-col gap-4">
+      <section class="flex flex-col gap-4 mt-7 px-5">
         <div
-          class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg"
+          class="flex flex-col gap-3 md:gap-6 bg-[#F8F8F8] px-3 md:px-8 py-4 md:py-10 rounded-lg"
         >
           <h2
-            class="text-[16px] md:text-[24px] leading-tight! font-medium text-left"
+            class="font-medium text-[16px] md:text-[24px] text-left leading-tight!"
           >
             Юридическая чистота автомобиля
           </h2>
           <div class="flex flex-col gap-3 md:gap-8">
             <!-- Zalog -->
             <div
-              class="w-full flex flex-col items-start gap-2 text-[12px] md:text-[16px]"
+              class="flex flex-col items-start gap-2 w-full text-[12px] md:text-[16px]"
             >
               Сведения о нахождении в залоге
               <div
-                class="grid grid-cols-2 justify-between gap-5 w-full text-[12px] md:text-[14px] leading-tight!"
+                class="justify-between gap-5 grid grid-cols-2 w-full text-[12px] md:text-[14px] leading-tight!"
               >
                 <label class="flex items-center gap-3" for="zalog">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -590,7 +690,7 @@
                 </label>
                 <label class="flex items-center gap-3" for="non-zalog">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -607,15 +707,15 @@
             </div>
             <!-- Registration -->
             <div
-              class="w-full flex flex-col items-start gap-2 text-[12px] md:text-[16px]"
+              class="flex flex-col items-start gap-2 w-full text-[12px] md:text-[16px]"
             >
               Ограничения на регистрационные действия
               <div
-                class="grid grid-cols-2 justify-between gap-5 w-full text-[12px] md:text-[14px] leading-tight!"
+                class="justify-between gap-5 grid grid-cols-2 w-full text-[12px] md:text-[14px] leading-tight!"
               >
                 <label class="flex items-center gap-3" for="registration">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -630,7 +730,7 @@
                 </label>
                 <label class="flex items-center gap-3" for="non-registration">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -647,15 +747,15 @@
             </div>
             <!-- Rozisk -->
             <div
-              class="w-full flex flex-col items-start gap-2 text-[12px] md:text-[16px]"
+              class="flex flex-col items-start gap-2 w-full text-[12px] md:text-[16px]"
             >
               Сведения о нахождении в розыске
               <div
-                class="grid grid-cols-2 justify-between gap-5 w-full text-[12px] md:text-[14px] leading-tight!"
+                class="justify-between gap-5 grid grid-cols-2 w-full text-[12px] md:text-[14px] leading-tight!"
               >
                 <label class="flex items-center gap-3" for="rozisk">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -670,7 +770,7 @@
                 </label>
                 <label class="flex items-center gap-3" for="non-rozisk">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -689,27 +789,27 @@
         </div>
       </section>
       <!-- Commercial Info -->
-      <section class="px-5 mt-7 flex flex-col gap-4">
+      <section class="flex flex-col gap-4 mt-7 px-5">
         <div
-          class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg"
+          class="flex flex-col gap-3 md:gap-6 bg-[#F8F8F8] px-3 md:px-8 py-4 md:py-10 rounded-lg"
         >
           <h2
-            class="text-[16px] md:text-[24px] leading-tight! font-medium text-left"
+            class="font-medium text-[16px] md:text-[24px] text-left leading-tight!"
           >
             Коммерческое использование
           </h2>
           <div class="flex flex-col gap-3 md:gap-8">
             <!-- Taxi -->
             <div
-              class="w-full flex flex-col items-start gap-2 text-[12px] md:text-[16px]"
+              class="flex flex-col items-start gap-2 w-full text-[12px] md:text-[16px]"
             >
               Разрешение на работу в такси
               <div
-                class="grid grid-cols-2 justify-between gap-5 w-full text-[12px] md:text-[14px] leading-tight!"
+                class="justify-between gap-5 grid grid-cols-2 w-full text-[12px] md:text-[14px] leading-tight!"
               >
                 <label class="flex items-center gap-3" for="taxi">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -724,7 +824,7 @@
                 </label>
                 <label class="flex items-center gap-3" for="non-taxi">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -741,15 +841,15 @@
             </div>
             <!-- Sharing -->
             <div
-              class="w-full flex flex-col items-start gap-2 text-[12px] md:text-[16px]"
+              class="flex flex-col items-start gap-2 w-full text-[12px] md:text-[16px]"
             >
               Регистрировался для работы в каршеринге
               <div
-                class="grid grid-cols-2 justify-between gap-5 w-full text-[12px] md:text-[14px] leading-tight!"
+                class="justify-between gap-5 grid grid-cols-2 w-full text-[12px] md:text-[14px] leading-tight!"
               >
                 <label class="flex items-center gap-3" for="sharing">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -764,7 +864,7 @@
                 </label>
                 <label class="flex items-center gap-3" for="non-sharing">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -781,15 +881,15 @@
             </div>
             <!-- Leasing -->
             <div
-              class="w-full flex flex-col items-start gap-2 text-[12px] md:text-[16px]"
+              class="flex flex-col items-start gap-2 w-full text-[12px] md:text-[16px]"
             >
               Обнаружен в договорах лизинга
               <div
-                class="grid grid-cols-2 justify-between gap-5 w-full text-[12px] md:text-[14px] leading-tight!"
+                class="justify-between gap-5 grid grid-cols-2 w-full text-[12px] md:text-[14px] leading-tight!"
               >
                 <label class="flex items-center gap-3" for="leasing">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -804,7 +904,7 @@
                 </label>
                 <label class="flex items-center gap-3" for="non-leasing">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#DB44310A] flex items-center justify-center"
+                    class="flex justify-center items-center bg-[#DB44310A] rounded-full w-10 h-10"
                   >
                     <input
                       class="custom-radio"
@@ -823,12 +923,12 @@
         </div>
       </section>
       <!-- Defects -->
-      <section class="px-5 mt-7 flex flex-col gap-4">
+      <section class="flex flex-col gap-4 mt-7 px-5">
         <div
-          class="flex flex-col gap-3 md:gap-6 px-3 md:px-8 py-4 md:py-10 bg-[#F8F8F8] rounded-lg"
+          class="flex flex-col gap-3 md:gap-6 bg-[#F8F8F8] px-3 md:px-8 py-4 md:py-10 rounded-lg"
         >
           <h2
-            class="mb-3 text-[16px] md:text-[24px] leading-tight! font-medium text-left"
+            class="mb-3 font-medium text-[16px] md:text-[24px] text-left leading-tight!"
           >
             Повреждения
           </h2>
@@ -840,13 +940,13 @@
                 alt=""
               />
               <label
-                class="text-[12px] md:text-[16px] leading-tight! flex flex-col items-start gap-1.5 md:gap-3"
+                class="flex flex-col items-start gap-1.5 md:gap-3 text-[12px] md:text-[16px] leading-tight!"
                 for="mileage"
               >
                 Внесите дефекты
                 <input
                   id="mileage"
-                  class="bg-white rounded-lg w-full p-3 focus:outline-none placeholder:text-[#00000080]"
+                  class="bg-white p-3 rounded-lg focus:outline-none w-full placeholder:text-[#00000080]"
                   type="text"
                   required
                   placeholder="Косметические царапины на переднем бампере, без влияния на безопасность."
@@ -855,10 +955,10 @@
             </div>
             <div id="content-right" class="w-full">
               <div
-                class="relative w-full h-[149px] md:h-[250px] select-none rounded-lg overflow-hidden"
+                class="relative rounded-lg w-full h-[149px] md:h-[250px] overflow-hidden select-none"
               >
                 <div
-                  class="slider-container absolute inset-0 flex transition-transform duration-500 ease-in-out"
+                  class="absolute inset-0 flex transition-transform duration-500 ease-in-out slider-container"
                   id="slider"
                 >
                   <div
@@ -866,9 +966,9 @@
                       background: url(assets/img/auto/defect.jpg) center center /
                         cover no-repeat;
                     "
-                    class="w-full shrink-0 relative flex items-end p-3"
+                    class="relative flex items-end p-3 w-full shrink-0"
                   >
-                    <p class="text-[10px] md:text-[18px] text-white">
+                    <p class="text-[10px] text-white md:text-[18px]">
                       Косметические царапины на переднем бампере, без влияния на
                       безопасность.
                     </p>
@@ -878,9 +978,9 @@
                       background: url(assets/img/auto/defect.jpg) center center /
                         cover no-repeat;
                     "
-                    class="w-full shrink-0 relative flex items-end p-3"
+                    class="relative flex items-end p-3 w-full shrink-0"
                   >
-                    <p class="text-[10px] md:text-[18px] text-white">
+                    <p class="text-[10px] text-white md:text-[18px]">
                       Косметические царапины на переднем бампере, без влияния на
                       безопасность.
                     </p>
@@ -890,9 +990,9 @@
                       background: url(assets/img/auto/defect.jpg) center center /
                         cover no-repeat;
                     "
-                    class="w-full shrink-0 relative flex items-end p-3"
+                    class="relative flex items-end p-3 w-full shrink-0"
                   >
-                    <p class="text-[10px] md:text-[18px] text-white">
+                    <p class="text-[10px] text-white md:text-[18px]">
                       Косметические царапины на переднем бампере, без влияния на
                       безопасность.
                     </p>
@@ -903,17 +1003,17 @@
             <div
               id="toggle-buttons"
               data-enable-color-class="bg-[#DB4431]"
-              class="w-full md:w-1/2 flex gap-3 bg-[#FFFFFF] p-1 rounded-2xl"
+              class="flex gap-3 bg-[#FFFFFF] p-1 rounded-2xl w-full md:w-1/2"
             >
               <button
                 id="toggle-left"
-                class="w-full rounded-xl text-[12px] md:text-[20px] leading-tight! py-2 md:py-3 cursor-pointer"
+                class="py-2 md:py-3 rounded-xl w-full text-[12px] md:text-[20px] leading-tight! cursor-pointer"
               >
                 Схема
               </button>
               <button
                 id="toggle-right"
-                class="w-full rounded-xl text-[12px] md:text-[20px] leading-tight! py-2 md:py-3 cursor-pointer"
+                class="py-2 md:py-3 rounded-xl w-full text-[12px] md:text-[20px] leading-tight! cursor-pointer"
               >
                 Фото
               </button>
@@ -922,27 +1022,27 @@
         </div>
       </section>
       <!-- Next Step -->
-      <section class="px-5 mt-7 flex flex-col gap-4">
+      <section class="flex flex-col gap-4 mt-7 px-5">
         <a
           href="/Indep/checkCar.html"
-          class="text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+          class="bg-[#DB4431] px-9 py-2 md:py-2.5 rounded-xl w-full font-medium text-[12px] text-white md:text-[16px] text-center cursor-pointer"
         >
           Продолжить
         </a>
       </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-[#1E1E1E] text-white leading-tight! mt-7">
+    <footer class="bg-[#1E1E1E] mt-7 text-white leading-tight!">
       <div
-        class="relative container mx-auto px-5 py-8 flex flex-col items-start justify-between"
+        class="relative flex flex-col justify-between items-start mx-auto px-5 py-8 container"
       >
-        <div class="flex flex-col gap-7 items-start">
-          <div class="w-full flex justify-between items-center">
+        <div class="flex flex-col items-start gap-7">
+          <div class="flex justify-between items-center w-full">
             <a href="/Indep/">
               <img class="h-6" src="assets/img/logo-white.svg" alt="Logo" />
             </a>
             <img
-              class="md:absolute right-0 bottom-0 h-[50px] md:h-[124px]"
+              class="right-0 bottom-0 md:absolute h-[50px] md:h-[124px]"
               src="assets/img/footer-car.svg"
               alt=""
             />
@@ -984,10 +1084,10 @@
     <!-- Mobile Menu -->
     <section
       id="mobilemenu"
-      class="block md:hidden sticky right-0 bottom-0 w-full bg-[#F7F7F7] z-97 pt-2 pb-3"
+      class="md:hidden block right-0 bottom-0 z-97 sticky bg-[#F7F7F7] pt-2 pb-3 w-full"
     >
       <div class="flex flex-row justify-between items-center">
-        <a href="/Indep/" class="mobile-menu-item w-full">
+        <a href="/Indep/" class="w-full mobile-menu-item">
           <div class="flex flex-col items-center gap-1">
             <svg
               width="40"
@@ -1003,12 +1103,12 @@
                 fill="#A0A0A0"
               />
             </svg>
-            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+            <p class="font-medium text-[10px] text-lightgray leading-tight!">
               Главная
             </p>
           </div>
         </a>
-        <a href="/Indep/chat.html" class="mobile-menu-item w-full">
+        <a href="/Indep/chat.html" class="w-full mobile-menu-item">
           <div class="flex flex-col items-center gap-1">
             <svg
               width="40"
@@ -1022,12 +1122,12 @@
                 fill="#A0A0A0"
               />
             </svg>
-            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+            <p class="font-medium text-[10px] text-lightgray leading-tight!">
               Чат
             </p>
           </div>
         </a>
-        <a href="/Indep/call.html" class="mobile-menu-item w-full">
+        <a href="/Indep/call.html" class="w-full mobile-menu-item">
           <div class="flex flex-col items-center gap-1">
             <svg
               width="40"
@@ -1041,12 +1141,12 @@
                 fill="#A0A0A0"
               />
             </svg>
-            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+            <p class="font-medium text-[10px] text-lightgray leading-tight!">
               Позвонить
             </p>
           </div>
         </a>
-        <a href="/Indep/profile.html" class="mobile-menu-item w-full">
+        <a href="/Indep/profile.html" class="w-full mobile-menu-item">
           <div class="flex flex-col items-center gap-1">
             <svg
               width="40"
@@ -1064,7 +1164,7 @@
                 fill="#A0A0A0"
               />
             </svg>
-            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+            <p class="font-medium text-[10px] text-lightgray leading-tight!">
               Профиль
             </p>
           </div>
@@ -1075,21 +1175,151 @@
     <!-- Burger Overlay + Menu -->
     <div
       id="burger-overlay"
-      class="fixed hidden inset-0 backdrop-blur-xs z-101"
+      class="hidden z-101 fixed inset-0 backdrop-blur-xs"
     ></div>
     <section
       id="burger-menu"
-      class="fixed hidden right-0 top-0 h-dvh w-[60%] md:w-[30%] bg-[#F7F7F7] z-102 flex-col gap-10 md:gap-15 justify-between py-8 leading-tight! text-[#505050] text-[14px] md:text-[20px]"
+      class="hidden top-0 right-0 z-102 fixed flex-col justify-between bg-[#F7F7F7] py-8 w-[80%] md:w-[30%] h-dvh overflow-y-auto text-[#505050] text-[14px] md:text-[20px] leading-tight!"
     >
-      <a class="px-5" href="/Indep/">
-        <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
-      </a>
+      <div class="flex flex-col gap-6">
+        <a class="px-5" href="/Indep/">
+          <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
+        </a>
 
-      <nav class="grow">
-        <ul>
-          <a href="/Indep/favourites.html">
-            <li
-              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
+        <nav class="flex flex-col">
+          <a href="/Indep/catalog.html" class="block">
+            <div
+              class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-b border-b-[#00000066] transition-colors duration-200"
+            >
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/favourites.svg"
+                alt="Купить авто"
+              />
+              Купить авто
+            </div>
+          </a>
+
+          <a href="/Indep/register.html" class="block">
+            <div
+              class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-b border-b-[#00000066] transition-colors duration-200"
+            >
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/favourites.svg"
+                alt="Продать авто"
+              />
+              Продать авто
+            </div>
+          </a>
+
+          <div class="border-b border-b-[#00000066] burger-dropdown">
+            <button
+              class="flex justify-between items-center gap-2 px-5 py-4 w-full transition-colors duration-200 burger-dropdown__trigger"
+            >
+              <div class="flex items-center gap-2 md:gap-3.5">
+                <img
+                  class="h-5 md:h-7"
+                  src="assets/img/icons/burger/favourites.svg"
+                  alt="Услуги"
+                />
+                Услуги
+              </div>
+              <svg
+                class="w-5 h-5 transition-transform duration-200 burger-dropdown__arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 9L12 15L18 9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="hidden bg-[#F7F7F7] burger-dropdown__menu">
+              <a href="/Indep/selection.html" class="block">
+                <div
+                  class="flex items-center gap-2 md:gap-3.5 px-12 py-3 border-t border-t-[#0000001f] transition-colors duration-200"
+                >
+                  Разовая диагностика
+                </div>
+              </a>
+              <a href="/Indep/day.html" class="block">
+                <div
+                  class="flex items-center gap-2 md:gap-3.5 px-12 py-3 border-t border-t-[#0000001f] transition-colors duration-200"
+                >
+                  Автоподборщик на день
+                </div>
+              </a>
+              <a href="/Indep/key.html" class="block">
+                <div
+                  class="flex items-center gap-2 md:gap-3.5 px-12 py-3 border-t border-t-[#0000001f] transition-colors duration-200"
+                >
+                  Подбор авто под ключ
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="border-b border-b-[#00000066] burger-dropdown">
+            <button
+              class="flex justify-between items-center gap-2 px-5 py-4 w-full transition-colors duration-200 burger-dropdown__trigger"
+            >
+              <div class="flex items-center gap-2 md:gap-3.5">
+                <img
+                  class="h-5 md:h-7"
+                  src="assets/img/icons/burger/favourites.svg"
+                  alt="Партнерам"
+                />
+                Партнерам
+              </div>
+              <svg
+                class="w-5 h-5 transition-transform duration-200 burger-dropdown__arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 9L12 15L18 9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="hidden bg-[#F7F7F7] burger-dropdown__menu">
+              <a href="/Indep/cooperation.html" class="block">
+                <div
+                  class="flex items-center gap-2 md:gap-3.5 px-8 py-3 border-t border-t-[#0000001f] transition-colors duration-200"
+                >
+                  Сотрудничество
+                </div>
+              </a>
+              <a href="/Indep/about.html" class="block">
+                <div
+                  class="flex items-center gap-2 md:gap-3.5 px-8 py-3 border-t border-t-[#0000001f] transition-colors duration-200"
+                >
+                  О нас
+                </div>
+              </a>
+              <a href="/Indep/contacts.html" class="block">
+                <div
+                  class="flex items-center gap-2 md:gap-3.5 px-8 py-3 border-t border-t-[#0000001f] transition-colors duration-200"
+                >
+                  Контакты
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <a href="/Indep/favourites.html" class="block">
+            <div
+              class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-b border-b-[#00000066] transition-colors duration-200"
             >
               <img
                 class="h-5 md:h-7"
@@ -1097,49 +1327,13 @@
                 alt="Избранное"
               />
               Избранное
-            </li>
+            </div>
           </a>
-          <a href="/Indep/selection.html">
-            <li
-              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
-            >
-              <img
-                class="h-5 md:h-7"
-                src="assets/img/icons/burger/selection.svg"
-                alt="Подбор авто"
-              />
-              Подбор авто
-            </li>
-          </a>
-          <a href="/Indep/cooperation.html">
-            <li
-              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
-            >
-              <img
-                class="h-5 md:h-7"
-                src="assets/img/icons/burger/ads.svg"
-                alt="Сотрудничество"
-              />
-              Сотрудничество
-            </li>
-          </a>
-          <a href="/Indep/about.html">
-            <li
-              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
-            >
-              <img
-                class="h-5 md:h-7"
-                src="assets/img/icons/burger/about.svg"
-                alt="О нас"
-              />
-              О нас
-            </li>
-          </a>
-        </ul>
-      </nav>
+        </nav>
+      </div>
 
       <button
-        class="flex items-center gap-2 md:gap-3.5 px-5 cursor-pointer"
+        class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-t border-t-[#00000066] transition-colors duration-200 cursor-pointer"
         onclick="window.location.href = '/'"
       >
         <img
@@ -1155,12 +1349,12 @@
     <div
       popover
       id="photoCabin"
-      class="px-3 py-4 h-[300px] w-[calc(100%-40px)] mx-auto fixed top-0 left-0 translate-y-1/2 bg-white backdrop:bg-[#00000080] rounded-lg"
+      class="top-0 left-0 fixed bg-white backdrop:bg-[#00000080] mx-auto px-3 py-4 rounded-lg w-[calc(100%-40px)] xl:max-w-[800px] h-[300px] translate-y-1/2"
     >
       <div class="flex flex-col gap-3">
         <!-- Heading + Close Button -->
-        <div class="flex items-center justify-between gap-3 leading-tight!">
-          <h3 class="text-[16px] font-medium">Добавьте фото салона</h3>
+        <div class="flex justify-between items-center gap-3 leading-tight!">
+          <h3 class="font-medium text-[16px]">Добавьте фото салона</h3>
           <button
             class="p-1"
             popovertarget="photoCabin"
@@ -1175,20 +1369,20 @@
           </button>
         </div>
         <!-- List -->
-        <div class="flex flex-col gap-1 items-start text-[12px] opacity-55">
+        <div class="flex flex-col items-start gap-1 opacity-55 text-[12px]">
           <p>В обязательном порядке загрузите фотографии:</p>
-          <ul class="list-disc marker:text-[#3A3A3A] ps-5">
+          <ul class="ps-5 marker:text-[#3A3A3A] list-disc">
             <li>спидометра;</li>
             <li>мультимедийной системы.</li>
           </ul>
         </div>
         <!-- Alert -->
-        <p class="text-[10px] opacity-75">
+        <p class="opacity-75 text-[10px]">
           Необходимо загрузить минимум 12 файлов.
         </p>
         <!-- Input -->
         <div
-          class="h-[134px] rounded-xl w-full flex flex-col justify-center px-10"
+          class="flex flex-col justify-center px-10 rounded-xl w-full h-[134px]"
           style="
             background: url(assets/img/addCar/addPhoto.svg) center center /
               cover no-repeat;
@@ -1196,14 +1390,14 @@
         >
           <label
             for="photoCabin"
-            class="relative w-full text-center rounded-xl bg-[#1E1E1E] text-[12px] font-medium text-white py-2 px-9"
+            class="relative bg-[#1E1E1E] px-9 py-2 rounded-xl w-full font-medium text-[12px] text-white text-center"
           >
             Добавить фото
             <input
               accept="image/*"
               id="photoCabin"
               type="file"
-              class="opacity-0 absolute left-1/2 top-1/2 -translate-1/2"
+              class="top-1/2 left-1/2 absolute opacity-0 -translate-1/2"
             />
           </label>
         </div>
@@ -1212,12 +1406,12 @@
     <div
       popover
       id="photoBody"
-      class="px-3 py-4 h-[300px] w-[calc(100%-40px)] mx-auto fixed top-0 left-0 translate-y-1/2 bg-white backdrop:bg-[#00000080] rounded-lg"
+      class="top-0 left-0 fixed bg-white backdrop:bg-[#00000080] mx-auto px-3 py-4 rounded-lg w-[calc(100%-40px)] xl:max-w-[800px] h-[300px] translate-y-1/2"
     >
       <div class="flex flex-col gap-3">
         <!-- Heading + Close Button -->
-        <div class="flex items-center justify-between gap-3 leading-tight!">
-          <h3 class="text-[16px] font-medium">Добавьте фото кузова</h3>
+        <div class="flex justify-between items-center gap-3 leading-tight!">
+          <h3 class="font-medium text-[16px]">Добавьте фото кузова</h3>
           <button
             class="p-1"
             popovertarget="photoBody"
@@ -1232,20 +1426,20 @@
           </button>
         </div>
         <!-- List -->
-        <div class="flex flex-col gap-1 items-start text-[12px] opacity-55">
+        <div class="flex flex-col items-start gap-1 opacity-55 text-[12px]">
           <p>В обязательном порядке загрузите фотографии:</p>
-          <ul class="list-disc marker:text-[#3A3A3A] ps-5">
+          <ul class="ps-5 marker:text-[#3A3A3A] list-disc">
             <li>подкапотного пространства;</li>
             <li>багажника;</li>
           </ul>
         </div>
         <!-- Alert -->
-        <p class="text-[10px] opacity-75">
+        <p class="opacity-75 text-[10px]">
           Необходимо загрузить минимум 12 файлов.
         </p>
         <!-- Input -->
         <div
-          class="h-[134px] rounded-xl w-full flex flex-col justify-center px-10"
+          class="flex flex-col justify-center px-10 rounded-xl w-full h-[134px]"
           style="
             background: url(assets/img/addCar/addPhoto.svg) center center /
               cover no-repeat;
@@ -1253,14 +1447,14 @@
         >
           <label
             for="photoBody"
-            class="relative w-full text-center rounded-xl bg-[#1E1E1E] text-[12px] font-medium text-white py-2 px-9"
+            class="relative bg-[#1E1E1E] px-9 py-2 rounded-xl w-full font-medium text-[12px] text-white text-center"
           >
             Добавить фото
             <input
               accept="image/*"
               id="photoBody"
               type="file"
-              class="opacity-0 absolute left-1/2 top-1/2 -translate-1/2"
+              class="top-1/2 left-1/2 absolute opacity-0 -translate-1/2"
             />
           </label>
         </div>
@@ -1269,12 +1463,12 @@
     <div
       popover
       id="videoCabin"
-      class="px-3 py-4 h-[300px] w-[calc(100%-40px)] mx-auto fixed top-0 left-0 translate-y-1/2 bg-white backdrop:bg-[#00000080] rounded-lg"
+      class="top-0 left-0 fixed bg-white backdrop:bg-[#00000080] mx-auto px-3 py-4 rounded-lg w-[calc(100%-40px)] xl:max-w-[800px] h-[300px] translate-y-1/2"
     >
       <div class="flex flex-col gap-3">
         <!-- Heading + Close Button -->
-        <div class="flex items-center justify-between gap-3 leading-tight!">
-          <h3 class="text-[16px] font-medium">Добавьте видео салона</h3>
+        <div class="flex justify-between items-center gap-3 leading-tight!">
+          <h3 class="font-medium text-[16px]">Добавьте видео салона</h3>
           <button
             class="p-1"
             popovertarget="videoCabin"
@@ -1289,20 +1483,20 @@
           </button>
         </div>
         <!-- List -->
-        <div class="flex flex-col gap-1 items-start text-[12px] opacity-55">
+        <div class="flex flex-col items-start gap-1 opacity-55 text-[12px]">
           <p>В обязательном порядке загрузите видео:</p>
-          <ul class="list-disc marker:text-[#3A3A3A] ps-5">
+          <ul class="ps-5 marker:text-[#3A3A3A] list-disc">
             <li>спидометра;</li>
             <li>мультимедийной системы.</li>
           </ul>
         </div>
         <!-- Alert -->
-        <p class="text-[10px] opacity-75">
+        <p class="opacity-75 text-[10px]">
           Необходимо загрузить минимум 3 файла.
         </p>
         <!-- Input -->
         <div
-          class="h-[134px] rounded-xl w-full flex flex-col justify-center px-10"
+          class="flex flex-col justify-center px-10 rounded-xl w-full h-[134px]"
           style="
             background: url(assets/img/addCar/addVideo.svg) center center /
               cover no-repeat;
@@ -1310,14 +1504,14 @@
         >
           <label
             for="videoCabin"
-            class="relative w-full text-center rounded-xl bg-[#1E1E1E] text-[12px] font-medium text-white py-2 px-9"
+            class="relative bg-[#1E1E1E] px-9 py-2 rounded-xl w-full font-medium text-[12px] text-white text-center"
           >
             Добавить видео
             <input
               accept="video/*"
               id="videoCabin"
               type="file"
-              class="opacity-0 absolute left-1/2 top-1/2 -translate-1/2"
+              class="top-1/2 left-1/2 absolute opacity-0 -translate-1/2"
             />
           </label>
         </div>
@@ -1326,12 +1520,12 @@
     <div
       popover
       id="videoBody"
-      class="px-3 py-4 h-[300px] w-[calc(100%-40px)] mx-auto fixed top-0 left-0 translate-y-1/2 bg-white backdrop:bg-[#00000080] rounded-lg"
+      class="top-0 left-0 fixed bg-white backdrop:bg-[#00000080] mx-auto px-3 py-4 rounded-lg w-[calc(100%-40px)] xl:max-w-[800px] h-[300px] translate-y-1/2"
     >
       <div class="flex flex-col gap-3">
         <!-- Heading + Close Button -->
-        <div class="flex items-center justify-between gap-3 leading-tight!">
-          <h3 class="text-[16px] font-medium">Добавьте видео кузова</h3>
+        <div class="flex justify-between items-center gap-3 leading-tight!">
+          <h3 class="font-medium text-[16px]">Добавьте видео кузова</h3>
           <button
             class="p-1"
             popovertarget="videoBody"
@@ -1346,20 +1540,20 @@
           </button>
         </div>
         <!-- List -->
-        <div class="flex flex-col gap-1 items-start text-[12px] opacity-55">
+        <div class="flex flex-col items-start gap-1 opacity-55 text-[12px]">
           <p>В обязательном порядке загрузите видео:</p>
-          <ul class="list-disc marker:text-[#3A3A3A] ps-5">
+          <ul class="ps-5 marker:text-[#3A3A3A] list-disc">
             <li>подкапотного пространства;</li>
             <li>багажника;</li>
           </ul>
         </div>
         <!-- Alert -->
-        <p class="text-[10px] opacity-75">
+        <p class="opacity-75 text-[10px]">
           Необходимо загрузить минимум 3 файла.
         </p>
         <!-- Input -->
         <div
-          class="h-[134px] rounded-xl w-full flex flex-col justify-center px-10"
+          class="flex flex-col justify-center px-10 rounded-xl w-full h-[134px]"
           style="
             background: url(assets/img/addCar/addVideo.svg) center center /
               cover no-repeat;
@@ -1367,14 +1561,14 @@
         >
           <label
             for="videoBody"
-            class="relative w-full text-center rounded-xl bg-[#1E1E1E] text-[12px] font-medium text-white py-2 px-9"
+            class="relative bg-[#1E1E1E] px-9 py-2 rounded-xl w-full font-medium text-[12px] text-white text-center"
           >
             Добавить видео
             <input
               accept="video/*"
               id="videoBody"
               type="file"
-              class="opacity-0 absolute left-1/2 top-1/2 -translate-1/2"
+              class="top-1/2 left-1/2 absolute opacity-0 -translate-1/2"
             />
           </label>
         </div>

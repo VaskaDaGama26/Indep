@@ -193,7 +193,7 @@
             id="slider"
           >
             <div
-              class="relative flex flex-col justify-between px-5 py-10 w-full banner-4 shrink-0"
+              class="relative flex flex-col justify-between px-5 py-10 w-full banner-6 shrink-0"
               fetchpriority="high"
               loading="eager"
             >
@@ -203,20 +203,18 @@
                 <h2
                   class="md:mb-9 font-medium text-[28px] text-black md:text-[40px] leading-tight!"
                 >
-                  Найдём
-                  <span class="text-primary">лучший</span>
-                  автомобиль с пробегом для Вас
+                  Автоподборщик на день
                 </h2>
                 <p class="hidden md:block mb-15 text-[13px] leading-tight!">
-                  Подберём проверенные варианты с учётом вашего бюджета и
-                  требований. Оценим состояние, историю и документы — вы
-                  получаете надёжный авто без рисков и переплат.
+                  Подберём автомобиль без скрытых проблем и переплат. Проверяем
+                  технику, историю и документы. Вы получаете честный результат и
+                  спокойствие при покупке.
                 </p>
                 <a
-                  href="/Indep/"
+                  href="/Indep/catalog.html"
                   class="bg-[#DB4431] px-9 py-2 md:py-2.5 rounded-xl w-full font-medium text-[12px] text-white md:text-[16px] text-center cursor-pointer"
                 >
-                  Оставить заявку
+                  Перейти в каталог авто
                 </a>
               </div>
             </div>
@@ -304,10 +302,15 @@
         <h3 class="font-medium text-[18px] md:text-[40px] leading-tight!">
           Как это работает?
         </h3>
-        <div class="gap-5 grid md:grid-cols-2">
+        <div class="gap-5 grid md:grid-cols-12">
           <div
-            class="relative flex gap-5 p-2 rounded-[20px] w-full h-[208px] overflow-hidden how-1"
+            class="relative md:col-span-4 p-2 rounded-[20px] w-full h-[465px] how-1"
           >
+            <img
+              class="bottom-0 left-1/2 absolute px-5 -translate-x-1/2"
+              src="assets/img/selection/how/1.webp"
+              alt=""
+            />
             <div
               class="flex flex-col gap-3 bg-[#F7F7F7] p-3 rounded-[12px] text-[#1E1E1E] leading-tight"
             >
@@ -323,11 +326,44 @@
                 требования к комплектации и состоянию автомобиля.
               </p>
             </div>
-            <img class="-mb-2" src="assets/img/selection/how/1.webp" alt="" />
           </div>
           <div
-            class="relative flex gap-5 p-2 rounded-[20px] w-full h-[208px] overflow-hidden how-2"
+            class="relative md:col-span-5 p-2 rounded-[20px] w-full h-[465px] how-2"
           >
+            <div
+              class="bottom-6 left-1/2 absolute w-[90%] max-w-[500px] -translate-x-1/2"
+            >
+              <div class="flex justify-center gap-[22px]">
+                <!-- Левая колонка с двумя маленькими картинками -->
+                <div class="flex flex-col gap-[22px] max-w-[150px]">
+                  <div class="w-full aspect-[4/3]">
+                    <img
+                      class="rounded-[8px] md:rounded-[12px] w-full h-full object-cover"
+                      src="assets/img/selection/how/2-1.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div class="w-full aspect-[4/3]">
+                    <img
+                      class="rounded-[8px] md:rounded-[12px] w-full h-full object-cover"
+                      src="assets/img/selection/how/2-2.webp"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <!-- Правая большая картинка -->
+                <div class="max-w-[258px]">
+                  <div class="w-full h-full aspect-square">
+                    <img
+                      class="rounded-[8px] md:rounded-[12px] w-full h-full object-cover"
+                      src="assets/img/selection/how/2-3.webp"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
             <div
               class="flex flex-col gap-3 bg-[#F7F7F7] p-3 rounded-[12px] text-[#1E1E1E] leading-tight"
             >
@@ -336,24 +372,16 @@
               >
                 2
               </span>
-              <h4 class="text-[20px]">
-                Выезжаем на осмотр и проверяем автомобиль
-              </h4>
+              <h4 class="text-[20px]">Подбор и предложения автомобилей</h4>
               <p class="text-[11px]">
-                Специалист выезжает к продавцу, проводит диагностику автомобиля
-                и проверяет его историю: кузов, техническое состояние,
-                электронику, а также данные по ДТП, пробегу, ограничениям и
-                залогам.
+                Подбираем проверенные автомобили с пробегом под ваши требования
+                и бюджет. Отправляем только подходящие варианты по марке,
+                модели, году, комплектации и с подтверждённой историей.
               </p>
             </div>
-            <img
-              class="rounded-[12px]"
-              src="assets/img/selection/how/2-1.webp"
-              alt=""
-            />
           </div>
           <div
-            class="relative flex gap-5 p-2 rounded-[20px] w-full h-[208px] overflow-hidden how-4"
+            class="relative md:col-span-3 p-2 rounded-[20px] w-full h-[465px] how-3"
           >
             <div
               class="flex flex-col gap-3 bg-[#F7F7F7] p-3 rounded-[12px] text-[#1E1E1E] leading-tight"
@@ -363,38 +391,20 @@
               >
                 3
               </span>
-              <h4 class="text-[20px]">Получаете подробный отчёт</h4>
+              <h4 class="text-[20px]">Выбор авто</h4>
               <p class="text-[11px]">
-                После проверки вы получаете фото, результаты диагностики и
-                честное заключение специалиста — стоит ли покупать этот
-                автомобиль.
+                После согласования подходящего варианта вы принимаете финальное
+                решение о покупке. Мы сопровождаем сделку на всех этапах:
               </p>
+              <ul class="ps-4 text-[11px] list-disc">
+                <li>Проверяем документы</li>
+                <li>Согласовываем условия с продавцом</li>
+                <li>
+                  При необходимости помогаем оформить автокредит на выгодных
+                  условия
+                </li>
+              </ul>
             </div>
-            <img src="assets/img/selection/how/2-4.webp" alt="" />
-          </div>
-          <div
-            class="relative flex gap-5 p-2 rounded-[20px] w-full h-[208px] overflow-hidden how-1"
-          >
-            <div
-              class="flex flex-col gap-3 bg-[#F7F7F7] p-3 rounded-[12px] text-[#1E1E1E] leading-tight"
-            >
-              <span
-                class="flex justify-center items-center bg-[#81818133] rounded-full w-6 md:w-8 h-6 md:h-8 text-[#1E1E1E] text-[11px] md:text-[20px] leading-none!"
-              >
-                4
-              </span>
-              <h4 class="text-[20px]">Помогаем принять решение</h4>
-              <p class="text-[11px]">
-                Мы объясняем все выявленные нюансы и даём рекомендации: покупать
-                автомобиль, торговаться с продавцом или лучше рассмотреть другой
-                вариант.
-              </p>
-            </div>
-            <img
-              class="rounded-[12px]"
-              src="assets/img/selection/how/3-1.webp"
-              alt=""
-            />
           </div>
         </div>
       </section>

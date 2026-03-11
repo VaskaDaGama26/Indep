@@ -18,14 +18,14 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="sticky top-0 bg-white z-100 border-b border-[#DEDEDE]">
+    <header class="top-0 z-100 sticky bg-white border-[#DEDEDE] border-b">
       <div
-        class="container mx-auto px-5 py-4 flex items-center justify-between gap-5"
+        class="flex justify-between items-center gap-5 mx-auto px-5 py-4 container"
       >
-        <div class="contents xl:flex gap-15 items-center">
+        <div class="contents xl:flex items-center gap-15">
           <a href="/Indep/">
             <img
-              class="h-2.5 md:h-8 max-w-[120px]"
+              class="max-w-[120px] h-2.5 md:h-8"
               src="assets/img/logo.svg"
               alt="Logo"
             />
@@ -33,46 +33,146 @@
           <!-- Search Bar -->
           <div class="hidden xl:block relative w-[312px]">
             <input
-              class="focus-visible:outline-none w-full rounded-xl bg-[#F8F8F8] text-[#979797] text-[12px] md:text-[14px] font-medium py-2 ps-8 pe-2 md:py-2.5 md:ps-10 md:pe-2.5 shrink-0 transition-all duration-300"
+              class="bg-[#F8F8F8] py-2 md:py-2.5 ps-8 md:ps-10 pe-2 md:pe-2.5 rounded-xl focus-visible:outline-none w-full font-medium text-[#979797] text-[12px] md:text-[14px] transition-all duration-300 shrink-0"
               type="text"
               placeholder="Поиск по объявлениям"
             />
             <img
-              class="md:h-5 md:w-5 absolute left-2 top-1/2 -translate-y-1/2 pointer-events-non"
+              class="top-1/2 left-2 absolute md:w-5 md:h-5 -translate-y-1/2 pointer-events-non"
               src="assets/img/icons/search.svg"
               alt="Search Bar"
             />
           </div>
         </div>
-        <div class="contents md:flex gap-10 items-center">
+        <div class="contents md:flex items-center gap-10">
           <nav class="hidden md:flex items-center gap-6">
-            <a class="text-[#080717]" href="/Indep/catalog.html">Каталог</a>
-            <a class="text-[#080717]" href="/Indep/selection.html"
-              >Подбор авто</a
+            <a
+              class="text-[#080717] hover:text-[#db4431] transition-colors duration-200"
+              href="/Indep/catalog.html"
+              >Купить авто</a
             >
-            <a class="text-[#080717]" href="/Indep/cooperation.html"
-              >Сотрудничество</a
+            <a
+              class="text-[#080717] hover:text-[#db4431] transition-colors duration-200"
+              href="/Indep/register.html"
+              >Продать авто</a
             >
-            <a class="text-[#080717]" href="/Indep/about.html">О нас</a>
+            <div class="group relative nav-dropdown__wrapper">
+              <button
+                class="inline-flex justify-center items-center gap-1 text-[#080717] hover:text-[#db4431] transition-colors duration-200 nav-dropdown__link"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Услуги
+                <img
+                  class="w-4 h-4 group-hover:rotate-180 transition-transform duration-200 nav-dropdown__img"
+                  src="assets/img/icons/black-dropdown.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+
+              <ul
+                class="invisible group-hover:visible top-full left-0 z-50 absolute bg-white opacity-0 group-hover:opacity-100 shadow-lg mt-1 py-2 border border-gray-100 rounded-lg min-w-[200px] transition-all duration-200 nav-dropdown"
+                role="menu"
+                aria-label="Услуги"
+              >
+                <li role="none">
+                  <a
+                    href="/Indep/selection.html"
+                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                    role="menuitem"
+                  >
+                    Разовая диагностика
+                  </a>
+                </li>
+                <li role="none">
+                  <a
+                    href="/Indep/day.html"
+                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                    role="menuitem"
+                  >
+                    Автоподборщик на день
+                  </a>
+                </li>
+                <li role="none">
+                  <a
+                    href="/Indep/key.html"
+                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                    role="menuitem"
+                  >
+                    Подбор авто под ключ
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="group relative nav-dropdown__wrapper">
+              <button
+                class="inline-flex justify-center items-center gap-1 text-[#080717] hover:text-[#db4431] transition-colors duration-200 nav-dropdown__link"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Партнерам
+                <img
+                  class="w-4 h-4 group-hover:rotate-180 transition-transform duration-200 nav-dropdown__img"
+                  src="assets/img/icons/black-dropdown.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+
+              <ul
+                class="invisible group-hover:visible top-full left-0 z-50 absolute bg-white opacity-0 group-hover:opacity-100 shadow-lg mt-1 py-2 border border-gray-100 rounded-lg min-w-[200px] transition-all duration-200 nav-dropdown"
+                role="menu"
+                aria-label="Партнерам"
+              >
+                <li role="none">
+                  <a
+                    href="/Indep/cooperation.html"
+                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                    role="menuitem"
+                  >
+                    Сотрудничество
+                  </a>
+                </li>
+                <li role="none">
+                  <a
+                    href="/Indep/about.html"
+                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                    role="menuitem"
+                  >
+                    О нас
+                  </a>
+                </li>
+                <li role="none">
+                  <a
+                    href="/Indep/contacts.html"
+                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                    role="menuitem"
+                  >
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
-          <div class="flex gap-5 items-center">
+          <div class="flex items-center gap-5">
             <a
               href="/Indep/favourites.html"
-              class="cursor-pointer hidden md:block"
+              class="hidden md:block cursor-pointer"
             >
               <img
                 class="h-8"
                 src="assets/img/icons/favourite.svg"
-                alt="Favoruites"
+                alt="Favourites"
               />
             </a>
             <a
               href="/Indep/profile.html"
-              class="cursor-pointer hidden md:block"
+              class="hidden md:block cursor-pointer"
             >
               <img class="h-8" src="assets/img/icons/user.svg" alt="Menu" />
             </a>
-            <button class="block md:hidden cursor-pointer" id="burger">
+            <button class="md:hidden block cursor-pointer" id="burger">
               <img
                 class="h-6 md:h-12"
                 src="assets/img/icons/burger.svg"
@@ -83,10 +183,10 @@
         </div>
       </div>
     </header>
-    <main id="main" class="container mx-auto mt-6">
+    <main id="main" class="mx-auto mt-6 container">
       <!-- Breadcrumbs -->
       <section
-        class="container mx-auto px-5 text-[10px] md:text-[16px] leading-tight text-[#979797] flex flex-wrap items-center gap-1 md:gap-2"
+        class="flex flex-wrap items-center gap-1 md:gap-2 mx-auto px-5 text-[#979797] text-[10px] md:text-[16px] leading-tight container"
       >
         <a href="/Indep/profile.html">Профиль</a>
         <img
@@ -97,47 +197,47 @@
         <p class="text-[#DB4431]">Избранное</p>
       </section>
       <!-- Favourites -->
-      <section class="flex flex-col gap-4 mt-4 px-5 relative">
-        <h3 class="text-[18px] md:text-[40px] font-medium leading-tight!">
+      <section class="relative flex flex-col gap-4 mt-4 px-5">
+        <h3 class="font-medium text-[18px] md:text-[40px] leading-tight!">
           Избранное
         </h3>
         <div
-          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-4 md:gap-y-10 md:gap-x-5"
+          class="gap-y-4 md:gap-x-5 md:gap-y-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
         >
           <!-- Car -->
           <a
             href="/Indep/auto.html"
-            class="rounded-2xl bg-[#F7F7F7] w-full p-3 md:py-4 flex flex-col gap-4"
+            class="flex flex-col gap-4 bg-[#F7F7F7] p-3 md:py-4 rounded-2xl w-full"
           >
             <!-- Carousel -->
             <div class="flex flex-col gap-4 overflow-x-auto">
-              <div class="flex flex-row gap-4 w-full pb-2">
+              <div class="flex flex-row gap-4 pb-2 w-full">
                 <img
                   src="assets/img/cars1.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars2.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars1.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars2.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
               </div>
             </div>
             <!-- Car Info -->
             <div class="flex flex-col gap-3 leading-tight!">
               <div class="flex justify-between items-start">
-                <span class="text-[20px] md:text-[28px] font-semibold"
+                <span class="font-semibold text-[20px] md:text-[28px]"
                   >67 000 000 ₽</span
                 >
                 <span
-                  class="bg-[#DB4431] text-white px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] md:text-[14px] leading-none"
+                  class="bg-[#DB4431] px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] text-white md:text-[14px] leading-none"
                 >
                   200 000 км
                 </span>
@@ -154,13 +254,13 @@
             <!-- Buttons -->
             <div class="flex items-center gap-3">
               <button
-                class="flex-1 text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+                class="flex-1 bg-[#DB4431] px-9 py-2 md:py-2.5 rounded-xl w-full font-medium text-[12px] text-white md:text-[16px] text-center cursor-pointer"
               >
                 Купить отчет
               </button>
               <button
                 id="addToFavourite"
-                class="w-[34px] md:w-11 h-[34px] md:h-11 shrink-0 flex items-center justify-center bg-[#EFEFEF] rounded-xl cursor-pointer"
+                class="flex justify-center items-center bg-[#EFEFEF] rounded-xl w-[34px] md:w-11 h-[34px] md:h-11 cursor-pointer shrink-0"
               >
                 <svg
                   class="w-4.5 md:w-6 h-4.5 md:h-6"
@@ -177,7 +277,7 @@
               </button>
             </div>
             <!-- Address -->
-            <div class="flex gap-2 items-center justify-start">
+            <div class="flex justify-start items-center gap-2">
               <img class="h-3 md:h-4" src="assets/img/icons/map.svg" alt="" />
               <span class="text-[10px] md:text-[12px]"
                 >г. Москва, ул. Волкова</span
@@ -187,37 +287,37 @@
           <!-- Car -->
           <a
             href="/Indep/auto.html"
-            class="rounded-2xl bg-[#F7F7F7] w-full p-3 md:py-4 flex flex-col gap-4"
+            class="flex flex-col gap-4 bg-[#F7F7F7] p-3 md:py-4 rounded-2xl w-full"
           >
             <!-- Carousel -->
             <div class="flex flex-col gap-4 overflow-x-auto">
-              <div class="flex flex-row gap-4 w-full pb-2">
+              <div class="flex flex-row gap-4 pb-2 w-full">
                 <img
                   src="assets/img/cars1.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars2.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars1.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars2.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
               </div>
             </div>
             <!-- Car Info -->
             <div class="flex flex-col gap-3 leading-tight!">
               <div class="flex justify-between items-start">
-                <span class="text-[20px] md:text-[28px] font-semibold"
+                <span class="font-semibold text-[20px] md:text-[28px]"
                   >67 000 000 ₽</span
                 >
                 <span
-                  class="bg-[#DB4431] text-white px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] md:text-[14px] leading-none"
+                  class="bg-[#DB4431] px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] text-white md:text-[14px] leading-none"
                 >
                   200 000 км
                 </span>
@@ -234,13 +334,13 @@
             <!-- Buttons -->
             <div class="flex items-center gap-3">
               <button
-                class="flex-1 text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+                class="flex-1 bg-[#DB4431] px-9 py-2 md:py-2.5 rounded-xl w-full font-medium text-[12px] text-white md:text-[16px] text-center cursor-pointer"
               >
                 Купить отчет
               </button>
               <button
                 id="addToFavourite"
-                class="w-[34px] md:w-11 h-[34px] md:h-11 shrink-0 flex items-center justify-center bg-[#EFEFEF] rounded-xl cursor-pointer"
+                class="flex justify-center items-center bg-[#EFEFEF] rounded-xl w-[34px] md:w-11 h-[34px] md:h-11 cursor-pointer shrink-0"
               >
                 <svg
                   class="w-4.5 md:w-6 h-4.5 md:h-6"
@@ -257,7 +357,7 @@
               </button>
             </div>
             <!-- Address -->
-            <div class="flex gap-2 items-center justify-start">
+            <div class="flex justify-start items-center gap-2">
               <img class="h-3 md:h-4" src="assets/img/icons/map.svg" alt="" />
               <span class="text-[10px] md:text-[12px]"
                 >г. Москва, ул. Волкова</span
@@ -267,37 +367,37 @@
           <!-- Car -->
           <a
             href="/Indep/auto.html"
-            class="rounded-2xl bg-[#F7F7F7] w-full p-3 md:py-4 flex flex-col gap-4"
+            class="flex flex-col gap-4 bg-[#F7F7F7] p-3 md:py-4 rounded-2xl w-full"
           >
             <!-- Carousel -->
             <div class="flex flex-col gap-4 overflow-x-auto">
-              <div class="flex flex-row gap-4 w-full pb-2">
+              <div class="flex flex-row gap-4 pb-2 w-full">
                 <img
                   src="assets/img/cars1.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars2.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars1.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars2.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
               </div>
             </div>
             <!-- Car Info -->
             <div class="flex flex-col gap-3 leading-tight!">
               <div class="flex justify-between items-start">
-                <span class="text-[20px] md:text-[28px] font-semibold"
+                <span class="font-semibold text-[20px] md:text-[28px]"
                   >67 000 000 ₽</span
                 >
                 <span
-                  class="bg-[#DB4431] text-white px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] md:text-[14px] leading-none"
+                  class="bg-[#DB4431] px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] text-white md:text-[14px] leading-none"
                 >
                   200 000 км
                 </span>
@@ -314,13 +414,13 @@
             <!-- Buttons -->
             <div class="flex items-center gap-3">
               <button
-                class="flex-1 text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+                class="flex-1 bg-[#DB4431] px-9 py-2 md:py-2.5 rounded-xl w-full font-medium text-[12px] text-white md:text-[16px] text-center cursor-pointer"
               >
                 Купить отчет
               </button>
               <button
                 id="addToFavourite"
-                class="w-[34px] md:w-11 h-[34px] md:h-11 shrink-0 flex items-center justify-center bg-[#EFEFEF] rounded-xl cursor-pointer"
+                class="flex justify-center items-center bg-[#EFEFEF] rounded-xl w-[34px] md:w-11 h-[34px] md:h-11 cursor-pointer shrink-0"
               >
                 <svg
                   class="w-4.5 md:w-6 h-4.5 md:h-6"
@@ -337,7 +437,7 @@
               </button>
             </div>
             <!-- Address -->
-            <div class="flex gap-2 items-center justify-start">
+            <div class="flex justify-start items-center gap-2">
               <img class="h-3 md:h-4" src="assets/img/icons/map.svg" alt="" />
               <span class="text-[10px] md:text-[12px]"
                 >г. Москва, ул. Волкова</span
@@ -347,37 +447,37 @@
           <!-- Car -->
           <a
             href="/Indep/auto.html"
-            class="rounded-2xl bg-[#F7F7F7] w-full p-3 md:py-4 flex flex-col gap-4"
+            class="flex flex-col gap-4 bg-[#F7F7F7] p-3 md:py-4 rounded-2xl w-full"
           >
             <!-- Carousel -->
             <div class="flex flex-col gap-4 overflow-x-auto">
-              <div class="flex flex-row gap-4 w-full pb-2">
+              <div class="flex flex-row gap-4 pb-2 w-full">
                 <img
                   src="assets/img/cars1.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars2.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars1.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars2.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
               </div>
             </div>
             <!-- Car Info -->
             <div class="flex flex-col gap-3 leading-tight!">
               <div class="flex justify-between items-start">
-                <span class="text-[20px] md:text-[28px] font-semibold"
+                <span class="font-semibold text-[20px] md:text-[28px]"
                   >67 000 000 ₽</span
                 >
                 <span
-                  class="bg-[#DB4431] text-white px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] md:text-[14px] leading-none"
+                  class="bg-[#DB4431] px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] text-white md:text-[14px] leading-none"
                 >
                   200 000 км
                 </span>
@@ -394,13 +494,13 @@
             <!-- Buttons -->
             <div class="flex items-center gap-3">
               <button
-                class="flex-1 text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+                class="flex-1 bg-[#DB4431] px-9 py-2 md:py-2.5 rounded-xl w-full font-medium text-[12px] text-white md:text-[16px] text-center cursor-pointer"
               >
                 Купить отчет
               </button>
               <button
                 id="addToFavourite"
-                class="w-[34px] md:w-11 h-[34px] md:h-11 shrink-0 flex items-center justify-center bg-[#EFEFEF] rounded-xl cursor-pointer"
+                class="flex justify-center items-center bg-[#EFEFEF] rounded-xl w-[34px] md:w-11 h-[34px] md:h-11 cursor-pointer shrink-0"
               >
                 <svg
                   class="w-4.5 md:w-6 h-4.5 md:h-6"
@@ -417,7 +517,7 @@
               </button>
             </div>
             <!-- Address -->
-            <div class="flex gap-2 items-center justify-start">
+            <div class="flex justify-start items-center gap-2">
               <img class="h-3 md:h-4" src="assets/img/icons/map.svg" alt="" />
               <span class="text-[10px] md:text-[12px]"
                 >г. Москва, ул. Волкова</span
@@ -427,37 +527,37 @@
           <!-- Car -->
           <a
             href="/Indep/auto.html"
-            class="rounded-2xl bg-[#F7F7F7] w-full p-3 md:py-4 flex flex-col gap-4"
+            class="flex flex-col gap-4 bg-[#F7F7F7] p-3 md:py-4 rounded-2xl w-full"
           >
             <!-- Carousel -->
             <div class="flex flex-col gap-4 overflow-x-auto">
-              <div class="flex flex-row gap-4 w-full pb-2">
+              <div class="flex flex-row gap-4 pb-2 w-full">
                 <img
                   src="assets/img/cars1.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars2.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars1.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars2.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
               </div>
             </div>
             <!-- Car Info -->
             <div class="flex flex-col gap-3 leading-tight!">
               <div class="flex justify-between items-start">
-                <span class="text-[20px] md:text-[28px] font-semibold"
+                <span class="font-semibold text-[20px] md:text-[28px]"
                   >67 000 000 ₽</span
                 >
                 <span
-                  class="bg-[#DB4431] text-white px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] md:text-[14px] leading-none"
+                  class="bg-[#DB4431] px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] text-white md:text-[14px] leading-none"
                 >
                   200 000 км
                 </span>
@@ -474,13 +574,13 @@
             <!-- Buttons -->
             <div class="flex items-center gap-3">
               <button
-                class="flex-1 text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+                class="flex-1 bg-[#DB4431] px-9 py-2 md:py-2.5 rounded-xl w-full font-medium text-[12px] text-white md:text-[16px] text-center cursor-pointer"
               >
                 Купить отчет
               </button>
               <button
                 id="addToFavourite"
-                class="w-[34px] md:w-11 h-[34px] md:h-11 shrink-0 flex items-center justify-center bg-[#EFEFEF] rounded-xl cursor-pointer"
+                class="flex justify-center items-center bg-[#EFEFEF] rounded-xl w-[34px] md:w-11 h-[34px] md:h-11 cursor-pointer shrink-0"
               >
                 <svg
                   class="w-4.5 md:w-6 h-4.5 md:h-6"
@@ -497,7 +597,7 @@
               </button>
             </div>
             <!-- Address -->
-            <div class="flex gap-2 items-center justify-start">
+            <div class="flex justify-start items-center gap-2">
               <img class="h-3 md:h-4" src="assets/img/icons/map.svg" alt="" />
               <span class="text-[10px] md:text-[12px]"
                 >г. Москва, ул. Волкова</span
@@ -507,37 +607,37 @@
           <!-- Car -->
           <a
             href="/Indep/auto.html"
-            class="rounded-2xl bg-[#F7F7F7] w-full p-3 md:py-4 flex flex-col gap-4"
+            class="flex flex-col gap-4 bg-[#F7F7F7] p-3 md:py-4 rounded-2xl w-full"
           >
             <!-- Carousel -->
             <div class="flex flex-col gap-4 overflow-x-auto">
-              <div class="flex flex-row gap-4 w-full pb-2">
+              <div class="flex flex-row gap-4 pb-2 w-full">
                 <img
                   src="assets/img/cars1.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars2.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars1.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
                 <img
                   src="assets/img/cars2.jpg"
-                  class="rounded-2xl shrink-0 h-[140px] md:h-[180px]"
+                  class="rounded-2xl h-[140px] md:h-[180px] shrink-0"
                 />
               </div>
             </div>
             <!-- Car Info -->
             <div class="flex flex-col gap-3 leading-tight!">
               <div class="flex justify-between items-start">
-                <span class="text-[20px] md:text-[28px] font-semibold"
+                <span class="font-semibold text-[20px] md:text-[28px]"
                   >67 000 000 ₽</span
                 >
                 <span
-                  class="bg-[#DB4431] text-white px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] md:text-[14px] leading-none"
+                  class="bg-[#DB4431] px-2 md:px-4 py-0.5 md:py-1 rounded-full text-[10px] text-white md:text-[14px] leading-none"
                 >
                   200 000 км
                 </span>
@@ -554,13 +654,13 @@
             <!-- Buttons -->
             <div class="flex items-center gap-3">
               <button
-                class="flex-1 text-center rounded-xl bg-[#DB4431] text-[12px] md:text-[16px] font-medium text-white py-2 md:py-2.5 px-9 w-full cursor-pointer"
+                class="flex-1 bg-[#DB4431] px-9 py-2 md:py-2.5 rounded-xl w-full font-medium text-[12px] text-white md:text-[16px] text-center cursor-pointer"
               >
                 Купить отчет
               </button>
               <button
                 id="addToFavourite"
-                class="w-[34px] md:w-11 h-[34px] md:h-11 shrink-0 flex items-center justify-center bg-[#EFEFEF] rounded-xl cursor-pointer"
+                class="flex justify-center items-center bg-[#EFEFEF] rounded-xl w-[34px] md:w-11 h-[34px] md:h-11 cursor-pointer shrink-0"
               >
                 <svg
                   class="w-4.5 md:w-6 h-4.5 md:h-6"
@@ -577,7 +677,7 @@
               </button>
             </div>
             <!-- Address -->
-            <div class="flex gap-2 items-center justify-start">
+            <div class="flex justify-start items-center gap-2">
               <img class="h-3 md:h-4" src="assets/img/icons/map.svg" alt="" />
               <span class="text-[10px] md:text-[12px]"
                 >г. Москва, ул. Волкова</span
@@ -588,17 +688,17 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-[#1E1E1E] text-white leading-tight! mt-7">
+    <footer class="bg-[#1E1E1E] mt-7 text-white leading-tight!">
       <div
-        class="relative container mx-auto px-5 py-8 flex flex-col items-start justify-between"
+        class="relative flex flex-col justify-between items-start mx-auto px-5 py-8 container"
       >
-        <div class="flex flex-col gap-7 items-start">
-          <div class="w-full flex justify-between items-center">
+        <div class="flex flex-col items-start gap-7">
+          <div class="flex justify-between items-center w-full">
             <a href="/Indep/">
               <img class="h-6" src="assets/img/logo-white.svg" alt="Logo" />
             </a>
             <img
-              class="md:absolute right-0 bottom-0 h-[50px] md:h-[124px]"
+              class="right-0 bottom-0 md:absolute h-[50px] md:h-[124px]"
               src="assets/img/footer-car.svg"
               alt=""
             />
@@ -640,10 +740,10 @@
     <!-- Mobile Menu -->
     <section
       id="mobilemenu"
-      class="block md:hidden sticky right-0 bottom-0 w-full bg-[#F7F7F7] z-97 pt-2 pb-3"
+      class="md:hidden block right-0 bottom-0 z-97 sticky bg-[#F7F7F7] pt-2 pb-3 w-full"
     >
       <div class="flex flex-row justify-between items-center">
-        <a href="/Indep/" class="mobile-menu-item w-full">
+        <a href="/Indep/" class="w-full mobile-menu-item">
           <div class="flex flex-col items-center gap-1">
             <svg
               width="40"
@@ -659,12 +759,12 @@
                 fill="#A0A0A0"
               />
             </svg>
-            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+            <p class="font-medium text-[10px] text-lightgray leading-tight!">
               Главная
             </p>
           </div>
         </a>
-        <a href="/Indep/chat.html" class="mobile-menu-item w-full">
+        <a href="/Indep/chat.html" class="w-full mobile-menu-item">
           <div class="flex flex-col items-center gap-1">
             <svg
               width="40"
@@ -678,12 +778,12 @@
                 fill="#A0A0A0"
               />
             </svg>
-            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+            <p class="font-medium text-[10px] text-lightgray leading-tight!">
               Чат
             </p>
           </div>
         </a>
-        <a href="/Indep/call.html" class="mobile-menu-item w-full">
+        <a href="/Indep/call.html" class="w-full mobile-menu-item">
           <div class="flex flex-col items-center gap-1">
             <svg
               width="40"
@@ -697,12 +797,12 @@
                 fill="#A0A0A0"
               />
             </svg>
-            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+            <p class="font-medium text-[10px] text-lightgray leading-tight!">
               Позвонить
             </p>
           </div>
         </a>
-        <a href="/Indep/profile.html" class="mobile-menu-item w-full">
+        <a href="/Indep/profile.html" class="w-full mobile-menu-item">
           <div class="flex flex-col items-center gap-1">
             <svg
               width="40"
@@ -720,7 +820,7 @@
                 fill="#A0A0A0"
               />
             </svg>
-            <p class="text-[10px] leading-tight! font-medium text-lightgray">
+            <p class="font-medium text-[10px] text-lightgray leading-tight!">
               Профиль
             </p>
           </div>
@@ -731,21 +831,151 @@
     <!-- Burger Overlay + Menu -->
     <div
       id="burger-overlay"
-      class="fixed hidden inset-0 backdrop-blur-xs z-101"
+      class="hidden z-101 fixed inset-0 backdrop-blur-xs"
     ></div>
     <section
       id="burger-menu"
-      class="fixed hidden right-0 top-0 h-dvh w-[60%] md:w-[30%] bg-[#F7F7F7] z-102 flex-col gap-10 md:gap-15 justify-between py-8 leading-tight! text-[#505050] text-[14px] md:text-[20px]"
+      class="hidden top-0 right-0 z-102 fixed flex-col justify-between bg-[#F7F7F7] py-8 w-[80%] md:w-[30%] h-dvh overflow-y-auto text-[#505050] text-[14px] md:text-[20px] leading-tight!"
     >
-      <a class="px-5" href="/Indep/">
-        <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
-      </a>
+      <div class="flex flex-col gap-6">
+        <a class="px-5" href="/Indep/">
+          <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
+        </a>
 
-      <nav class="grow">
-        <ul>
-          <a href="/Indep/favourites.html">
-            <li
-              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
+        <nav class="flex flex-col">
+          <a href="/Indep/catalog.html" class="block">
+            <div
+              class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-b border-b-[#00000066] transition-colors duration-200"
+            >
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/favourites.svg"
+                alt="Купить авто"
+              />
+              Купить авто
+            </div>
+          </a>
+
+          <a href="/Indep/register.html" class="block">
+            <div
+              class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-b border-b-[#00000066] transition-colors duration-200"
+            >
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/favourites.svg"
+                alt="Продать авто"
+              />
+              Продать авто
+            </div>
+          </a>
+
+          <div class="border-b border-b-[#00000066] burger-dropdown">
+            <button
+              class="flex justify-between items-center gap-2 px-5 py-4 w-full transition-colors duration-200 burger-dropdown__trigger"
+            >
+              <div class="flex items-center gap-2 md:gap-3.5">
+                <img
+                  class="h-5 md:h-7"
+                  src="assets/img/icons/burger/favourites.svg"
+                  alt="Услуги"
+                />
+                Услуги
+              </div>
+              <svg
+                class="w-5 h-5 transition-transform duration-200 burger-dropdown__arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 9L12 15L18 9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="hidden bg-[#F7F7F7] burger-dropdown__menu">
+              <a href="/Indep/selection.html" class="block">
+                <div
+                  class="flex items-center gap-2 md:gap-3.5 px-12 py-3 border-t border-t-[#0000001f] transition-colors duration-200"
+                >
+                  Разовая диагностика
+                </div>
+              </a>
+              <a href="/Indep/day.html" class="block">
+                <div
+                  class="flex items-center gap-2 md:gap-3.5 px-12 py-3 border-t border-t-[#0000001f] transition-colors duration-200"
+                >
+                  Автоподборщик на день
+                </div>
+              </a>
+              <a href="/Indep/key.html" class="block">
+                <div
+                  class="flex items-center gap-2 md:gap-3.5 px-12 py-3 border-t border-t-[#0000001f] transition-colors duration-200"
+                >
+                  Подбор авто под ключ
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="border-b border-b-[#00000066] burger-dropdown">
+            <button
+              class="flex justify-between items-center gap-2 px-5 py-4 w-full transition-colors duration-200 burger-dropdown__trigger"
+            >
+              <div class="flex items-center gap-2 md:gap-3.5">
+                <img
+                  class="h-5 md:h-7"
+                  src="assets/img/icons/burger/favourites.svg"
+                  alt="Партнерам"
+                />
+                Партнерам
+              </div>
+              <svg
+                class="w-5 h-5 transition-transform duration-200 burger-dropdown__arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 9L12 15L18 9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="hidden bg-[#F7F7F7] burger-dropdown__menu">
+              <a href="/Indep/cooperation.html" class="block">
+                <div
+                  class="flex items-center gap-2 md:gap-3.5 px-8 py-3 border-t border-t-[#0000001f] transition-colors duration-200"
+                >
+                  Сотрудничество
+                </div>
+              </a>
+              <a href="/Indep/about.html" class="block">
+                <div
+                  class="flex items-center gap-2 md:gap-3.5 px-8 py-3 border-t border-t-[#0000001f] transition-colors duration-200"
+                >
+                  О нас
+                </div>
+              </a>
+              <a href="/Indep/contacts.html" class="block">
+                <div
+                  class="flex items-center gap-2 md:gap-3.5 px-8 py-3 border-t border-t-[#0000001f] transition-colors duration-200"
+                >
+                  Контакты
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <a href="/Indep/favourites.html" class="block">
+            <div
+              class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-b border-b-[#00000066] transition-colors duration-200"
             >
               <img
                 class="h-5 md:h-7"
@@ -753,49 +983,13 @@
                 alt="Избранное"
               />
               Избранное
-            </li>
+            </div>
           </a>
-          <a href="/Indep/selection.html">
-            <li
-              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
-            >
-              <img
-                class="h-5 md:h-7"
-                src="assets/img/icons/burger/selection.svg"
-                alt="Подбор авто"
-              />
-              Подбор авто
-            </li>
-          </a>
-          <a href="/Indep/cooperation.html">
-            <li
-              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
-            >
-              <img
-                class="h-5 md:h-7"
-                src="assets/img/icons/burger/ads.svg"
-                alt="Сотрудничество"
-              />
-              Сотрудничество
-            </li>
-          </a>
-          <a href="/Indep/about.html">
-            <li
-              class="flex items-center gap-2 md:gap-3.5 py-4 px-5 border-b border-b-[#00000066]"
-            >
-              <img
-                class="h-5 md:h-7"
-                src="assets/img/icons/burger/about.svg"
-                alt="О нас"
-              />
-              О нас
-            </li>
-          </a>
-        </ul>
-      </nav>
+        </nav>
+      </div>
 
       <button
-        class="flex items-center gap-2 md:gap-3.5 px-5 cursor-pointer"
+        class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-t border-t-[#00000066] transition-colors duration-200 cursor-pointer"
         onclick="window.location.href = '/'"
       >
         <img

@@ -1,0 +1,53 @@
+/* Базовые стили для дропдауна */
+.nav-dropdown__wrapper {
+  position: relative;
+}
+
+.nav-dropdown__link {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.nav-dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 0.5rem;
+  min-width: 200px;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0f0f0;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease-in-out;
+  z-index: 50;
+}
+
+.nav-dropdown__wrapper:hover .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #080717;
+  transition: all 0.2s ease;
+}
+
+.nav-dropdown li a:hover {
+  background-color: #f8f8f8;
+  color: #db4431;
+}
+
+/* Анимация стрелки */
+.nav-dropdown__wrapper:hover .nav-dropdown__img {
+  rotate: 180deg;
+}

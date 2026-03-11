@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>INDEP</title>
+    <title>Indep</title>
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -183,346 +184,62 @@
       </div>
     </header>
     <main id="main" class="mx-auto md:mt-6 container">
-      <!-- Main Banner -->
-      <section class="px-5">
-        <div
-          class="relative bg-white p-2 lg:p-4 rounded-lg lg:rounded-2xl w-full h-[440px] lg:h-[460px] overflow-hidden select-none"
-        >
+      <section
+        class="flex flex-col items-start mt-7 md:mt-15 px-5 text-[#1E1E1E] leading-tight!"
+      >
+        <h1 class="mb-6 font-medium text-[18px] md:text-[40px] leading-tight!">
+          Контакты
+        </h1>
+        <p class="mb-8 text-[15px]">Свяжитесь с нами любым удобным способом</p>
+        <div class="gap-6 grid grid-cols-2 w-full">
           <div
-            class="absolute inset-0 flex transition-transform duration-500 ease-in-out slider-container"
-            id="slider"
+            class="flex flex-col items-start gap-8 bg-[#F7F7F7] px-7 py-5 rounded-[12px] w-full"
           >
+            <h3 class="font-medium text-[#000000] text-[20px]">
+              По вопросам приобретения автомобиля
+            </h3>
             <div
-              class="relative flex flex-col justify-between px-5 py-10 w-full banner-2 shrink-0"
-              fetchpriority="high"
-              loading="eager"
+              class="flex flex-col items-start gap-5 text-[#1E1E1E] text-[20px]"
             >
-              <div
-                class="contents top-24 md:top-1/2 left-15 absolute md:flex flex-col items-start max-w-[400px] md:-translate-y-1/2"
+              <a
+                class="inline-flex justify-center items-center gap-3"
+                href="tel:"
               >
-                <h2
-                  class="md:mb-9 font-medium text-[28px] text-black md:text-[40px] leading-tight!"
-                >
-                  <span class="text-primary">Добавь объявление</span>
-                  и заработай 1000 ₽!
-                </h2>
-                <p class="hidden md:block mb-15 text-[13px] leading-tight!">
-                  Добавьте авто с полной информацией и комментариями по осмотру.
-                </p>
-                <a
-                  href="/Indep/register.html"
-                  class="bg-[#DB4431] px-9 py-2 md:py-2.5 rounded-xl w-full font-medium text-[12px] text-white md:text-[16px] text-center cursor-pointer"
-                >
-                  Зарегистрироваться
-                </a>
-              </div>
+                <img class="h-6" src="assets/img/contacts/phone.svg" alt="" />
+                +7 (999) 999-99-99
+              </a>
+              <a
+                class="inline-flex justify-center items-center gap-3"
+                href="mailto:"
+              >
+                <img class="h-6" src="assets/img/contacts/mail.svg" alt="" />
+                example@example.ru
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- Carousel -->
-      <section class="mt-7 px-5">
-        <div class="flex flex-col gap-4 overflow-x-auto">
-          <div class="flex flex-row gap-4 lg:grid lg:grid-cols-3 pb-2 w-full">
-            <!-- 1 -->
+          <div
+            class="flex flex-col items-start gap-8 bg-[#F7F7F7] px-7 py-5 rounded-[12px] w-full"
+          >
+            <h3 class="font-medium text-[#000000] text-[20px]">Маркетинг</h3>
             <div
-              class="bg-[#F7F7F7] px-2.5 md:px-3 py-3 md:py-5 rounded-lg md:rounded-xl w-[190px] md:w-[402px] lg:w-full leading-tight! shrink-0"
+              class="flex flex-col items-start gap-5 text-[#1E1E1E] text-[20px]"
             >
-              <div class="flex justify-between items-start">
-                <div class="flex flex-col items-start gap-2 md:gap-3">
-                  <img
-                    class="h-10 md:h-15"
-                    src="assets/img/cooperation/carousel/1.svg"
-                    alt=""
-                  />
-                  <div class="flex flex-col flex-1 gap-2 md:gap-3">
-                    <h4 class="text-[13px] md:text-[24px]">
-                      Размещайте отчёты и зарабатывайте
-                    </h4>
-                    <p class="opacity-50 text-[11px] md:text-[15px]">
-                      Вы можете публиковать свои предложения по подбору
-                      автомобилей на сайте и получать 1 000 рублей за каждое
-                      размещённое объявление. Это дополнительный поток клиентов
-                      и стабильный доход.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 2 -->
-            <div
-              class="bg-[#F7F7F7] px-2.5 md:px-3 py-3 md:py-5 rounded-lg md:rounded-xl w-[190px] md:w-[402px] lg:w-full leading-tight! shrink-0"
-            >
-              <div class="flex justify-between items-start">
-                <div class="flex flex-col items-start gap-2 md:gap-3">
-                  <img
-                    class="h-10 md:h-15"
-                    src="assets/img/cooperation/carousel/2.svg"
-                    alt=""
-                  />
-                  <div class="flex flex-col flex-1 gap-2 md:gap-3">
-                    <h4 class="text-[13px] md:text-[24px]">
-                      Получайте заказы от клиентов
-                    </h4>
-                    <p class="opacity-50 text-[11px] md:text-[15px]">
-                      Платформа передаёт вам заявки от клиентов, которым
-                      требуется подбор автомобиля. Вы сами выбираете удобные
-                      заказы и работаете напрямую, без сложных схем и
-                      посредников.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 3 -->
-            <div
-              class="bg-[#F7F7F7] px-2.5 md:px-3 py-3 md:py-5 rounded-lg md:rounded-xl w-[190px] md:w-[402px] lg:w-full leading-tight! shrink-0"
-            >
-              <div class="flex justify-between items-start">
-                <div class="flex flex-col items-start gap-2 md:gap-3">
-                  <img
-                    class="h-10 md:h-15"
-                    src="assets/img/cooperation/carousel/3.svg"
-                    alt=""
-                  />
-                  <div class="flex flex-col flex-1 gap-2 md:gap-3">
-                    <h4 class="text-[13px] md:text-[24px]">
-                      Используйте базу готовых отчётов
-                    </h4>
-                    <p class="opacity-50 text-[11px] md:text-[15px]">
-                      В базе доступны готовые отчёты по проверенным автомобилям.
-                      Вы можете приобрести подходящий и сразу отправить его
-                      клиенту без выезда — экономя время и увеличивая количество
-                      закрытых заказов.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <a
+                class="inline-flex justify-center items-center gap-3"
+                href="tel:"
+              >
+                <img class="h-6" src="assets/img/contacts/phone.svg" alt="" />
+                +7 (999) 999-99-99
+              </a>
+              <a
+                class="inline-flex justify-center items-center gap-3"
+                href="mailto:"
+              >
+                <img class="h-6" src="assets/img/contacts/mail.svg" alt="" />
+                example@example.ru
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- Why Choose Us? -->
-      <section class="flex flex-col gap-4 md:gap-7 mt-7 md:mt-15 px-5">
-        <h3 class="font-medium text-[18px] md:text-[40px] leading-tight!">
-          Требования к специалистам
-        </h3>
-        <div
-          class="gap-x-3 gap-y-4 md:gap-x-5 md:gap-y-7 grid grid-cols-1 md:grid-cols-2 w-full"
-        >
-          <div
-            class="relative flex flex-col gap-4 bg-[#DB4431] px-4 py-6 rounded-[12px] overflow-hidden text-[#FFFFFF]"
-          >
-            <img
-              class="top-0 right-0 absolute pointer-events-none"
-              src="assets/img/cooperation/require/1.svg"
-              alt=""
-            />
-            <h4 class="font-medium text-[18px] md:text-[20px]">
-              Соблюдение стандартов платформы
-            </h4>
-            <span class="text-[12px] md:text-[16px]">
-              Необходимо загружать фотографии автомобиля со всех ракурсов —
-              кузов, салон, моторный отсек, багажник, VIN и выявленные дефекты —
-              а также видеообзор для наглядной оценки состояния.
-            </span>
-          </div>
-          <div
-            class="relative flex flex-col gap-4 bg-[#DB4431] px-4 py-6 rounded-[12px] overflow-hidden text-[#FFFFFF]"
-          >
-            <img
-              class="top-0 right-0 absolute pointer-events-none"
-              src="assets/img/cooperation/require/2.svg"
-              alt=""
-            />
-            <h4 class="font-medium text-[18px] md:text-[20px]">
-              Полное и корректное заполнение отчёта
-            </h4>
-            <span class="text-[12px] md:text-[16px]">
-              Чем активнее вы работаете и загружаете отчёты, тем выше ваши шансы
-              получать заказы на подбор авто. Менеджеры связываются с наиболее
-              активными специалистами, поэтому активность напрямую влияет на
-              количество и качество заказов.
-            </span>
-          </div>
-          <div
-            class="relative flex flex-col gap-4 bg-[#DB4431] px-4 py-6 rounded-[12px] overflow-hidden text-[#FFFFFF]"
-          >
-            <img
-              class="top-0 right-0 absolute pointer-events-none"
-              src="assets/img/cooperation/require/3.svg"
-              alt=""
-            />
-            <h4 class="font-medium text-[18px] md:text-[20px]">
-              Активность и загрузка отчётов
-            </h4>
-            <span class="text-[12px] md:text-[16px]">
-              Необходимо загружать фото со всех ракурсов, включая интерьер,
-              моторный отсек, VIN и дефекты, а также видеообзор. Все материалы
-              проходят модерацию перед публикацией.
-            </span>
-          </div>
-          <div
-            class="relative flex flex-col gap-4 bg-[#DB4431] px-4 py-6 rounded-[12px] overflow-hidden text-[#FFFFFF]"
-          >
-            <img
-              class="top-0 right-0 absolute pointer-events-none"
-              src="assets/img/cooperation/require/4.svg"
-              alt=""
-            />
-            <h4 class="font-medium text-[18px] md:text-[20px]">Правила</h4>
-            <span class="text-[12px] md:text-[16px]">
-              Наказывать подборщиков будем? Что если подборщик не выезжает на
-              заказной подбор
-            </span>
-          </div>
-        </div>
-      </section>
-      <!-- Profit -->
-      <section class="flex flex-col gap-4 md:gap-7 mt-7 md:mt-15 px-5">
-        <h3 class="font-medium text-[18px] md:text-[40px] leading-tight!">
-          Ваша выгода и доход
-        </h3>
-        <div
-          class="gap-x-3 gap-y-4 md:gap-x-5 md:gap-y-7 grid grid-cols-1 md:grid-cols-2 w-full"
-        >
-          <div
-            class="relative flex xl:flex-row flex-col items-center md:gap-4 bg-[#F7F7F7] rounded-[12px] overflow-hidden"
-          >
-            <img src="assets/img/cooperation/profit/1.svg" alt="" />
-            <div class="flex flex-col items-start gap-4 p-4">
-              <h4 class="font-medium text-[18px] md:text-[20px]">
-                Индивидуальные заказы
-              </h4>
-              <span class="text-[12px] md:text-[14px]">
-                Вы зарабатываете на выполнении заказов по подбору автомобилей
-                для клиентов — от 10 000 рублей за один заказ.<br />Чем активнее
-                и качественнее вы работаете, тем больше заказов поступает, а ваш
-                доход растёт.
-              </span>
-            </div>
-          </div>
-          <div
-            class="relative flex xl:flex-row flex-col items-center md:gap-4 bg-[#F7F7F7] rounded-[12px] overflow-hidden"
-          >
-            <img src="assets/img/cooperation/profit/2.svg" alt="" />
-            <div class="flex flex-col items-start gap-4 p-4">
-              <h4 class="font-medium text-[18px] md:text-[20px]">
-                Продажа готовых отчётов
-              </h4>
-              <span class="text-[12px] md:text-[14px]">
-                Вы можете публиковать свои актуальные отчёты по проверенным
-                автомобилям в базе платформы.<br />За каждый проданный отчёт вам
-                начисляется 1 000 рублей, что позволяет получать дополнительный
-                доход,
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Advantages -->
-      <section class="flex flex-col gap-4 md:gap-7 mt-7 md:mt-15 px-5">
-        <h3 class="font-medium text-[18px] md:text-[40px] leading-tight!">
-          Ваша выгода и доход
-        </h3>
-        <div
-          class="gap-x-3 gap-y-4 md:gap-x-5 md:gap-y-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full"
-        >
-          <div
-            class="relative flex flex-col items-center gap-10 bg-[#F7F7F7] p-5 rounded-[12px] overflow-hidden"
-          >
-            <img src="assets/img/cooperation/advantages/1.svg" alt="" />
-            <div class="flex flex-col items-start gap-4">
-              <h4 class="font-medium text-[18px] md:text-[20px]">
-                Высокий доход
-              </h4>
-              <span class="text-[12px] md:text-[14px]">
-                Вы зарабатываете на подборе авто (от 10 000 ₽ за заказ) и
-                продаже готовых отчётов из базы (1 000 ₽ за отчёт). Доход
-                зависит от вашей активности, качества работы и числа выполненных
-                заказов.
-              </span>
-            </div>
-          </div>
-          <div
-            class="relative flex flex-col items-center gap-10 bg-[#F7F7F7] p-5 rounded-[12px] overflow-hidden"
-          >
-            <img src="assets/img/cooperation/advantages/2.svg" alt="" />
-            <div class="flex flex-col items-start gap-4">
-              <h4 class="font-medium text-[18px] md:text-[20px]">
-                Удобство работы
-              </h4>
-              <span class="text-[12px] md:text-[14px]">
-                Гибкий график, возможность работать дистанционно, использовать
-                готовые отчёты других специалистов и получать заказы без лишних
-                выездов.
-              </span>
-            </div>
-          </div>
-          <div
-            class="relative flex flex-col items-center gap-10 bg-[#F7F7F7] p-5 rounded-[12px] overflow-hidden"
-          >
-            <img src="assets/img/cooperation/advantages/3.svg" alt="" />
-            <div class="flex flex-col items-start gap-4">
-              <h4 class="font-medium text-[18px] md:text-[20px]">
-                Мгновенные выплаты
-              </h4>
-              <span class="text-[12px] md:text-[14px]">
-                Вы получаете оплату сразу после сдачи отчёта — без ожиданий и
-                задержек. Деньги поступают мгновенно.
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- FAQ -->
-      <section class="flex flex-col gap-4 md:gap-7 mt-7 md:mt-15 px-5">
-        <h3 class="font-medium text-[18px] md:text-[40px] leading-tight!">
-          Частые вопросы
-        </h3>
-        <div class="flex flex-col text-[#1E1E1E] leading-tight">
-          <details class="custom-details">
-            <summary>
-              Кто может стать специалистом по подбору авто?
-              <img src="/assets/img/icons/faq-dropdown.svg" alt="" />
-            </summary>
-            <p class="px-4 pt-4">Ответ</p>
-          </details>
-          <details class="custom-details">
-            <summary>
-              Как начать работу на платформе?
-              <img src="/assets/img/icons/faq-dropdown.svg" alt="" />
-            </summary>
-            <p class="px-4 pt-4">Ответ</p>
-          </details>
-          <details class="custom-details">
-            <summary>
-              Как я получаю заказы на подбор?
-              <img src="/assets/img/icons/faq-dropdown.svg" alt="" />
-            </summary>
-            <p class="px-4 pt-4">Ответ</p>
-          </details>
-          <details class="custom-details">
-            <summary>
-              Какой доход может получать специалист?
-              <img src="/assets/img/icons/faq-dropdown.svg" alt="" />
-            </summary>
-            <p class="px-4 pt-4">Ответ</p>
-          </details>
-          <details class="custom-details">
-            <summary>
-              Как происходит оплата?
-              <img src="/assets/img/icons/faq-dropdown.svg" alt="" />
-            </summary>
-            <p class="px-4 pt-4">Ответ</p>
-          </details>
-          <details class="custom-details">
-            <summary>
-              Есть ли требования к материалам?
-              <img src="/assets/img/icons/faq-dropdown.svg" alt="" />
-            </summary>
-            <p class="px-4 pt-4">Ответ</p>
-          </details>
         </div>
       </section>
     </main>
@@ -841,8 +558,7 @@
     </section>
 
     <!-- Scripts -->
-    <script src="assets/js/bannersSlider.js" defer></script>
-    <script src="assets/js/burger.js"></script>
     <script src="assets/js/mobileMenu.js"></script>
+    <script src="assets/js/burger.js"></script>
   </body>
 </html>
