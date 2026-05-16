@@ -48,12 +48,16 @@
             <a
               class="text-[#080717] hover:text-[#db4431] transition-colors duration-200"
               href="/Indep/catalog.html"
-              >Купить авто</a
+              >Купить</a
             >
             <a
               class="text-[#080717] hover:text-[#db4431] transition-colors duration-200"
               href="/Indep/register.html"
-              >Продать авто</a
+              >Продать</a
+            ><a
+              class="text-[#080717] hover:text-[#db4431] transition-colors duration-200"
+              href="/Indep/loan.html"
+              >Автокредит</a
             >
             <div class="group relative nav-dropdown__wrapper">
               <button
@@ -165,12 +169,26 @@
                 alt="Favourites"
               />
             </a>
-            <a
-              href="/Indep/profile.html"
-              class="hidden md:block cursor-pointer"
-            >
-              <img class="h-8" src="assets/img/icons/user.svg" alt="Menu" />
-            </a>
+            <div class="relative ms-auto mb-auto nav-dropdown__wrapper">
+              <a
+                href="/Indep/profile.html"
+                class="hidden md:block ms-auto mb-auto cursor-pointer cursor-pointer nav-dropdown__link" id="profileMenuBtn"
+              >
+                <img class="h-8" src="assets/img/icons/user.svg" alt="Menu" />
+              </a>
+
+              <ul class="nav-dropdown--right nav-dropdown" role="menu" aria-label="Меню профиля" id="profileDropdown">
+                <li role="none">
+                  <form method="POST" action="{{ route('auth.logout') }}" id="logout-form">
+                    <button type="submit"
+                      class="block hover:bg-[#F8F8F8] px-4 py-2 w-full text-[#080717] hover:text-[#3D7D1C] text-left transition-colors duration-200 cursor-pointer"
+                      role="menuitem">
+                      Выйти из аккаунта
+                    </button>
+                  </form>
+                </li>
+              </ul>
+            </div>
             <button class="md:hidden block cursor-pointer" id="burger">
               <img
                 class="h-6 md:h-12"
@@ -309,7 +327,7 @@
             <div
               class="flex flex-col gap-2 md:gap-4 text-[#1E1E1E] leading-tight"
             >
-              <h4 class="font-medium text-[18px] md:text-[24px]">
+              <h4 class="font-medium text-[16px] md:text-[24px]">
                 Мы экономим ваше время и деньги
               </h4>
               <span class="text-[12px] md:text-[16px]">
@@ -331,7 +349,7 @@
             <div
               class="flex flex-col gap-2 md:gap-4 text-[#1E1E1E] leading-tight"
             >
-              <h4 class="font-medium text-[18px] md:text-[24px]">
+              <h4 class="font-medium text-[16px] md:text-[24px]">
                 Профессиональная техническая проверка
               </h4>
               <span class="text-[12px] md:text-[16px]">
@@ -353,7 +371,7 @@
             <div
               class="flex flex-col gap-2 md:gap-4 text-[#1E1E1E] leading-tight"
             >
-              <h4 class="font-medium text-[18px] md:text-[24px]">
+              <h4 class="font-medium text-[16px] md:text-[24px]">
                 Честность и прозрачность
               </h4>
               <span class="text-[12px] md:text-[16px]">
@@ -374,7 +392,7 @@
             <div
               class="flex flex-col gap-2 md:gap-4 text-[#1E1E1E] leading-tight"
             >
-              <h4 class="font-medium text-[18px] md:text-[24px]">
+              <h4 class="font-medium text-[16px] md:text-[24px]">
                 Полное сопровождение сделки
               </h4>
               <span class="text-[12px] md:text-[16px]">
@@ -391,9 +409,9 @@
         <h3 class="font-medium text-[18px] md:text-[40px] leading-tight!">
           Нужна помощь?
         </h3>
-        <div class="gap-5 grid grid-cols-[3fr_2fr]">
+        <div class="gap-5 grid grid-cols-1 lg:grid-cols-[3fr_2fr]">
           <div class="bg-[#F7F7F7] px-6 py-8 rounded-[16px] w-full h-full">
-            <p class="mb-7 text-[#1E1E1E] text-[15px]">
+            <p class="mb-7 text-[#1E1E1E] text-[12px] md:text-[15px]">
               Оставьте заявку, и мы поможем решить ваш вопрос. Хотите купить
               автомобиль, продать его или заказать профессиональный подбор? Наши
               специалисты свяжутся с вами, ответят на все вопросы и подберут
@@ -621,7 +639,7 @@
     ></div>
     <section
       id="burger-menu"
-      class="hidden top-0 right-0 z-102 fixed flex-col justify-between bg-[#F7F7F7] py-8 w-[80%] md:w-[30%] h-dvh overflow-y-auto text-[#505050] text-[14px] md:text-[20px] leading-tight!"
+      class="hidden top-0 right-0 z-102 fixed flex-col justify-between bg-[#F7F7F7] pt-8 w-[80%] md:w-[30%] h-dvh overflow-y-auto text-[#505050] text-[14px] md:text-[20px] leading-tight!"
     >
       <div class="flex flex-col gap-6">
         <a class="px-5" href="/Indep/">
@@ -635,10 +653,10 @@
             >
               <img
                 class="h-5 md:h-7"
-                src="assets/img/icons/burger/favourites.svg"
-                alt="Купить авто"
+                src="assets/img/icons/burger/selection.svg"
+                alt="Купить"
               />
-              Купить авто
+              Купить
             </div>
           </a>
 
@@ -648,10 +666,22 @@
             >
               <img
                 class="h-5 md:h-7"
-                src="assets/img/icons/burger/favourites.svg"
-                alt="Продать авто"
+                src="assets/img/icons/burger/key.svg"
+                alt="Продать"
               />
-              Продать авто
+              Продать
+            </div>
+          </a>
+          <a href="/Indep/loan.html" class="block">
+            <div
+              class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-b border-b-[#00000066] transition-colors duration-200"
+            >
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/credit.svg"
+                alt="Автокредит"
+              />
+              Автокредит
             </div>
           </a>
 
@@ -662,7 +692,7 @@
               <div class="flex items-center gap-2 md:gap-3.5">
                 <img
                   class="h-5 md:h-7"
-                  src="assets/img/icons/burger/favourites.svg"
+                  src="assets/img/icons/burger/ads.svg"
                   alt="Услуги"
                 />
                 Услуги
@@ -714,7 +744,7 @@
               <div class="flex items-center gap-2 md:gap-3.5">
                 <img
                   class="h-5 md:h-7"
-                  src="assets/img/icons/burger/favourites.svg"
+                  src="assets/img/icons/burger/about.svg"
                   alt="Партнерам"
                 />
                 Партнерам
@@ -774,17 +804,19 @@
         </nav>
       </div>
 
-      <button
-        class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-t border-t-[#00000066] transition-colors duration-200 cursor-pointer"
-        onclick="window.location.href = '/'"
-      >
-        <img
-          class="h-5 md:h-7"
-          src="assets/img/icons/burger/logout.svg"
-          alt="Выйти из аккаунта"
-        />
-        Выйти из аккаунта
-      </button>
+      <form method="POST" action="{{ route('auth.logout') }}" id="logout-form" class="inline w-full">
+        <button
+          type="submit"
+          class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-t border-t-[#00000066] w-full text-left transition-colors duration-200 cursor-pointer"
+        >
+          <img
+            class="h-5 md:h-7"
+            src="assets/img/icons/burger/logout.svg"
+            alt="Выйти из аккаунта"
+          />
+          Выйти из аккаунта
+        </button>
+      </form>
     </section>
 
     <!-- Scripts -->

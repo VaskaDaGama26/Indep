@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INDEP | Автокредит</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="top-0 z-100 sticky bg-white border-[#DEDEDE] border-b">
+        <div class="flex justify-between items-center gap-5 mx-auto px-5 py-4 container">
+            <div class="contents xl:flex items-center gap-15">
+                <a href="/Indep/">
+                    <img class="max-w-[120px] h-2.5 md:h-8" src="assets/img/logo.svg" alt="Logo" />
+                </a>
+                <!-- Search Bar -->
+                <div class="hidden xl:block relative w-[312px]">
+                    <input
+                        class="bg-[#F8F8F8] py-2 md:py-2.5 ps-8 md:ps-10 pe-2 md:pe-2.5 rounded-xl focus-visible:outline-none w-full font-medium text-[#979797] text-[12px] md:text-[14px] transition-all duration-300 shrink-0"
+                        type="text" placeholder="Поиск по объявлениям" />
+                    <img class="top-1/2 left-2 absolute md:w-5 md:h-5 -translate-y-1/2 pointer-events-non"
+                        src="assets/img/icons/search.svg" alt="Search Bar" />
+                </div>
+            </div>
+            <div class="contents md:flex items-center gap-10">
+                <nav class="hidden md:flex items-center gap-6">
+                    <a class="text-[#080717] hover:text-[#db4431] transition-colors duration-200"
+                        href="/Indep/catalog.html">Купить</a>
+                    <a class="text-[#080717] hover:text-[#db4431] transition-colors duration-200"
+                        href="/Indep/register.html">Продать</a>
+                    <a class="text-[#080717] hover:text-[#db4431] transition-colors duration-200"
+                        href="/Indep/loan.html">Автокредит</a>
+                    <div class="group relative nav-dropdown__wrapper">
+                        <button
+                            class="inline-flex justify-center items-center gap-1 text-[#080717] hover:text-[#db4431] transition-colors duration-200 nav-dropdown__link"
+                            aria-expanded="false" aria-haspopup="true">
+                            Услуги
+                            <img class="w-4 h-4 group-hover:rotate-180 transition-transform duration-200 nav-dropdown__img"
+                                src="assets/img/icons/black-dropdown.svg" alt=""
+                                aria-hidden="true" />
+                        </button>
+
+                        <ul class="invisible group-hover:visible top-full left-0 z-50 absolute bg-white opacity-0 group-hover:opacity-100 shadow-lg mt-1 py-2 border border-gray-100 rounded-lg min-w-[200px] transition-all duration-200 nav-dropdown"
+                            role="menu" aria-label="Услуги">
+                            <li role="none">
+                                <a href="/Indep/selection.html"
+                                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                                    role="menuitem">
+                                    Разовая диагностика
+                                </a>
+                            </li>
+                            <li role="none">
+                                <a href="/Indep/day.html"
+                                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                                    role="menuitem">
+                                    Автоподборщик на день
+                                </a>
+                            </li>
+                            <li role="none">
+                                <a href="/Indep/key.html"
+                                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                                    role="menuitem">
+                                    Подбор авто под ключ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="group relative nav-dropdown__wrapper">
+                        <button
+                            class="inline-flex justify-center items-center gap-1 text-[#080717] hover:text-[#db4431] transition-colors duration-200 nav-dropdown__link"
+                            aria-expanded="false" aria-haspopup="true">
+                            Партнерам
+                            <img class="w-4 h-4 group-hover:rotate-180 transition-transform duration-200 nav-dropdown__img"
+                                src="assets/img/icons/black-dropdown.svg" alt=""
+                                aria-hidden="true" />
+                        </button>
+
+                        <ul class="invisible group-hover:visible top-full left-0 z-50 absolute bg-white opacity-0 group-hover:opacity-100 shadow-lg mt-1 py-2 border border-gray-100 rounded-lg min-w-[200px] transition-all duration-200 nav-dropdown"
+                            role="menu" aria-label="Партнерам">
+                            <li role="none">
+                                <a href="/Indep/cooperation.html"
+                                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                                    role="menuitem">
+                                    Сотрудничество
+                                </a>
+                            </li>
+                            <li role="none">
+                                <a href="/Indep/about.html"
+                                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                                    role="menuitem">
+                                    О нас
+                                </a>
+                            </li>
+                            <li role="none">
+                                <a href="/Indep/contacts.html"
+                                    class="block hover:bg-[#F8F8F8] px-4 py-2 text-[#080717] hover:text-[#3D7D1C] transition-colors duration-200"
+                                    role="menuitem">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="flex items-center gap-5">
+                    <a href="/Indep/favourites.html" class="hidden md:block cursor-pointer">
+                        <img class="h-8" src="assets/img/icons/favourite.svg" alt="Favourites" />
+                    </a>
+                    <div class="relative ms-auto mb-auto nav-dropdown__wrapper">
+                        <a href="/Indep/profile.html"
+                            class="hidden md:block ms-auto mb-auto cursor-pointer cursor-pointer nav-dropdown__link"
+                            id="profileMenuBtn">
+                            <img class="h-8" src="assets/img/icons/user.svg" alt="Menu" />
+                        </a>
+
+                        <ul class="nav-dropdown--right nav-dropdown" role="menu" aria-label="Меню профиля"
+                            id="profileDropdown">
+                            <li role="none">
+                                <form method="POST" action="{{ route('auth.logout') }}" id="logout-form">
+                                    
+                                    <button type="submit"
+                                        class="block hover:bg-[#F8F8F8] px-4 py-2 w-full text-[#080717] hover:text-[#3D7D1C] text-left transition-colors duration-200 cursor-pointer"
+                                        role="menuitem">
+                                        Выйти из аккаунта
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="md:hidden block cursor-pointer" id="burger">
+                        <img class="h-6 md:h-12" src="assets/img/icons/burger.svg" alt="Menu" />
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="mx-auto mt-6 container">
+
+        <section class="flex flex-col gap-4 md:gap-7 px-5">
+            <h3 class="font-medium text-[18px] md:text-[40px] leading-tight!">
+                Подбор выгодного автокредита
+            </h3>
+
+            <div data-form-container class="flex xl:flex-row flex-col gap-4 sm:gap-6">
+                <div class="flex flex-col flex-shrink-0 gap-4 w-full xl:w-[50%] h-max">
+                    <form
+                        class="flex flex-col gap-3 md:gap-5 bg-[#F8F8F8] px-3 md:px-4 py-4 md:py-6 rounded-lg w-full h-fit"
+                        onsubmit="event.preventDefault(); window.location.href = `/Indep/auto`;">
+                        <div class="flex flex-col items-start gap-2">
+
+                            <span class="opacity-60 text-[16px]">Выберите автомобиль</span>
+                            <div class="space-y-3 md:space-y-6 w-full">
+                                <div class="relative">
+                                    <select name="mark" required
+                                        class="relative bg-[#FFFFFF] py-3 ps-5 pe-9 rounded-lg focus-visible:outline-none w-full text-[#979797] appearance-none">
+                                        <option value="">Марка автомобиля</option>
+                                        <option class="test-option" value="value">
+                                            test
+                                        </option>
+                                    </select>
+                                    <img id="select-dropdown" class="top-3 right-5 absolute pointer-events-non"
+                                        src="assets/img/icons/dropdown.svg" alt="" />
+                                </div>
+
+                                <div class="relative">
+                                    <select name="model" required
+                                        class="relative bg-[#FFFFFF] py-3 ps-5 pe-9 rounded-lg focus-visible:outline-none w-full text-[#979797] appearance-none">
+                                        <option value="">Модель</option>
+                                    </select>
+                                    <img id="select-dropdown" class="top-3 right-5 absolute pointer-events-non"
+                                        src="assets/img/icons/dropdown.svg" alt="" />
+                                </div>
+
+                                <div class="relative">
+                                    <select name="complectation" required
+                                        class="relative bg-[#FFFFFF] py-3 ps-5 pe-9 rounded-lg focus-visible:outline-none w-full text-[#979797] appearance-none">
+                                        <option value="">Комплектация</option>
+                                    </select>
+                                    <img id="select-dropdown" class="top-3 right-5 absolute pointer-events-non"
+                                        src="assets/img/icons/dropdown.svg" alt="" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="flex flex-col items-start gap-6">
+                            <div class="flex flex-col items-start gap-2">
+                                <span class="opacity-60 text-[16px]">Первоначальный взнос</span>
+                                <span class="opacity-60 text-[32px]">5 000 000 ₽ (70%)</span>
+                            </div>
+                            <div class="flex flex-col items-start gap-3 w-full">
+                                <input step="10" min="10" max="70" class="range-slider"
+                                    type="range" />
+                                <div class="flex justify-between opacity-60 px-2.5 w-full font-normal text-sm">
+                                    <span>10%</span>
+                                    <span>20%</span>
+                                    <span>30%</span>
+                                    <span>40%</span>
+                                    <span>50%</span>
+                                    <span>60%</span>
+                                    <span>70%</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-start gap-2">
+                                <span class="opacity-60 text-[16px]">Срок кредита</span>
+                                <span class="opacity-60 text-[32px]">7 лет</span>
+                            </div>
+                            <div class="flex flex-col items-start gap-3 w-full">
+                                <input step="1" min="1" max="7" class="range-slider"
+                                    type="range" />
+                                <div class="flex justify-between opacity-60 px-2.5 w-full font-normal text-sm">
+                                    <span>1 год</span>
+                                    <span>2 года</span>
+                                    <span>3 года</span>
+                                    <span>4 года</span>
+                                    <span>5 лет</span>
+                                    <span>6 лет</span>
+                                    <span>7 лет</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="opacity-60 text-[16px]">Заполните ваши контактные данные</span>
+                        <!-- Name -->
+                        <label class="flex flex-col items-start gap-1.5 text-[12px] md:text-[14px] leading-tight!"
+                            for="name">
+                            Имя
+                            <input id="name"
+                                class="bg-[#FFFFFF] p-3 rounded-lg focus:outline-none w-full text-[14px] md:text-[16px] placeholder:text-[#00000080]"
+                                type="text" required placeholder="Укажите Ваше имя" />
+                        </label>
+                        <!-- Phone -->
+                        <label class="flex flex-col items-start gap-1.5 text-[12px] md:text-[14px] leading-tight!"
+                            for="tel">
+                            Номер телефона
+                            <input id="tel"
+                                class="bg-[#FFFFFF] p-3 rounded-lg focus:outline-none w-full text-[14px] md:text-[16px] placeholder:text-[#00000080]"
+                                type="text" required placeholder="+7 (___) ___-__-__" />
+                        </label>
+
+                        <!-- Checkbox -->
+                        <div class="flex flex-col mt-2">
+                            <div class="flex items-center gap-2">
+                                <label style="--range-color: #ffffff" class="custom-checkbox" for="policy">
+                                    <input checked type="checkbox" id="policy" />
+                                    <span class="checkmark">✓</span>
+                                </label>
+                                <span class="text-[12px] md:text-[14px] leading-tight!">
+                                    Даю согласие на
+                                    <a href="" class="underline">
+                                        обработку персональных данных
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Button -->
+                        <button type="submit"
+                            class="bg-[#080717] mt-6 px-9 py-2 md:py-2.5 rounded-xl w-full font-medium text-[12px] text-white md:text-[16px] text-center cursor-pointer">
+                            Подтвердить
+                        </button>
+                    </form>
+                    <!-- Banks Desktop -->
+                    <div
+                        class="hidden md:flex flex-row flex-wrap justify-between md:justify-start gap-x-2.5 gap-y-4 md:gap-6 px-2">
+                        <img class="h-[20px] md:h-[30px]" src="assets/img/banks/sovcom.svg"
+                            alt="Sovcom" />
+                        <img class="h-[20px] md:h-[30px]" src="assets/img/banks/tbank.svg"
+                            alt="TBank" />
+                        <img class="h-[20px] md:h-[30px]" src="assets/img/banks/vtb.svg"
+                            alt="VTB" />
+                        <img class="h-[20px] md:h-[30px]" src="assets/img/banks/sber.svg"
+                            alt="Sber" />
+                        <img class="h-[20px] md:h-[30px]" src="assets/img/banks/otp.svg"
+                            alt="OTP" />
+                        <img class="h-[20px] md:h-[30px]" src="assets/img/banks/zenit.svg"
+                            alt="Zenit" />
+                        <img class="h-[20px] md:h-[30px]" src="assets/img/banks/gasprom.svg"
+                            alt="GasProm" />
+                        <img class="h-[20px] md:h-[30px]" src="assets/img/banks/alfa.svg"
+                            alt="Alfa" />
+                        <img class="h-[20px] md:h-[30px]" src="assets/img/banks/absolut.svg"
+                            alt="Absolut" />
+                    </div>
+                </div>
+                <!-- Main Info -->
+                <div class="flex flex-col gap-4 md:row-span-2 md:m-0 mt-4 px-5 md:px-0">
+                    <!-- Images -->
+                    <div class="flex flex-col gap-2 md:gap-5">
+                        <div class="rounded-sm md:rounded-xl h-fit overflow-hidden shrink-0">
+                            <img class="w-full h-40 md:h-[305px] object-cover"
+                                src="assets/img/auto/images/1.jpg" alt="" />
+                        </div>
+                        <!-- Carousel -->
+                        <div class="flex flex-col gap-4 overflow-x-auto">
+                            <div class="box-content flex flex-row gap-2 md:gap-4 pb-2 w-full h-14 md:h-auto">
+                                <img src="assets/img/auto/images/2.jpg"
+                                    class="rounded-sm w-full max-w-[109px] md:max-w-[210px] shrink-0" />
+                                <img src="assets/img/auto/images/3.jpg"
+                                    class="rounded-sm w-full max-w-[109px] md:max-w-[210px] shrink-0" />
+                                <img src="assets/img/auto/images/4.jpg"
+                                    class="rounded-sm w-full max-w-[109px] md:max-w-[210px] shrink-0" />
+                                <div style="background: url('assets/img/auto/images/4.jpg') center center /cover no-repeat;"
+                                    class="relative flex justify-center items-center rounded-sm w-full max-w-[109px] md:max-w-[210px] shrink-0">
+                                    <div class="z-1 flex flex-col items-center">
+                                        <span
+                                            class="text-[12px] text-white md:text-[24px] text-center leading-none">67+</span>
+                                        <span
+                                            class="text-[10px] text-white md:text-[16px] text-center leading-none">фото</span>
+                                    </div>
+                                    <!-- Mask -->
+                                    <div class="absolute bg-[#3b3b3bcc] rounded-sm w-full h-full overflow-hidden">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Info -->
+                    <div class="flex flex-col gap-3 leading-tight!">
+                        <!-- Desktop Heading of Car -->
+                        <div class="md:hidden block space-y-2 text-[10px]">
+                            <div class="flex justify-between items-center">
+                                <h1 class="text-[24px]">NISSAN Qashqai</h1>
+                                <span class="bg-[#DB4431] px-2 py-0.5 rounded-full text-white">
+                                    200 000 км
+                                </span>
+                            </div>
+                            <p>Active - 1,2 л (115 л.с.) 6MT 2WD - 2025 г.</p>
+                            <p class="opacity-40">Кроссовер</p>
+                        </div>
+                        <div class="space-y-2 md:space-y-3 text-[#4D4D4D]">
+                            <p class="font-semibold text-[11px] md:text-[14px]">
+                                Кредит от 8 577 ₽/мес.
+                            </p>
+                            <p class="font-normal text-[20px] md:text-[40px]">
+                                5 000 000 ₽
+                            </p>
+                            <p class="font-light text-[14px] md:text-[28px] line-through">
+                                7 562 000 ₽
+                            </p>
+                        </div>
+                        <div class="bg-[#F8F8F8] px-6 py-5 rounded-[12px] w-full h-[122px] md:h-[142px]">
+                            <div class="flex flex-row justify-between gap-2">
+                                <div class="flex flex-col items-center gap-2">
+                                    <p class="font-normal text-black text-xs md:text-base !leading-tight">Первый взнос
+                                    </p>
+                                    <p id="initialPaymentAmount"
+                                        class="font-medium text-[15px] text-black md:text-[20px] !leading-tight">700
+                                        000₽
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center gap-2">
+                                    <p class="font-normal text-black text-xs md:text-base !leading-tight">Срок
+                                        кредитования
+                                    </p>
+                                    <p id="loanTermDisplay"
+                                        class="font-medium text-[15px] text-black md:text-[20px] !leading-tight">8
+                                        лет</p>
+                                </div>
+                            </div>
+                            <hr class="mt-3 mb-4 w-full h-[2px] text-[#656565]">
+                            <div class="flex flex-row justify-between items-center gap-2">
+                                <p class="font-normal text-black text-xs md:text-base !leading-tight">Ежемесячный
+                                    платёж</p>
+                                <p id="monthlyPayment"
+                                    class="font-medium text-[15px] text-black md:text-[20px] !leading-tight">20
+                                    000₽/мес.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col gap-3 md:gap-5 bg-[#F8F8F8] px-3 md:px-4 py-4 md:py-6 rounded-lg md:h-full">
+                            <h2 class="font-medium text-[16px] md:text-[20px] text-left leading-tight!">
+                                Данные из ПТС
+                            </h2>
+                            <!-- Rows -->
+                            <div class="gap-y-4 grid">
+                                <div
+                                    class="justify-between grid grid-cols-2 text-[12px] md:text-[14px] leading-tight!">
+                                    <span class="opacity-60 text-left">VIN</span>
+                                    <span class="text-right">KNA 204**********</span>
+                                </div>
+                                <div
+                                    class="justify-between grid grid-cols-2 text-[12px] md:text-[14px] leading-tight!">
+                                    <span class="opacity-60 text-left">Марка</span>
+                                    <span class="text-right">Kia</span>
+                                </div>
+                                <div
+                                    class="justify-between grid grid-cols-2 text-[12px] md:text-[14px] leading-tight!">
+                                    <span class="opacity-60 text-left">Модель</span>
+                                    <span class="text-right">Carnival</span>
+                                </div>
+                                <div
+                                    class="justify-between grid grid-cols-2 text-[12px] md:text-[14px] leading-tight!">
+                                    <span class="opacity-60 text-left">Год выпуска </span>
+                                    <span class="text-right">2019</span>
+                                </div>
+                                <div
+                                    class="justify-between grid grid-cols-2 text-[12px] md:text-[14px] leading-tight!">
+                                    <span class="opacity-60 text-left">Цвет</span>
+                                    <span class="text-right">Белый</span>
+                                </div>
+                                <div
+                                    class="justify-between grid grid-cols-2 text-[12px] md:text-[14px] leading-tight!">
+                                    <span class="opacity-60 text-left">Объём двигателя</span>
+                                    <span class="text-right">2,2 л.</span>
+                                </div>
+                                <div
+                                    class="justify-between grid grid-cols-2 text-[12px] md:text-[14px] leading-tight!">
+                                    <span class="opacity-60 text-left">ПТС</span>
+                                    <span class="text-right">Оригинал</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us? -->
+        <section class="flex flex-col gap-4 md:gap-7 mt-7 md:mt-15 px-5">
+            <h3 class="font-medium text-[18px] md:text-[40px] leading-tight!">
+                Почему мы?
+            </h3>
+            <div class="gap-x-3 gap-y-4 md:gap-x-5 md:gap-y-7 grid grid-cols-1 md:grid-cols-2 w-full">
+                <div
+                    class="flex md:flex-row flex-col items-start gap-3 md:gap-5 bg-[#F7F7F7] px-3 py-5 rounded-[12px]">
+                    <img class="w-10 md:w-15" src="assets/img/selection/why/1.svg" alt="" />
+                    <div class="flex flex-col gap-2 md:gap-4 text-[#1E1E1E] leading-tight">
+                        <h4 class="font-medium text-[16px] md:text-[24px]">
+                            Мы экономим ваше время и деньги
+                        </h4>
+                        <span class="text-[12px] md:text-[16px]">
+                            Рынок автомобилей огромен, но достойных вариантов мало. Мы
+                            отсекаем проблемные машины ещё на этапе анализа объявлений,
+                            чтобы вы не тратили время впустую. Наша цель — подобрать лучший
+                            автомобиль в рамках вашего бюджета, а не просто любой вариант.
+                        </span>
+                    </div>
+                </div>
+                <div
+                    class="flex md:flex-row flex-col items-start gap-3 md:gap-5 bg-[#F7F7F7] px-3 py-5 rounded-[12px]">
+                    <img class="w-10 md:w-15" src="assets/img/selection/why/2.svg" alt="" />
+                    <div class="flex flex-col gap-2 md:gap-4 text-[#1E1E1E] leading-tight">
+                        <h4 class="font-medium text-[16px] md:text-[24px]">
+                            Профессиональная техническая проверка
+                        </h4>
+                        <span class="text-[12px] md:text-[16px]">
+                            Мы проверяем каждый автомобиль более чем по 100 параметрам — от
+                            состояния кузова и техники до электроники и юридической истории.
+                            Это помогает заранее обнаружить скрытые недостатки и исключить
+                            возможные риски.
+                        </span>
+                    </div>
+                </div>
+                <div
+                    class="flex md:flex-row flex-col items-start gap-3 md:gap-5 bg-[#F7F7F7] px-3 py-5 rounded-[12px]">
+                    <img class="w-10 md:w-15" src="assets/img/selection/why/3.svg" alt="" />
+                    <div class="flex flex-col gap-2 md:gap-4 text-[#1E1E1E] leading-tight">
+                        <h4 class="font-medium text-[16px] md:text-[24px]">
+                            Честность и прозрачность
+                        </h4>
+                        <span class="text-[12px] md:text-[16px]">
+                            Предоставляем подробный отчёт по каждому автомобилю: фото,
+                            видеообзор и полную информацию о состоянии. Вы можете объективно
+                            оценить машину ещё до осмотра — прозрачно и безопасно.
+                        </span>
+                    </div>
+                </div>
+                <div
+                    class="flex md:flex-row flex-col items-start gap-3 md:gap-5 bg-[#F7F7F7] px-3 py-5 rounded-[12px]">
+                    <img class="w-10 md:w-15" src="assets/img/selection/why/4.svg" alt="" />
+                    <div class="flex flex-col gap-2 md:gap-4 text-[#1E1E1E] leading-tight">
+                        <h4 class="font-medium text-[16px] md:text-[24px]">
+                            Полное сопровождение сделки
+                        </h4>
+                        <span class="text-[12px] md:text-[16px]">
+                            От первого звонка до передачи ключей — мы рядом. Проверяем
+                            документы, сопровождаем на сделке, помогаем с переоформлением и
+                            даём рекомендации по дальнейшей эксплуатации.
+                        </span>
+                    </div>
+                </div>
+                <a href="/Indep/"
+                    class="bg-[#DB4431] px-9 py-2 md:py-2.5 rounded-xl w-full md:max-w-fit font-medium text-[12px] text-white md:text-[16px] text-center cursor-pointer">
+                    Подобрать авто
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#1E1E1E] mt-7 text-white leading-tight!">
+        <div class="relative flex flex-col justify-between items-start mx-auto px-5 py-8 container">
+            <div class="flex flex-col items-start gap-7">
+                <div class="flex justify-between items-center w-full">
+                    <a href="/Indep/">
+                        <img class="h-6" src="assets/img/logo-white.svg" alt="Logo" />
+                    </a>
+                    <img class="right-0 bottom-0 md:absolute h-[50px] md:h-[124px]"
+                        src="assets/img/footer-car.svg" alt="" />
+                </div>
+                <nav aria-label="Footer Menu"
+                    class="flex flex-wrap items-center gap-5 text-[14px] md:text-[16px] underline">
+                    <a href="/Indep/catalog.html">Каталог</a>
+                    <a href="/Indep/selection.html">Подбор авто</a>
+                    <a href="/Indep/cooperation.html">Сотрудничество</a>
+                    <a href="/Indep/about.html">О нас</a>
+                </nav>
+                <div class="flex flex-col items-start gap-3 text-[12px]">
+                    <p>
+                        Производитель сохраняет за собой исключительное право в любое
+                        время вносить дополнения, изменения, обновления в информацию о
+                        параметрах продукта, конфигурации, материалы, цвета и в другую
+                        информацию о транспортном средстве без предварительного
+                        уведомления. Приобретение любой продукции осуществляется в
+                        соответствии с условиями индивидуального договора купли-продажи.
+                        Представленное изображение, цвет, технические характеристики и
+                        комплектация автомобилей могут отличаться от реализуемого.
+                        Упоминаемое оборудование может быть опциональным. Не является
+                        публичной офертой.
+                    </p>
+                    <span class="opacity-50">Все права защищены</span>
+                    <span class="opacity-50">ООО EXAMPLE, вл. 777, корп.777 ОГРН 11112222333344445 ИНН
+                        6666777788</span>
+                </div>
+            </div>
+            <a class="mt-12 text-[12px]" href="/Indep/privacypolicy.html">
+                Политика конфиденциальности
+            </a>
+        </div>
+    </footer>
+    <!-- Mobile Menu -->
+    <section id="mobilemenu" class="md:hidden block right-0 bottom-0 z-97 sticky bg-[#F7F7F7] pt-2 pb-3 w-full">
+        <div class="flex flex-row justify-between items-center">
+            <a href="/Indep/" class="w-full mobile-menu-item">
+                <div class="flex flex-col items-center gap-1">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M25.5061 7.02756C27.2533 7.02753 27.8791 6.68675 28.7492 8.40256L29.343 9.5676C29.8399 10.5195 30.6218 11.7597 30.9875 12.7561L32.8713 12.7541C33.2616 12.7524 33.5473 12.645 33.886 12.9045C34.3642 13.2711 34.1972 14.224 33.6184 14.2912C33.0763 14.3542 32.3952 14.3211 31.8322 14.3196C31.9477 14.5674 32.196 14.9696 32.341 15.2365L33.5168 17.4162C35.1096 20.3723 34.9025 20.6193 34.9641 23.8069C34.9969 25.5035 35.2776 26.6883 33.5373 27.4768C33.5192 28.7898 33.7871 30.2269 32.8401 31.2307C31.9242 32.2008 30.9138 31.9639 29.7483 31.9963C27.6858 32.0536 27.1596 30.7982 27.1594 28.9035L27.1604 27.5217H12.8645L12.8654 28.8733C12.8658 31.1042 12.1997 31.9435 9.99923 31.9387L8.94747 31.9436C6.9577 31.9568 6.41248 30.6074 6.41134 28.7571V27.4768C4.63832 26.5288 5.05172 25.3465 5.02169 23.5354C5.00626 22.6066 5.00662 21.645 5.13693 20.7268C5.40515 18.8765 7.27445 16.0934 8.1838 14.3196L7.18087 14.3215C6.66682 14.3261 5.72567 14.4191 5.78341 13.552C5.84524 12.6253 6.77492 12.7541 7.40841 12.7541L9.00607 12.7561C9.23894 12.3384 9.42278 11.9447 9.64181 11.5266L10.7697 9.38108C11.4323 8.09915 11.608 7.16259 13.1311 7.02854L25.5061 7.02756ZM10.2092 27.5207L7.884 27.5217C7.88305 27.9814 7.83253 29.3115 7.91915 29.6604C8.1797 30.7092 9.48741 30.447 10.2902 30.4377C10.6242 30.4339 10.879 30.3906 11.1506 30.1701C11.4934 29.589 11.4279 29.4126 11.427 28.7561L11.424 27.5217C11.0379 27.5084 10.5995 27.5205 10.2092 27.5207ZM29.799 27.5217C29.4316 27.5219 28.9917 27.5371 28.633 27.5217L28.6311 28.8801C28.6276 30.6891 29.0165 30.4327 30.4133 30.4367C31.0461 30.4386 31.2872 30.5817 31.8322 30.1701C32.1671 29.5866 32.0824 29.503 32.0774 28.844L32.0754 27.5217H29.799ZM9.9924 19.3967C8.07094 19.5287 7.98966 22.0234 9.60958 22.4016C9.85607 22.4587 10.1648 22.4209 10.4231 22.4192L11.7785 22.4172C13.6066 22.5463 13.7456 19.4056 11.7404 19.3996C11.1549 19.3978 10.5741 19.3885 9.9924 19.3967ZM28.7297 19.3967C28.1102 19.4326 27.728 19.4504 27.2805 19.9426C26.734 20.5439 26.771 21.4927 27.3811 22.0344C27.823 22.4265 28.3527 22.4159 28.9084 22.4172H29.7736C30.3662 22.4003 30.7357 22.41 31.1897 21.9465C31.754 21.3703 31.6507 20.3231 31.0695 19.7961C30.6275 19.3951 30.1229 19.401 29.5608 19.3977L28.7297 19.3967ZM17.4592 20.6399C17.0593 20.64 16.7361 20.9646 16.7385 21.3645C16.741 21.7666 17.063 22.0966 17.4651 22.0969C17.9753 22.097 18.4913 22.0917 18.9944 22.092H22.6037C23.0047 22.092 23.3303 21.7664 23.3303 21.3654C23.3301 20.9647 23.0046 20.6399 22.6037 20.6399H17.4592ZM12.8645 8.56662C11.8433 10.6091 10.7266 12.5883 9.68283 14.6174C9.58595 14.8058 9.476 15.0501 9.35275 15.219H27.2238L29.4846 15.2209C29.8949 15.2229 30.2704 15.2545 30.6819 15.219C29.9871 13.9873 29.3227 12.7484 28.6604 11.4983L27.5432 9.34299C27.4415 9.14856 27.201 8.74494 27.1604 8.56662H12.8645Z"
+                            fill="#A0A0A0" />
+                    </svg>
+                    <p class="font-medium text-[10px] text-lightgray leading-tight!">
+                        Главная
+                    </p>
+                </div>
+            </a>
+            <a href="/Indep/chat.html" class="w-full mobile-menu-item">
+                <div class="flex flex-col items-center gap-1">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.8531 26.8533C11.0334 26.4019 10.4728 26.0332 9.7605 25.4624C5.30788 21.8932 4.72333 15.2452 8.46766 10.9752C10.6437 8.49359 13.3055 7.25814 16.6377 7.00059L22.5998 7C29.1899 7.00092 34.6435 12.141 33.9385 18.6816C33.4141 23.5467 29.3158 27.3053 24.4085 27.9825C22.8872 28.1816 21.3035 27.9742 19.7817 28.107C19.6959 28.1145 19.0197 28.5657 18.8945 28.645L12.6864 32.4859C12.4129 32.6547 12.1198 32.8242 11.8531 33L11.8529 28.9495C11.8529 28.2981 11.8789 27.4888 11.8531 26.8533ZM19.319 15.8999C18.2025 16.0149 18.0212 16.7459 17.9982 17.6808C17.9628 19.1161 18.4995 19.5008 19.8855 19.4949L20.6704 19.4935C22.3419 19.3029 22.2979 16.8289 21.4495 16.1966C20.9094 15.7796 19.9921 15.8874 19.319 15.8999ZM26.1741 15.8999C24.6667 15.9753 24.5559 16.8697 24.6329 18.1152C24.7182 19.495 25.9362 19.496 27.0042 19.4935C28.8113 19.4504 28.904 17.0438 28.0728 16.2527C27.5928 15.7959 26.8336 15.8981 26.1741 15.8999ZM12.6517 15.8999C11.5336 16.0944 11.4124 16.8169 11.3912 17.7459C11.3766 18.3825 11.4674 18.8741 12.0386 19.2638C12.4194 19.5236 13.6127 19.5611 14.1127 19.4935C15.4019 19.2356 15.3954 18.0202 15.2763 16.9757C15.1326 15.7147 13.48 15.9408 12.6517 15.8999Z"
+                            fill="#A0A0A0" />
+                    </svg>
+                    <p class="font-medium text-[10px] text-lightgray leading-tight!">
+                        Чат
+                    </p>
+                </div>
+            </a>
+            <a href="/Indep/call.html" class="w-full mobile-menu-item">
+                <div class="flex flex-col items-center gap-1">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.0417 18.2594C13.4417 22.3472 17.3 25.6911 22.025 27.7711L25.6917 24.5861C26.15 24.1889 26.8083 24.0733 27.3833 24.2322C29.25 24.7667 31.2583 25.0556 33.3333 25.0556C34.2583 25.0556 35 25.6983 35 26.5V31.5556C35 32.3572 34.2583 33 33.3333 33C17.6833 33 5 22.0078 5 8.44444C5 7.64278 5.75 7 6.66667 7H12.5C13.425 7 14.1667 7.64278 14.1667 8.44444C14.1667 10.2428 14.5 11.9833 15.1167 13.6011C15.3 14.0994 15.1667 14.67 14.7083 15.0672L11.0417 18.2594Z"
+                            fill="#A0A0A0" />
+                    </svg>
+                    <p class="font-medium text-[10px] text-lightgray leading-tight!">
+                        Позвонить
+                    </p>
+                </div>
+            </a>
+            <a href="/Indep/profile.html" class="w-full mobile-menu-item">
+                <div class="flex flex-col items-center gap-1">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.2152 21.296C16.6277 21.4267 13.623 18.3339 13.5037 14.3877C13.3844 10.4414 16.1956 7.1358 19.7832 7.00406C23.3713 6.87229 26.377 9.96539 26.4963 13.9123C26.6157 17.8593 23.8034 21.1652 20.2152 21.296Z"
+                            fill="#A0A0A0" />
+                        <path
+                            d="M27.4919 32.9457L8.8669 32.9462C7.57931 32.9474 6.90781 33.3639 7.01021 31.861C7.35178 26.8477 10.3913 23.2995 14.4307 21.3C14.505 21.3362 15.1649 21.8572 15.3031 21.9538C17.8447 23.7296 21.2921 23.8603 23.9851 22.3992C24.5697 22.0819 25.0218 21.7447 25.5535 21.3594C29.7352 22.9047 32.793 27.5332 32.9982 32.2731C33.0327 33.0702 32.5643 32.9471 31.9925 32.9465L27.4919 32.9457Z"
+                            fill="#A0A0A0" />
+                    </svg>
+                    <p class="font-medium text-[10px] text-lightgray leading-tight!">
+                        Профиль
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Burger Overlay + Menu -->
+    <div id="burger-overlay" class="hidden z-101 fixed inset-0 backdrop-blur-xs"></div>
+    <section id="burger-menu"
+        class="hidden top-0 right-0 z-102 fixed flex-col justify-between bg-[#F7F7F7] pt-8 w-[80%] md:w-[30%] h-dvh overflow-y-auto text-[#505050] text-[14px] md:text-[20px] leading-tight!">
+        <div class="flex flex-col gap-6">
+            <a class="px-5" href="/Indep/">
+                <img class="h-2.5 md:h-6" src="assets/img/logo.svg" alt="Logo" />
+            </a>
+
+            <nav class="flex flex-col">
+                <a href="/Indep/catalog.html" class="block">
+                    <div
+                        class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-b border-b-[#00000066] transition-colors duration-200">
+                        <img class="h-5 md:h-7" src="assets/img/icons/burger/selection.svg"
+                            alt="Купить" />
+                        Купить
+                    </div>
+                </a>
+
+                <a href="/Indep/register.html" class="block">
+                    <div
+                        class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-b border-b-[#00000066] transition-colors duration-200">
+                        <img class="h-5 md:h-7" src="assets/img/icons/burger/key.svg"
+                            alt="Продать" />
+                        Продать
+                    </div>
+                </a>
+
+                <a href="/Indep/loan.html" class="block">
+                    <div
+                        class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-b border-b-[#00000066] transition-colors duration-200">
+                        <img class="h-5 md:h-7" src="assets/img/icons/burger/credit.svg"
+                            alt="Автокредит" />
+                        Автокредит
+                    </div>
+                </a>
+
+                <div class="border-b border-b-[#00000066] burger-dropdown">
+                    <button
+                        class="flex justify-between items-center gap-2 px-5 py-4 w-full transition-colors duration-200 burger-dropdown__trigger">
+                        <div class="flex items-center gap-2 md:gap-3.5">
+                            <img class="h-5 md:h-7" src="assets/img/icons/burger/ads.svg"
+                                alt="Услуги" />
+                            Услуги
+                        </div>
+                        <svg class="w-5 h-5 transition-transform duration-200 burger-dropdown__arrow"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="hidden bg-[#F7F7F7] burger-dropdown__menu">
+                        <a href="/Indep/selection.html" class="block">
+                            <div
+                                class="flex items-center gap-2 md:gap-3.5 px-12 py-3 border-t border-t-[#0000001f] transition-colors duration-200">
+                                Разовая диагностика
+                            </div>
+                        </a>
+                        <a href="/Indep/day.html" class="block">
+                            <div
+                                class="flex items-center gap-2 md:gap-3.5 px-12 py-3 border-t border-t-[#0000001f] transition-colors duration-200">
+                                Автоподборщик на день
+                            </div>
+                        </a>
+                        <a href="/Indep/key.html" class="block">
+                            <div
+                                class="flex items-center gap-2 md:gap-3.5 px-12 py-3 border-t border-t-[#0000001f] transition-colors duration-200">
+                                Подбор авто под ключ
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="border-b border-b-[#00000066] burger-dropdown">
+                    <button
+                        class="flex justify-between items-center gap-2 px-5 py-4 w-full transition-colors duration-200 burger-dropdown__trigger">
+                        <div class="flex items-center gap-2 md:gap-3.5">
+                            <img class="h-5 md:h-7" src="assets/img/icons/burger/about.svg"
+                                alt="Партнерам" />
+                            Партнерам
+                        </div>
+                        <svg class="w-5 h-5 transition-transform duration-200 burger-dropdown__arrow"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="hidden bg-[#F7F7F7] burger-dropdown__menu">
+                        <a href="/Indep/cooperation.html" class="block">
+                            <div
+                                class="flex items-center gap-2 md:gap-3.5 px-8 py-3 border-t border-t-[#0000001f] transition-colors duration-200">
+                                Сотрудничество
+                            </div>
+                        </a>
+                        <a href="/Indep/about.html" class="block">
+                            <div
+                                class="flex items-center gap-2 md:gap-3.5 px-8 py-3 border-t border-t-[#0000001f] transition-colors duration-200">
+                                О нас
+                            </div>
+                        </a>
+                        <a href="/Indep/contacts.html" class="block">
+                            <div
+                                class="flex items-center gap-2 md:gap-3.5 px-8 py-3 border-t border-t-[#0000001f] transition-colors duration-200">
+                                Контакты
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="/Indep/favourites.html" class="block">
+                    <div
+                        class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-b border-b-[#00000066] transition-colors duration-200">
+                        <img class="h-5 md:h-7" src="assets/img/icons/burger/favourites.svg"
+                            alt="Избранное" />
+                        Избранное
+                    </div>
+                </a>
+            </nav>
+        </div>
+
+        <form method="POST" action="{{ route('auth.logout') }}" id="logout-form" class="inline w-full">
+            
+            <button type="submit"
+                class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-t border-t-[#00000066] w-full text-left transition-colors duration-200 cursor-pointer">
+                <img class="h-5 md:h-7" src="assets/img/icons/burger/logout.svg"
+                    alt="Выйти из аккаунта" />
+                Выйти из аккаунта
+            </button>
+        </form>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/bannersSlider.js" defer></script>
+    <script src="assets/js/burger.js"></script>
+    <script src="assets/js/favourite.js"></script>
+    <script src="assets/js/mobileMenu.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/rangeSlider.js"></script>
+
+    <script src="{{ assets_url() }}/src/modules/iterations/cars.js"></script>
+    <script src="{{ assets_url() }}/src/modules/car/showCar.js"></script>
+</body>
+
+
+
+</html>
+</section>
+
+<!-- Scripts -->
+<script src="assets/js/bannersSlider.js" defer></script>
+<script src="assets/js/burger.js"></script>
+<script src="assets/js/favourite.js"></script>
+<script src="assets/js/mobileMenu.js"></script>
+<script src="assets/js/tabs.js"></script>
+<script src="assets/js/rangeSlider.js"></script>
+
+<script src="{{ assets_url() }}/src/modules/iterations/cars.js"></script>
+<script src="{{ assets_url() }}/src/modules/car/showCar.js"></script>
+</body>
+
+
+
+</html>

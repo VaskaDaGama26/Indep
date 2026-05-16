@@ -49,12 +49,16 @@
             <a
               class="text-[#080717] hover:text-[#db4431] transition-colors duration-200"
               href="/Indep/catalog.html"
-              >Купить авто</a
+              >Купить</a
             >
             <a
               class="text-[#080717] hover:text-[#db4431] transition-colors duration-200"
               href="/Indep/register.html"
-              >Продать авто</a
+              >Продать</a
+            ><a
+              class="text-[#080717] hover:text-[#db4431] transition-colors duration-200"
+              href="/Indep/loan.html"
+              >Автокредит</a
             >
             <div class="group relative nav-dropdown__wrapper">
               <button
@@ -166,12 +170,27 @@
                 alt="Favourites"
               />
             </a>
-            <a
-              href="/Indep/profile.html"
-              class="hidden md:block cursor-pointer"
-            >
-              <img class="h-8" src="assets/img/icons/user.svg" alt="Menu" />
-            </a>
+            <div class="relative ms-auto mb-auto nav-dropdown__wrapper">
+              <a
+                href="/Indep/profile.html"
+                class="hidden md:block ms-auto mb-auto cursor-pointer cursor-pointer nav-dropdown__link" id="profileMenuBtn"
+              >
+                <img class="h-8" src="assets/img/icons/user.svg" alt="Menu" />
+              </a>
+
+              <ul class="nav-dropdown--right nav-dropdown" role="menu" aria-label="Меню профиля" id="profileDropdown">
+                <li role="none">
+                  <form method="POST" action="{{ route('auth.logout') }}" id="logout-form">
+                    
+                    <button type="submit"
+                      class="block hover:bg-[#F8F8F8] px-4 py-2 w-full text-[#080717] hover:text-[#3D7D1C] text-left transition-colors duration-200 cursor-pointer"
+                      role="menuitem">
+                      Выйти из аккаунта
+                    </button>
+                  </form>
+                </li>
+              </ul>
+            </div>
             <button class="md:hidden block cursor-pointer" id="burger">
               <img
                 class="h-6 md:h-12"
@@ -196,9 +215,9 @@
         />
         <p class="text-[#DB4431]">Каталог</p>
       </section>
-      <section class="grid lg:grid-cols-[1fr_3fr] gap-x-5 mt-4 px-5">
+      <section class="gap-x-5 grid lg:grid-cols-[1fr_3fr] mt-4 px-5">
         <div
-          class="hidden lg:flex flex-col flex-1 items-start gap-4 px-5 py-4 overflow-y-auto bg-[#F7F7F7] rounded-[12px]"
+          class="hidden lg:flex flex-col flex-1 items-start gap-4 bg-[#F7F7F7] px-5 py-4 rounded-[12px] overflow-y-auto"
         >
           <!-- Filter Rows -->
           <div class="flex flex-col items-start gap-7 mb-6 w-full">
@@ -246,7 +265,7 @@
             <!-- Payment Type -->
             <!--! Remake to Radio Buttons from Tabs -->
             <div class="flex flex-col items-start gap-2 w-full text-[12px]">
-              <div id="content-left" class="w-full hidden"></div>
+              <div id="content-left" class="hidden w-full"></div>
               <div id="content-right" class="w-full"></div>
               <div
                 id="toggle-buttons"
@@ -255,13 +274,13 @@
               >
                 <button
                   id="toggle-left"
-                  class="py-2 rounded-xl w-full text-[14px] leading-tight! text-[#080717]"
+                  class="py-2 rounded-xl w-full text-[#080717] text-[14px] leading-tight!"
                 >
                   Наличные
                 </button>
                 <button
                   id="toggle-right"
-                  class="py-2 rounded-xl w-full text-[14px] leading-tight! bg-[#080717] text-[#FFFFFF]"
+                  class="bg-[#080717] py-2 rounded-xl w-full text-[#FFFFFF] text-[14px] leading-tight!"
                 >
                   В кредит
                 </button>
@@ -1056,19 +1075,19 @@
                   <div class="flex flex-row gap-4 pb-2 w-full">
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                   </div>
                 </div>
@@ -1140,19 +1159,19 @@
                   <div class="flex flex-row gap-4 pb-2 w-full">
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                   </div>
                 </div>
@@ -1224,19 +1243,19 @@
                   <div class="flex flex-row gap-4 pb-2 w-full">
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                   </div>
                 </div>
@@ -1308,19 +1327,19 @@
                   <div class="flex flex-row gap-4 pb-2 w-full">
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                   </div>
                 </div>
@@ -1392,19 +1411,19 @@
                   <div class="flex flex-row gap-4 pb-2 w-full">
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                   </div>
                 </div>
@@ -1476,19 +1495,19 @@
                   <div class="flex flex-row gap-4 pb-2 w-full">
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                   </div>
                 </div>
@@ -1560,19 +1579,19 @@
                   <div class="flex flex-row gap-4 pb-2 w-full">
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                   </div>
                 </div>
@@ -1644,19 +1663,19 @@
                   <div class="flex flex-row gap-4 pb-2 w-full">
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars1.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                     <img
                       src="assets/img/cars2.jpg"
-                      class="rounded-2xl h-[140px] md:h-[180px] shrink-0 object-cover"
+                      class="rounded-2xl h-[140px] md:h-[180px] object-cover shrink-0"
                     />
                   </div>
                 </div>
@@ -1722,18 +1741,18 @@
               <form
                 onsubmit="
                   event.preventDefault();
-                  window.location.href = '/catalog.html';
+                  window.location.href = `/Indep/catalog.html') }}`;
                 "
-                class="relative bg-[#1E1E1E] rounded-[12px] px-4 py-5 text-white flex flex-col items-start md:col-span-2 xl:col-span-1"
+                class="relative flex flex-col items-start md:col-span-2 xl:col-span-1 bg-[#1E1E1E] px-4 py-5 rounded-[12px] text-white"
               >
                 <img
-                  class="absolute bottom-4 left-0 z-[1] opacity-20"
+                  class="bottom-4 left-0 z-[1] absolute opacity-20"
                   src="assets/img/catalog-form.svg"
                   alt=""
                 />
-                <div class="relative z-[2] flex flex-col items-start gap-6 w-full">
+                <div class="z-[2] relative flex flex-col items-start gap-6 w-full">
                   <div class="flex flex-col items-start gap-3">
-                    <h3 class="text-[20px] font-medium">
+                    <h3 class="font-medium text-[20px]">
                       Нужна помощь с выбором автомобиля?
                     </h3>
                     <p class="text-[14px]">
@@ -1960,7 +1979,7 @@
     ></div>
     <section
       id="burger-menu"
-      class="hidden top-0 right-0 z-102 fixed flex-col justify-between bg-[#F7F7F7] py-8 w-[80%] md:w-[30%] h-dvh overflow-y-auto text-[#505050] text-[14px] md:text-[20px] leading-tight!"
+      class="hidden top-0 right-0 z-102 fixed flex-col justify-between bg-[#F7F7F7] pt-8 w-[80%] md:w-[30%] h-dvh overflow-y-auto text-[#505050] text-[14px] md:text-[20px] leading-tight!"
     >
       <div class="flex flex-col gap-6">
         <a class="px-5" href="/Indep/">
@@ -1974,10 +1993,10 @@
             >
               <img
                 class="h-5 md:h-7"
-                src="assets/img/icons/burger/favourites.svg"
-                alt="Купить авто"
+                src="assets/img/icons/burger/selection.svg"
+                alt="Купить"
               />
-              Купить авто
+              Купить
             </div>
           </a>
 
@@ -1987,10 +2006,22 @@
             >
               <img
                 class="h-5 md:h-7"
-                src="assets/img/icons/burger/favourites.svg"
-                alt="Продать авто"
+                src="assets/img/icons/burger/key.svg"
+                alt="Продать"
               />
-              Продать авто
+              Продать
+            </div>
+          </a>
+<a href="/Indep/loan.html" class="block">
+            <div
+              class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-b border-b-[#00000066] transition-colors duration-200"
+            >
+              <img
+                class="h-5 md:h-7"
+                src="assets/img/icons/burger/credit.svg"
+                alt="Автокредит"
+              />
+              Автокредит
             </div>
           </a>
 
@@ -2001,7 +2032,7 @@
               <div class="flex items-center gap-2 md:gap-3.5">
                 <img
                   class="h-5 md:h-7"
-                  src="assets/img/icons/burger/favourites.svg"
+                  src="assets/img/icons/burger/ads.svg"
                   alt="Услуги"
                 />
                 Услуги
@@ -2053,7 +2084,7 @@
               <div class="flex items-center gap-2 md:gap-3.5">
                 <img
                   class="h-5 md:h-7"
-                  src="assets/img/icons/burger/favourites.svg"
+                  src="assets/img/icons/burger/about.svg"
                   alt="Партнерам"
                 />
                 Партнерам
@@ -2113,17 +2144,20 @@
         </nav>
       </div>
 
-      <button
-        class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-t border-t-[#00000066] transition-colors duration-200 cursor-pointer"
-        onclick="window.location.href = '/'"
-      >
-        <img
-          class="h-5 md:h-7"
-          src="assets/img/icons/burger/logout.svg"
-          alt="Выйти из аккаунта"
-        />
-        Выйти из аккаунта
-      </button>
+      <form method="POST" action="{{ route('auth.logout') }}" id="logout-form" class="inline w-full">
+        
+        <button
+          type="submit"
+          class="flex items-center gap-2 md:gap-3.5 px-5 py-4 border-t border-t-[#00000066] w-full text-left transition-colors duration-200 cursor-pointer"
+        >
+          <img
+            class="h-5 md:h-7"
+            src="assets/img/icons/burger/logout.svg"
+            alt="Выйти из аккаунта"
+          />
+          Выйти из аккаунта
+        </button>
+      </form>
     </section>
 
     <!-- Scripts -->

@@ -5,6 +5,10 @@
   font-size: 20px;
   border-bottom: 1px solid #f3f1f2;
   transition: all 0.4s ease;
+  
+  @media(width < 769px) {
+    font-size: 10px;
+  }
 }
 .custom-details:hover {
   background: #f8f8f8;
@@ -23,11 +27,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   font-size: 24px;
   font-weight: 500;
+
+  @media(width < 769px) {
+    font-size: 14px;
+  }
 }
 .custom-details summary img {
   transition: all 0.4s ease-in-out;
+  height: 32px;
+
+  @media(width < 769px) {
+    height: 16px;
+  }
 }
 .custom-details[open] summary img {
   transform: rotateZ(180deg);
